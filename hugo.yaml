@@ -2,3 +2,40 @@ baseURL: 'http://mikeornstein.com/'
 languageCode: 'en-us'
 title: 'Mike Ornstein'
 theme: 'PaperMod'
+
+params:
+  defaultTheme: auto # follow the browser color palette
+  disableThemeToggle: true # hide the switch
+
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
+
+  socialIcons: # optional
+    - name: "linkedin"
+      url: "<link>"
+    - name: "github"
+      url: "<link2>"
+    - name: "instagram"
+      url: "<link2>"
+    - name: "x"
+      url: "<link2>"
+
+  cover:
+    linkFullImages: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
