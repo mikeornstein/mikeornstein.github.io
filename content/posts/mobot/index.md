@@ -1,18 +1,16 @@
 ---
-date: 2024-02-02T04:14:54-08:00
+date: 2010-05-01T00:00:00-00:00
 draft: false
 
 title: Mobot
 weight: 10
 cover:
-  image: "mobot top iso.jpg"
+  image: images/mobot-top-iso.jpg
   alt: "<alt text>"
   caption: "<text>"
   relative: true # To use relative path for cover image, used in hugo Page-bundles
 ---
-## Introduction
-
-This is **bold** text, and this is *emphasized* text.
-
-Visit the [Hugo](https://gohugo.io) website!
-{{}}
+## Project Overview
+[Mobot](https://www.cs.cmu.edu/mobot/) is an annual activity at CMU. 
+As a freshman, I wanted to enter into the competition, so joined forces with some savvy electronics and software folks to put together a car. I put the chassis of the beast together and did all the integration with wheels, sensors and compute.
+We didn't do too well, but it was a fun start to robot building in Robotics Club!

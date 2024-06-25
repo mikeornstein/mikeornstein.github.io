@@ -13,7 +13,7 @@ params:
 
   socialIcons: # optional
     - name: "linkedin"
-      url: "<link>"
+      url: "<link>" # TODO: add my real linked in link
     - name: "github"
       url: "<link2>"
     - name: "instagram"
