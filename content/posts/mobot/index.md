@@ -16,8 +16,8 @@ As a freshman, I wanted to enter into the competition, so joined forces with som
 We didn't do too well, but it was a fun start to robot building in Robotics Club!
 
 ## Team Members
-Jitu Das
-Harrison Rose
+* Jitu Das
+* Harrison Rose
 
 
 ## Project Goal
