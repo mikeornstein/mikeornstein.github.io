@@ -1,0 +1,8 @@
+{{ $images := .Page.Resources.Match "images/*" }}
+{{ range $images }}
+  {{ $resized := .Resize "800x" }}
+  <figure>
+    <img src="{{ $resized.Permalink }}" alt="{{ .Name }}" loading="lazy">
+    <figcaption>{{ .Name }}</figcaption>
+  </figure>
+{{ end }}

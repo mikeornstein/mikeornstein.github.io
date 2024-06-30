@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>House on Mike Ornstein</title>
+    <link>http://localhost:1313/tags/house/</link>
+    <description>Recent content in House on Mike Ornstein</description>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/house/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roof Shade - Overview</title>
+      <link>http://localhost:1313/posts/house-projects/roof-shade/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/house-projects/roof-shade/</guid>
+      <description>Project Overview A lot of work into these roof shades&amp;hellip; this is a many part series</description>
+    </item>
+    <item>
+      <title>Auto Roller Shade</title>
+      <link>http://localhost:1313/posts/house-projects/auto-roller-shades/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/house-projects/auto-roller-shades/</guid>
+      <description>We like to open and close the shades more now that we can ask Alexa to do it.
+THE END RESULT
+PARTS LIST
+Key bits that makes this work:
+The motor with a radio - Somfy Roll Up Wirefree R28 RTS Motor The motor radio to z-wave thing - Somfy ZRTSI RTS 16 Channel Z-Wave to RTS Plug-in Interface Wall Module Wink Hub - The z-wave thing to internet thing An Alexa Device - Echo Dot IFTTT There are also some other little bits that are needed, but are less exciting:</description>
+    </item>
+  </channel>
+</rss>

@@ -3,23 +3,48 @@ languageCode: 'en-us'
 title: 'Mike Ornstein'
 theme: 'PaperMod'
 
+menu:
+  main:
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 10
+    - identifier: archives
+      name: archives
+      url: /archives/
+      weight: 20
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 30
+
+taxonomies:
+  tag: tags
+
 params:
+  title: "another title!"
+
+
   defaultTheme: auto # follow the browser color palette
   disableThemeToggle: true # hide the switch
 
+  ShowToc: true
+  TocOpen: true
+  ShowPostNavLinks: true
+
   homeInfoParams:
-    Title: Hi there wave
-    Content: Can be Info, links, about...
+    Title: Dive into the Project Pile
+    Content: My humble heap of attempts to turn ideas into reality. Here, you’ll find a mix of projects that span robotics, generative design, coding, and the like. Whether it’s a household fix, an art project, or a new skill I’m bumbling through, every entry is a testament to my knack for biting off more than I can chew. Expect detailed breakdowns, the occasional ‘oops’ moment, and a glimpse into the chaos that is my creative process. Feel free to explore, get inspired, or at least get a good laugh at my expense.
 
   socialIcons: # optional
     - name: "linkedin"
-      url: "<link>" # TODO: add my real linked in link
+      url: "https://www.linkedin.com/in/mike-ornstein/" # TODO: add my real linked in link
     - name: "github"
-      url: "<link2>"
+      url: "https://github.com/mikeornstein"
     - name: "instagram"
-      url: "<link2>"
+      url: "https://www.instagram.com/slippery_salmonz/"
     - name: "x"
-      url: "<link2>"
+      url: "https://x.com/mikeornstein"
 
   cover:
     linkFullImages: true

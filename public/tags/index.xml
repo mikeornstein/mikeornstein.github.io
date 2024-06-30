@@ -6,6 +6,56 @@
     <description>Recent content in Tags on Mike Ornstein</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>House</title>
+      <link>http://localhost:1313/tags/house/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/house/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Formula SAE</title>
+      <link>http://localhost:1313/tags/formula-sae/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/formula-sae/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mobot</title>
+      <link>http://localhost:1313/tags/mobot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mobot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Roboclub</title>
+      <link>http://localhost:1313/tags/roboclub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/roboclub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Robotics</title>
+      <link>http://localhost:1313/tags/robotics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/robotics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vibratron</title>
+      <link>http://localhost:1313/tags/vibratron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/vibratron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Soft Robots</title>
+      <link>http://localhost:1313/tags/soft-robots/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/soft-robots/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

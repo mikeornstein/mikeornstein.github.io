@@ -2,24 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/mobot/</loc>
+    <loc>http://localhost:1313/posts/house-projects/roof-shade/</loc>
+    <lastmod>2019-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/house-projects/auto-roller-shades/</loc>
+    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/formula-sae/drivetrain/</loc>
+    <lastmod>2012-12-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/formula-sae/uprights/</loc>
+    <lastmod>2012-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/formula-sae/body/</loc>
+    <lastmod>2012-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/roboclub/monkeybot/</loc>
+    <lastmod>2011-05-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/roboclub/vibratron/</loc>
+    <lastmod>2011-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/roboclub/hylo/</loc>
+    <lastmod>2011-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/humanoid-lab/soft-arm/</loc>
+    <lastmod>2010-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/humanoid-lab/soft-wrist/</loc>
+    <lastmod>2010-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/roboclub/mobot/</loc>
     <lastmod>2010-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/vibratron/</loc>
-    <lastmod>2010-05-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/house/</loc>
+    <lastmod>2019-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2010-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2010-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2019-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/formula-sae/</loc>
+    <lastmod>2012-12-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mobot/</loc>
+    <lastmod>2011-05-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/roboclub/</loc>
+    <lastmod>2011-05-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/robotics/</loc>
+    <lastmod>2011-05-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vibratron/</loc>
+    <lastmod>2011-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/soft-robots/</loc>
+    <lastmod>2010-12-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
     <loc>http://localhost:1313/search/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

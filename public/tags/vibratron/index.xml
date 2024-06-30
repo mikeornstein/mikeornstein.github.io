@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vibratron on Mike Ornstein</title>
+    <link>http://localhost:1313/tags/vibratron/</link>
+    <description>Recent content in Vibratron on Mike Ornstein</description>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 May 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vibratron/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vibratron</title>
+      <link>http://localhost:1313/posts/roboclub/vibratron/</link>
+      <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/roboclub/vibratron/</guid>
+      <description>Project Overview Built out of a Vibraphone, Vibratron played was a robotic instrument that used recirculating ball bearings to hit keys on a circularly re-constructed vibraphone. This instrument was part of the Robotics club RobOrchestra.
+Team Members Andrew Burks!
+Contributions Aesthetic Design The distributor The lift </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docs on Mike Ornstein</title>
+    <link>http://localhost:1313/tags/docs/</link>
+    <description>Recent content in Docs on Mike Ornstein</description>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 May 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vibratron</title>
+      <link>http://localhost:1313/posts/vibratron/</link>
+      <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vibratron/</guid>
+      <description>Project Overview Built out of a Vibraphone, Vibratron played was a robotic instrument that used recirculating ball bearings to hit keys on a circularly re-constructed vibraphone. This instrument was part of the Robotics club RobOrchestra.
+Team Members Andrew Burks!
+Contributions Aesthetic Design The distributor The lift </description>
+    </item>
+    <item>
+      <title>Mobot</title>
+      <link>http://localhost:1313/posts/mobot/</link>
+      <pubDate>Sat, 01 May 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mobot/</guid>
+      <description>Project Overview Mobot is an annual activity at CMU. As a freshman, I wanted to enter into the competition, so joined forces with some savvy electronics and software folks to put together a car. I put the chassis of the beast together and did all the integration with wheels, sensors and compute. We didn&amp;rsquo;t do too well, but it was a fun start to robot building in Robotics Club!
+Team Members Jitu Das Harrison Rose Project Goal develop a robot using parts literally off the shelf (megashelf!</description>
+    </item>
+  </channel>
+</rss>

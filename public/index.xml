@@ -6,23 +6,94 @@
     <description>Recent content on Mike Ornstein</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 May 2011 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Roof Shade - Overview</title>
+      <link>http://localhost:1313/posts/house-projects/roof-shade/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/house-projects/roof-shade/</guid>
+      <description>Project Overview A lot of work into these roof shades&amp;hellip; this is a many part series</description>
+    </item>
+    <item>
+      <title>Auto Roller Shade</title>
+      <link>http://localhost:1313/posts/house-projects/auto-roller-shades/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/house-projects/auto-roller-shades/</guid>
+      <description>We like to open and close the shades more now that we can ask Alexa to do it.
+THE END RESULT
+PARTS LIST
+Key bits that makes this work:
+The motor with a radio - Somfy Roll Up Wirefree R28 RTS Motor The motor radio to z-wave thing - Somfy ZRTSI RTS 16 Channel Z-Wave to RTS Plug-in Interface Wall Module Wink Hub - The z-wave thing to internet thing An Alexa Device - Echo Dot IFTTT There are also some other little bits that are needed, but are less exciting:</description>
+    </item>
+    <item>
+      <title>Drivetrain</title>
+      <link>http://localhost:1313/posts/formula-sae/drivetrain/</link>
+      <pubDate>Tue, 04 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/formula-sae/drivetrain/</guid>
+      <description>Project Overview race car project for credit</description>
+    </item>
+    <item>
+      <title>Uprights</title>
+      <link>http://localhost:1313/posts/formula-sae/uprights/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/formula-sae/uprights/</guid>
+      <description>Project Overview This was a project for race car team. I designed, analyzed, and fabricated the uprights for the car.
+Project Goal </description>
+    </item>
+    <item>
+      <title>CMR 57 Body</title>
+      <link>http://localhost:1313/posts/formula-sae/body/</link>
+      <pubDate>Tue, 01 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/formula-sae/body/</guid>
+      <description>Project Overview Trials and tribulations of sketch to finished carbon car body for Carnegie Mellon Racing&amp;rsquo;s #57 car.</description>
+    </item>
+    <item>
+      <title>Monkey Bot</title>
+      <link>http://localhost:1313/posts/roboclub/monkeybot/</link>
+      <pubDate>Tue, 03 May 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/roboclub/monkeybot/</guid>
+      <description>Project Overview A robot that was supposed to be able to swing dynamically from monkey bars.</description>
+    </item>
+    <item>
       <title>Vibratron</title>
-      <link>http://localhost:1313/posts/vibratron/</link>
+      <link>http://localhost:1313/posts/roboclub/vibratron/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vibratron/</guid>
+      <guid>http://localhost:1313/posts/roboclub/vibratron/</guid>
       <description>Project Overview Built out of a Vibraphone, Vibratron played was a robotic instrument that used recirculating ball bearings to hit keys on a circularly re-constructed vibraphone. This instrument was part of the Robotics club RobOrchestra.
 Team Members Andrew Burks!
 Contributions Aesthetic Design The distributor The lift </description>
     </item>
     <item>
+      <title>HyLo</title>
+      <link>http://localhost:1313/posts/roboclub/hylo/</link>
+      <pubDate>Fri, 29 Apr 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/roboclub/hylo/</guid>
+      <description>Project Overview A robot that has legs and wheels! Hybrid Locomotion</description>
+    </item>
+    <item>
+      <title>Soft Arm</title>
+      <link>http://localhost:1313/posts/humanoid-lab/soft-arm/</link>
+      <pubDate>Sun, 19 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/humanoid-lab/soft-arm/</guid>
+      <description>Project Overview The Humanoids Lab and the Quality of Life Technologies group and Carnegie Mellon formed a project whose goal was to create an inherently safe robot that was able to do useful work.
+This work was presented at the EBMC 2011 conference with the paper, Physical Human Interaction for an Inflatable Manipulator
+It also turned out to be the inspiration for Baymax of Big Hero 6! </description>
+    </item>
+    <item>
+      <title>Soft Wrist and Gripper</title>
+      <link>http://localhost:1313/posts/humanoid-lab/soft-wrist/</link>
+      <pubDate>Sun, 04 Jul 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/humanoid-lab/soft-wrist/</guid>
+      <description>Project Overview A wrist actuated by tendons to move around an inflatable grasper. Provisionally patented! </description>
+    </item>
+    <item>
       <title>Mobot</title>
-      <link>http://localhost:1313/posts/mobot/</link>
+      <link>http://localhost:1313/posts/roboclub/mobot/</link>
       <pubDate>Sat, 01 May 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/mobot/</guid>
-      <description>Project Overview Mobot is an annual activity at CMU. As a freshman, I wanted to enter into the competition, so joined forces with some savvy electronics and software folks to put together a car. I put the chassis of the beast together and did all the integration with wheels, sensors and compute. We didn&amp;rsquo;t do too well, but it was a fun start to robot building in Robotics Club!</description>
+      <guid>http://localhost:1313/posts/roboclub/mobot/</guid>
+      <description>Project Overview Mobot is an annual activity at CMU. As a freshman, I wanted to enter into the competition, so joined forces with some savvy electronics and software folks to put together a car. I put the chassis of the beast together and did all the integration with wheels, sensors and compute. We didn&amp;rsquo;t do too well, but it was a fun start to robot building in Robotics Club!
+Team Members Jitu Das Harrison Rose Project Goal develop a robot using parts literally off the shelf (megashelf!</description>
     </item>
   </channel>
 </rss>
