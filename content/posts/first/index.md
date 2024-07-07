@@ -62,3 +62,5 @@ This marks a fresh start for us here, and I’m eager to gradually tidy up the c
 # Next Steps
 
 I intend to use this platform to chronicle both the mundane and noteworthy side projects and fascinations of the moment. Perhaps I’ll throw in a book review or two, or simply share the latest magic ChatGPT has done at my request… time will tell!
+
+[^1]: I'm still willing to pay for my domain name... GoDaddy has been solid there and fair at ~$22/yr
