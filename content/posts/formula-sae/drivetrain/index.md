@@ -1,6 +1,6 @@
 ---
 date: 2012-12-04T00:00:00-00:00
-draft: false
+draft: true
 
 title: Drivetrain
 weight: 10

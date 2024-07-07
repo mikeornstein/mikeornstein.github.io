@@ -37,7 +37,6 @@ Motor-side Shade Mount
 In picto-form (missing Wink + Echo):
 
 
-
 STEP-BY-STEP
 
 yeah.. okay

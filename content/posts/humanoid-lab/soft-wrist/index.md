@@ -1,6 +1,6 @@
 ---
 date: 2010-07-04T00:00:00-00:00
-draft: false
+draft: true
 
 title: Soft Wrist and Gripper
 weight: 10
