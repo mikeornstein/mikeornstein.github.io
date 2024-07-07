@@ -101,3 +101,20 @@ And here is an image:
 Here is a GitHub Gist:
 {{< gist mikeornstein d2318fe0fefe82b6fba8f2d7e032bbda >}}
 
+### Let's chat
+{{< chat-left >}}
+Hello! How can I help you today?
+{{< /chat-left >}}
+
+{{< chat-right >}}
+I have a question about my order.
+{{< /chat-right >}}
+
+{{< chat-left >}}
+Sure, I'd be happy to help. What's your order number? What if this is a really long line with a lot of text and potentially some *markdown*
+Like really fancy markdown in it!? `print("hello world")`
+{{< /chat-left >}}
+
+{{< chat-right >}}
+It's #12345.
+{{< /chat-right >}}

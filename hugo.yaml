@@ -1,6 +1,6 @@
 baseURL: 'http://mikeornstein.com/'
 languageCode: 'en-us'
-title: 'Mike Ornstein'
+title: 'mike ornstein'
 theme: 'PaperMod'
 
 menu:
@@ -26,15 +26,15 @@ params:
 
 
   defaultTheme: auto # follow the browser color palette
-  disableThemeToggle: true # hide the switch
+  disableThemeToggle: false # hide the switch
 
   ShowToc: true
   TocOpen: true
   ShowPostNavLinks: true
 
   homeInfoParams:
-    Title: Dive into the Project Pile
-    Content: My humble heap of attempts to turn ideas into reality. Here, you’ll find a mix of projects that span robotics, generative design, coding, and the like. Whether it’s a household fix, an art project, or a new skill I’m bumbling through, every entry is a testament to my knack for biting off more than I can chew. Expect detailed breakdowns, the occasional ‘oops’ moment, and a glimpse into the chaos that is my creative process. Feel free to explore, get inspired, or at least get a good laugh at my expense.
+    Title: mike's brain dump
+    Content: upcycling garbage on the internet, and occasionally real life. 
 
   socialIcons: # optional
     - name: "linkedin"

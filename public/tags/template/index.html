@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Template | Mike Ornstein</title>
+<title>Template | mike ornstein</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/tags/template/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.7d82250391d491e90093a23a90437ef30312064e4bd38f73c8fea2b6c0f498b0.css" integrity="sha256-fYIlA5HUkekAk6I6kEN&#43;8wMSBk5L049zyP6itsD0mLA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -61,7 +61,11 @@
 
 <body class="list" id="top">
 <script>
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -70,8 +74,28 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Mike Ornstein (Alt + H)">Mike Ornstein</a>
+            <a href="http://localhost:1313/" accesskey="h" title="mike ornstein (Alt + H)">mike ornstein</a>
             <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
         </div>
         <ul id="menu">
@@ -101,10 +125,11 @@
 </header>
 
 <article class="post-entry tag-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="http://localhost:1313/template_cover.png" alt="">
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/posts/template/template_cover.png" alt="">
 </figure>
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Template Text!
+    <h2 class="entry-hint-parent">Template Post
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
           <path
@@ -114,15 +139,19 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Project Overview Trials and tribulations of sketch to finished carbon car body for Carnegie Mellon Racing’s #57 car.</p>
+    <p>My Blog Post Here is an introductory paragraph with some bold text and some italic text.
+Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Standard Formatting This is strikethrough text.
+This is italic text. This is italic text.
+This is bold text. This is bold text.
+Lists Unordered Item 1 Item 2 Subitem 1 Subitem 2 Item 3 Ordered First item Second item Subitem 1 Subitem 2 Third item Quotes Here is a block quote:...</p>
   </div>
   <footer class="entry-footer"><span title='2024-07-04 00:00:00 +0000 +0000'>July 4, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Template Text!" href="http://localhost:1313/posts/template/template/"></a>
+  <a class="entry-link" aria-label="post link to Template Post" href="http://localhost:1313/posts/template/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="http://localhost:1313/">Mike Ornstein</a></span> · 
+        <span>&copy; 2024 <a href="http://localhost:1313/">mike ornstein</a></span> · 
 
     <span>
         Powered by
@@ -176,6 +205,18 @@
             mybutton.style.opacity = "0";
         }
     };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
 </script>
 </body>
