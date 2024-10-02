@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>House on mike ornstein</title>
-    <link>http://mikeornstein.com/tags/house/</link>
+    <link>http://localhost:1313/tags/house/</link>
     <description>Recent content in House on mike ornstein</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://mikeornstein.com/tags/house/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/house/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Roof Shade - Overview</title>
-      <link>http://mikeornstein.com/posts/house-projects/roof-shade/</link>
+      <link>http://localhost:1313/posts/house-projects/roof-shade/</link>
       <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>http://mikeornstein.com/posts/house-projects/roof-shade/</guid>
-      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;A lot of work into these roof shades&amp;hellip; this is a many part series&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/house-projects/roof-shade/</guid>
+      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;
+&lt;p&gt;A lot of work into these roof shades&amp;hellip; this is a many part series&lt;/p&gt;</description>
     </item>
     <item>
       <title>Auto Roller Shade</title>
-      <link>http://mikeornstein.com/posts/house-projects/auto-roller-shades/</link>
+      <link>http://localhost:1313/posts/house-projects/auto-roller-shades/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://mikeornstein.com/posts/house-projects/auto-roller-shades/</guid>
-      <description>&lt;p&gt;We like to open and close the shades more now that we can ask Alexa to do it.&lt;/p&gt;&#xA;&lt;p&gt;THE END RESULT&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oXEsUJOqUe0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;p&gt;PARTS LIST&lt;/p&gt;&#xA;&lt;p&gt;Key bits that makes this work:&lt;/p&gt;&#xA;&lt;p&gt;The motor with a radio - Somfy Roll Up Wirefree R28 RTS Motor&#xA;The motor radio to z-wave thing - Somfy ZRTSI RTS 16 Channel Z-Wave to RTS Plug-in Interface Wall Module&#xA;Wink Hub - The z-wave thing to internet thing&#xA;An Alexa Device - Echo Dot&#xA;IFTTT&#xA;There are also some other little bits that are needed, but are less exciting:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/house-projects/auto-roller-shades/</guid>
+      <description>&lt;p&gt;We like to open and close the shades more now that we can ask Alexa to do it.&lt;/p&gt;
+&lt;p&gt;THE END RESULT&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oXEsUJOqUe0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;PARTS LIST&lt;/p&gt;
+&lt;p&gt;Key bits that makes this work:&lt;/p&gt;
+&lt;p&gt;The motor with a radio - Somfy Roll Up Wirefree R28 RTS Motor
+The motor radio to z-wave thing - Somfy ZRTSI RTS 16 Channel Z-Wave to RTS Plug-in Interface Wall Module
+Wink Hub - The z-wave thing to internet thing
+An Alexa Device - Echo Dot
+IFTTT
+There are also some other little bits that are needed, but are less exciting:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

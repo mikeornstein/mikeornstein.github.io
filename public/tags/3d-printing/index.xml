@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Personal on mike ornstein</title>
-    <link>http://localhost:1313/tags/personal/</link>
-    <description>Recent content in Personal on mike ornstein</description>
+    <title>3D-Printing on mike ornstein</title>
+    <link>http://localhost:1313/tags/3d-printing/</link>
+    <description>Recent content in 3D-Printing on mike ornstein</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/3d-printing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thing Arranger</title>
       <link>http://localhost:1313/posts/thing-arranger/</link>
@@ -15,14 +15,6 @@
       <guid>http://localhost:1313/posts/thing-arranger/</guid>
       <description>&lt;h3 id=&#34;thing-arranger-a-tool-for-aesthetic-object-placement-and-3d-printing&#34;&gt;Thing Arranger: A Tool for Aesthetic Object Placement and 3D Printing&lt;/h3&gt;
 &lt;p&gt;Ever had a bunch of random objects that you just couldn’t figure out how to arrange in a pleasing way? Or perhaps you wanted to create something that looked like organized chaos but didn’t want to spend hours manually placing each object in just the right spot? Enter &lt;strong&gt;Thing Arranger&lt;/strong&gt;, a Python tool that arranges objects in aesthetically interesting ways, generating 3D models ready for printing.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>First</title>
-      <link>http://localhost:1313/posts/first/</link>
-      <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/first/</guid>
-      <description>&lt;h1 id=&#34;death-to-godaddy&#34;&gt;Death to GoDaddy&lt;/h1&gt;
-&lt;p&gt;GoDaddy sent me a Web Hosting Deluxe Renewal reminder (very courteous of them). It was for &lt;strong&gt;$839.40&lt;/strong&gt;/5yrs. I decided that was too much for a pretty much useless site. I considered downgrading to the &amp;ldquo;Standard&amp;rdquo; hosting plan for $5/mo but couldn&amp;rsquo;t justify it. The nice thing was that the old site had been up a while and I got somewhat used to the wordpress content management scheme. But its time as passed, over 12 or 13 years since the first post on that site.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

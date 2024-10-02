@@ -1,32 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on mike ornstein</title>
-    <link>http://mikeornstein.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on mike ornstein</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://mikeornstein.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D-Printing</title>
+      <link>http://localhost:1313/tags/3d-printing/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/3d-printing/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Personal</title>
-      <link>http://mikeornstein.com/tags/personal/</link>
-      <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://mikeornstein.com/tags/personal/</guid>
+      <link>http://localhost:1313/tags/personal/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/personal/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>http://mikeornstein.com/tags/software/</link>
-      <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://mikeornstein.com/tags/software/</guid>
+      <link>http://localhost:1313/tags/software/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Template</title>
+      <link>http://localhost:1313/tags/template/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/template/</guid>
       <description></description>
     </item>
     <item>
       <title>House</title>
-      <link>http://mikeornstein.com/tags/house/</link>
+      <link>http://localhost:1313/tags/house/</link>
       <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>http://mikeornstein.com/tags/house/</guid>
+      <guid>http://localhost:1313/tags/house/</guid>
       <description></description>
     </item>
   </channel>
