@@ -14,6 +14,7 @@ tags: ["Template",]
 # My Blog Post
 
 Here is an introductory paragraph with some **bold** text and some *italic* text.
+And here's a footnote[^1]!
 
 # Heading 1
 ## Heading 2
@@ -118,3 +119,5 @@ Like really fancy markdown in it!? `print("hello world")`
 {{< chat-right >}}
 It's #12345.
 {{< /chat-right >}}
+
+[^1]: look ma, a footnote!

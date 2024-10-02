@@ -1,48 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on mike ornstein</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://mikeornstein.com/posts/</link>
     <description>Recent content in Posts on mike ornstein</description>
-    <generator>Hugo -- 0.127.0</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://mikeornstein.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First</title>
-      <link>http://localhost:1313/posts/first/</link>
+      <link>http://mikeornstein.com/posts/first/</link>
       <pubDate>Sat, 06 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/first/</guid>
-      <description>Death to GoDaddy GoDaddy sent me a Web Hosting Deluxe Renewal reminder (very courteous of them). It was for $839.40/5yrs. I decided that was too much for a pretty much useless site. I considered downgrading to the &amp;ldquo;Standard&amp;rdquo; hosting plan for $5/mo but couldn&amp;rsquo;t justify it. The nice thing was that the old site had been up a while and I got somewhat used to the wordpress content management scheme. But its time as passed, over 12 or 13 years since the first post on that site.</description>
-    </item>
-    <item>
-      <title>Template Post</title>
-      <link>http://localhost:1313/posts/template/</link>
-      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/template/</guid>
-      <description>My Blog Post Here is an introductory paragraph with some bold text and some italic text.
-Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Standard Formatting This is strikethrough text.
-This is italic text. This is italic text.
-This is bold text. This is bold text.
-Lists Unordered Item 1 Item 2 Subitem 1 Subitem 2 Item 3 Ordered First item Second item Subitem 1 Subitem 2 Third item Quotes Here is a block quote:</description>
+      <guid>http://mikeornstein.com/posts/first/</guid>
+      <description>&lt;h1 id=&#34;death-to-godaddy&#34;&gt;Death to GoDaddy&lt;/h1&gt;&#xA;&lt;p&gt;GoDaddy sent me a Web Hosting Deluxe Renewal reminder (very courteous of them). It was for &lt;strong&gt;$839.40&lt;/strong&gt;/5yrs. I decided that was too much for a pretty much useless site. I considered downgrading to the &amp;ldquo;Standard&amp;rdquo; hosting plan for $5/mo but couldn&amp;rsquo;t justify it. The nice thing was that the old site had been up a while and I got somewhat used to the wordpress content management scheme. But its time as passed, over 12 or 13 years since the first post on that site.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Roof Shade - Overview</title>
-      <link>http://localhost:1313/posts/house-projects/roof-shade/</link>
+      <link>http://mikeornstein.com/posts/house-projects/roof-shade/</link>
       <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/house-projects/roof-shade/</guid>
-      <description>Project Overview A lot of work into these roof shades&amp;hellip; this is a many part series</description>
+      <guid>http://mikeornstein.com/posts/house-projects/roof-shade/</guid>
+      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;A lot of work into these roof shades&amp;hellip; this is a many part series&lt;/p&gt;</description>
     </item>
     <item>
       <title>Auto Roller Shade</title>
-      <link>http://localhost:1313/posts/house-projects/auto-roller-shades/</link>
+      <link>http://mikeornstein.com/posts/house-projects/auto-roller-shades/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/house-projects/auto-roller-shades/</guid>
-      <description>We like to open and close the shades more now that we can ask Alexa to do it.
-THE END RESULT
-PARTS LIST
-Key bits that makes this work:
-The motor with a radio - Somfy Roll Up Wirefree R28 RTS Motor The motor radio to z-wave thing - Somfy ZRTSI RTS 16 Channel Z-Wave to RTS Plug-in Interface Wall Module Wink Hub - The z-wave thing to internet thing An Alexa Device - Echo Dot IFTTT There are also some other little bits that are needed, but are less exciting:</description>
+      <guid>http://mikeornstein.com/posts/house-projects/auto-roller-shades/</guid>
+      <description>&lt;p&gt;We like to open and close the shades more now that we can ask Alexa to do it.&lt;/p&gt;&#xA;&lt;p&gt;THE END RESULT&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oXEsUJOqUe0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;p&gt;PARTS LIST&lt;/p&gt;&#xA;&lt;p&gt;Key bits that makes this work:&lt;/p&gt;&#xA;&lt;p&gt;The motor with a radio - Somfy Roll Up Wirefree R28 RTS Motor&#xA;The motor radio to z-wave thing - Somfy ZRTSI RTS 16 Channel Z-Wave to RTS Plug-in Interface Wall Module&#xA;Wink Hub - The z-wave thing to internet thing&#xA;An Alexa Device - Echo Dot&#xA;IFTTT&#xA;There are also some other little bits that are needed, but are less exciting:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
