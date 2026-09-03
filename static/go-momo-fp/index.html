@@ -185,7 +185,7 @@
     lctx.save();
     lctx.translate(px, py);
     lctx.strokeStyle = INK;
-    lctx.fillStyle = LIME;
+    lctx.fillStyle = "#c9a36a";
     lctx.lineWidth = 2;
     lctx.lineJoin = "round";
     lctx.lineCap = "round";
@@ -273,7 +273,7 @@
     lctx.save(); lctx.translate(collarX, Math.min(LCD_H - 28, collarY + 8 + sniff * 4)); lctx.scale(1.35, 1.35); lctx.translate(-collarX, -(collarY + 8)); drawMomo(collarX, collarY + 8, sniff); lctx.restore();
     lctx.fillStyle = INK;
     lctx.font = "10px ui-monospace, ui-rounded, system-ui";
-    lctx.fillText("PEE-MAIL " + mail, 8, 14);
+    lctx.fillText("MAIL " + mail, 8, 14);
   }
 
   function frame(now) {
