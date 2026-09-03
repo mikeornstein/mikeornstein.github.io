@@ -1,1 +1,44 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Go Momo Go</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1a1714; overflow: hidden; touch-action: none; }
+  body { position: fixed; inset: 0; overscroll-behavior: none; }
+  #wrap { height: 100dvh; height: 100%; display: flex; flex-direction: column; }
+  #lcdWrap {
+    flex: 2 1 0; min-height: 0; display: flex; align-items: center; justify-content: center;
+    background: #c9d63a; padding: env(safe-area-inset-top, 0) 0 0;
+  }
+  #lcd { image-rendering: pixelated; image-rendering: crisp-edges; display: block; touch-action: none; }
+  #shelf {
+    flex: 1 1 0; min-height: 0; position: relative;
+    background: #1a1714;
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 0));
+  }
+  #dpad {
+    position: absolute; left: max(16px, env(safe-area-inset-left, 0));
+    bottom: max(20px, env(safe-area-inset-bottom, 12px));
+    width: 104px; height: 104px; touch-action: none; user-select: none;
+  }
+  #crank {
+    position: absolute; right: max(16px, env(safe-area-inset-right, 0));
+    bottom: max(20px, env(safe-area-inset-bottom, 12px));
+    width: 72px; height: 72px; touch-action: none; user-select: none;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="lcdWrap"><canvas id="lcd" width="400" height="240"></canvas></div>
+  <div id="shelf">
+    <canvas id="dpad" width="208" height="208"></canvas>
+    <canvas id="crank" width="136" height="136"></canvas>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
