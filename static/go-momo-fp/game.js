@@ -8,20 +8,16 @@
   const cctx = crankEl.getContext("2d");
   const dpadEl = document.getElementById("dpad");
   const dctx = dpadEl.getContext("2d");
-  function scaleLcd() {
-    const box = document.getElementById("lcdWrap").getBoundingClientRect();
-    const s = Math.max(1, Math.floor(Math.min(box.width / LCD_W, box.height / LCD_H)));
-    lcd.style.width = (LCD_W * s) + "px";
-    lcd.style.height = (LCD_H * s) + "px";
-  }
-  addEventListener("resize", scaleLcd);
-  scaleLcd();
+  function eatLcdTouch(e) { e.preventDefault(); }
+  lcd.addEventListener("touchstart", eatLcdTouch, { passive: false });
+  lcd.addEventListener("touchmove", eatLcdTouch, { passive: false });
+  lcd.addEventListener("touchend", eatLcdTouch, { passive: false });
+  lcd.addEventListener("touchcancel", eatLcdTouch, { passive: false });
   const you = { x: 0, y: 0, heading: 0 };
   const momo = { x: 1.6, y: 0.3, heading: 0, sniff: 0, gait: 0, wag: 0, target: null, think: 0 };
   const crank = { ang: 0, vel: 0, grabbing: false, last: null };
   const leash = { len: 2.6, taut: 0 };
   const pad = { up: false, down: false, left: false, right: false };
-  const look = { dragging: false, lastX: 0 };
   let mail = 0, tPrev = performance.now();
   const posts = [];
   for (let i = 0; i < 34; i++) {
@@ -113,27 +109,6 @@
     if (e.key === "ArrowLeft") pad.left = false;
     if (e.key === "ArrowRight") pad.right = false;
   });
-  function lcdClient(e) {
-    const r = lcd.getBoundingClientRect();
-    const t = e.changedTouches ? e.changedTouches[0] : e;
-    return t.clientX - r.left;
-  }
-  function onLookStart(e) { e.preventDefault(); look.dragging = true; look.lastX = lcdClient(e); }
-  function onLookMove(e) {
-    if (!look.dragging) return;
-    e.preventDefault();
-    const x = lcdClient(e);
-    you.heading += (x - look.lastX) * 0.008;
-    look.lastX = x;
-  }
-  function onLookEnd(e) { e.preventDefault(); look.dragging = false; }
-  lcd.addEventListener("touchstart", onLookStart, cOpts);
-  lcd.addEventListener("touchmove", onLookMove, cOpts);
-  lcd.addEventListener("touchend", onLookEnd, cOpts);
-  lcd.addEventListener("touchcancel", onLookEnd, cOpts);
-  lcd.addEventListener("pointerdown", e => { if (e.pointerType === "touch") return; onLookStart(e); lcd.setPointerCapture(e.pointerId); });
-  lcd.addEventListener("pointermove", e => { if (e.pointerType === "touch") return; onLookMove(e); });
-  lcd.addEventListener("pointerup", e => { if (e.pointerType === "touch") return; onLookEnd(e); });
   function worldToCam(wx, wy) {
     const dx = wx - you.x, dy = wy - you.y;
     const c = Math.cos(you.heading), s = Math.sin(you.heading);
