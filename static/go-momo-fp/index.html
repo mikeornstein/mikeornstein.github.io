@@ -29,15 +29,15 @@
     background: #1a1714;
     padding-bottom: max(12px, env(safe-area-inset-bottom, 0));
   }
-  #dpad {
-    position: absolute; left: max(16px, env(safe-area-inset-left, 0));
-    bottom: max(20px, env(safe-area-inset-bottom, 12px));
-    width: 104px; height: 104px; touch-action: none; user-select: none;
+  #stick {
+    position: absolute; left: max(12px, env(safe-area-inset-left, 0));
+    bottom: max(16px, env(safe-area-inset-bottom, 12px));
+    width: 132px; height: 132px; touch-action: none; user-select: none;
   }
   #crank {
-    position: absolute; right: max(16px, env(safe-area-inset-right, 0));
-    bottom: max(20px, env(safe-area-inset-bottom, 12px));
-    width: 72px; height: 72px; touch-action: none; user-select: none;
+    position: absolute; right: max(12px, env(safe-area-inset-right, 0));
+    bottom: max(16px, env(safe-area-inset-bottom, 12px));
+    width: 96px; height: 96px; touch-action: none; user-select: none;
   }
 </style>
 </head>
@@ -45,10 +45,10 @@
 <div id="wrap">
   <div id="lcdWrap"><canvas id="lcd" width="400" height="240"></canvas></div>
   <div id="shelf">
-    <canvas id="dpad" width="208" height="208"></canvas>
-    <canvas id="crank" width="136" height="136"></canvas>
+    <canvas id="stick" width="264" height="264"></canvas>
+    <canvas id="crank" width="192" height="192"></canvas>
   </div>
 </div>
-<script src="game.js?v=drag2"></script>
+<script src="game.js?v=stick1"></script>
 </body>
 </html>

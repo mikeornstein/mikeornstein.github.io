@@ -2,13 +2,15 @@
   const LCD_W = 400, LCD_H = 240;
   const LIME = "#c9d63a", INK = "#2a1c12", TAN = "#c9a36a";
   const LEASH_MIN = 0.9, LEASH_MAX = 5.2;
+  const TURN_RATE = 2.4;
+  const WALK_SPD = 2.3;
 
   const lcd = document.getElementById("lcd");
   const lctx = lcd.getContext("2d");
   const crankEl = document.getElementById("crank");
   const cctx = crankEl.getContext("2d");
-  const dpadEl = document.getElementById("dpad");
-  const dctx = dpadEl.getContext("2d");
+  const stickEl = document.getElementById("stick");
+  const sctx = stickEl.getContext("2d");
 
   function eatLcdTouch(e) { e.preventDefault(); }
   lcd.addEventListener("touchstart", eatLcdTouch, { passive: false });
@@ -16,11 +18,13 @@
   lcd.addEventListener("touchend", eatLcdTouch, { passive: false });
   lcd.addEventListener("touchcancel", eatLcdTouch, { passive: false });
 
-  const you = { x: 0, y: 0, heading: 0 }; // radians; snapped to π/2 detents
+  const you = { x: 0, y: 0, heading: 0 };
   const momo = { x: 1.6, y: 0.3, heading: 0, want: 0, sniff: 0, gait: 0, wag: 0, target: null, think: 0 };
   const crank = { ang: 0, vel: 0, grabbing: false, last: null };
   const leash = { len: 2.6, taut: 0 };
-  const pad = { up: false, down: false, left: false, right: false };
+  // left stick: nx/ny in [-1,1], screen +y down so walk forward = -ny
+  const stick = { nx: 0, ny: 0, grabbing: false };
+  const keys = { up: false, down: false, left: false, right: false };
   let mail = 0, tPrev = performance.now();
 
   const posts = [];
@@ -85,46 +89,76 @@
     leash.len = Math.min(LEASH_MAX, Math.max(LEASH_MIN, leash.len + da * 0.55));
   }, cOpts);
 
-  const padTouches = new Map();
-  function padDir(e) {
-    const r = dpadEl.getBoundingClientRect();
+  function stickLocal(e) {
+    const r = stickEl.getBoundingClientRect();
     const t = e.changedTouches ? e.changedTouches[0] : e;
-    const x = (t.clientX - r.left) / r.width - 0.5;
-    const y = (t.clientY - r.top) / r.height - 0.5;
-    const dead = 0.14;
-    const d = { up: false, down: false, left: false, right: false };
-    if (Math.abs(y) > Math.abs(x)) {
-      if (y < -dead) d.up = true; else if (y > dead) d.down = true;
-    } else {
-      if (x < -dead) d.left = true; else if (x > dead) d.right = true;
-    }
-    return d;
+    return { x: t.clientX - r.left - r.width / 2, y: t.clientY - r.top - r.height / 2 };
   }
-  function applyPad(e) {
-    const d = padDir(e);
-    pad.up = d.up; pad.down = d.down; pad.left = d.left; pad.right = d.right;
+  function setStickFromLocal(p) {
+    const maxR = stickEl.width * 0.34;
+    let x = p.x, y = p.y;
+    const mag = Math.hypot(x, y) || 1e-6;
+    if (mag > maxR) { x = (x / mag) * maxR; y = (y / mag) * maxR; }
+    const dead = 0.12;
+    let nx = x / maxR, ny = y / maxR;
+    if (Math.hypot(nx, ny) < dead) { nx = 0; ny = 0; }
+    stick.nx = nx;
+    stick.ny = ny;
   }
-  function clearPad() { pad.up = pad.down = pad.left = pad.right = false; }
-  dpadEl.addEventListener("touchstart", e => { e.preventDefault(); applyPad(e); }, cOpts);
-  dpadEl.addEventListener("touchmove", e => { e.preventDefault(); applyPad(e); }, cOpts);
-  dpadEl.addEventListener("touchend", e => { e.preventDefault(); clearPad(); }, cOpts);
-  dpadEl.addEventListener("touchcancel", e => { e.preventDefault(); clearPad(); }, cOpts);
-  dpadEl.addEventListener("pointerdown", e => { if (e.pointerType === "touch") return; e.preventDefault(); applyPad(e); dpadEl.setPointerCapture(e.pointerId); });
-  dpadEl.addEventListener("pointermove", e => { if (e.pointerType === "touch") return; if (e.buttons) applyPad(e); });
-  dpadEl.addEventListener("pointerup", e => { if (e.pointerType === "touch") return; clearPad(); });
+  function clearStick() { stick.nx = 0; stick.ny = 0; stick.grabbing = false; }
+  function onStickStart(e) {
+    e.preventDefault();
+    stick.grabbing = true;
+    setStickFromLocal(stickLocal(e));
+  }
+  function onStickMove(e) {
+    if (!stick.grabbing) return;
+    e.preventDefault();
+    setStickFromLocal(stickLocal(e));
+  }
+  function onStickEnd(e) {
+    e.preventDefault();
+    clearStick();
+  }
+  stickEl.addEventListener("touchstart", onStickStart, cOpts);
+  stickEl.addEventListener("touchmove", onStickMove, cOpts);
+  stickEl.addEventListener("touchend", onStickEnd, cOpts);
+  stickEl.addEventListener("touchcancel", onStickEnd, cOpts);
+  stickEl.addEventListener("pointerdown", e => {
+    if (e.pointerType === "touch") return;
+    e.preventDefault();
+    stick.grabbing = true;
+    setStickFromLocal(stickLocal(e));
+    stickEl.setPointerCapture(e.pointerId);
+  });
+  stickEl.addEventListener("pointermove", e => {
+    if (e.pointerType === "touch") return;
+    if (!stick.grabbing) return;
+    setStickFromLocal(stickLocal(e));
+  });
+  stickEl.addEventListener("pointerup", e => { if (e.pointerType === "touch") return; clearStick(); });
+
   addEventListener("keydown", e => {
-    if (e.key === "ArrowUp") pad.up = true;
-    if (e.key === "ArrowDown") pad.down = true;
-    if (e.key === "ArrowLeft") pad.left = true;
-    if (e.key === "ArrowRight") pad.right = true;
+    if (e.key === "ArrowUp") keys.up = true;
+    if (e.key === "ArrowDown") keys.down = true;
+    if (e.key === "ArrowLeft") keys.left = true;
+    if (e.key === "ArrowRight") keys.right = true;
   });
   addEventListener("keyup", e => {
-    if (e.key === "ArrowUp") pad.up = false;
-    if (e.key === "ArrowDown") pad.down = false;
-    if (e.key === "ArrowLeft") pad.left = false;
-    if (e.key === "ArrowRight") pad.right = false;
+    if (e.key === "ArrowUp") keys.up = false;
+    if (e.key === "ArrowDown") keys.down = false;
+    if (e.key === "ArrowLeft") keys.left = false;
+    if (e.key === "ArrowRight") keys.right = false;
   });
 
+  function stickAxes() {
+    if (stick.grabbing || Math.hypot(stick.nx, stick.ny) > 0.01) return { x: stick.nx, y: stick.ny };
+    let x = (keys.right ? 1 : 0) - (keys.left ? 1 : 0);
+    let y = (keys.down ? 1 : 0) - (keys.up ? 1 : 0);
+    const m = Math.hypot(x, y);
+    if (m > 1) { x /= m; y /= m; }
+    return { x, y };
+  }
 
   function worldToCam(wx, wy) {
     const dx = wx - you.x, dy = wy - you.y;
@@ -168,7 +202,6 @@
     momo.x += (dx / dist) * spd * dt;
     momo.y += (dy / dist) * spd * dt;
 
-    // leash constraint: never past leash.len from the walker
     let lx = momo.x - you.x, ly = momo.y - you.y;
     let ld = Math.hypot(lx, ly) || 1e-6;
     if (ld > leash.len) {
@@ -193,15 +226,11 @@
     for (const p of posts) if (p.hit > 0) p.hit *= Math.exp(-dt * 0.5);
   }
 
-  const DETENT = Math.PI / 2;
-  function snapCardinal(a) {
-    return Math.round(a / DETENT) * DETENT;
-  }
   function bearingTo(wx, wy) {
     return Math.atan2(wy - you.y, wx - you.x);
   }
   function faceLeash() {
-    const target = snapCardinal(bearingTo(momo.x, momo.y));
+    const target = bearingTo(momo.x, momo.y);
     if (Math.abs(wrapPi(target - you.heading)) > 0.001) you.heading = target;
   }
   let wasTaut = false;
@@ -212,20 +241,18 @@
       if (navigator.vibrate) navigator.vibrate([14, 30, 18]);
     } catch (_) {}
   }
-  let padLeftWas = false, padRightWas = false;
+
   function step(dt) {
     if (!crank.grabbing) crank.vel *= Math.exp(-dt * 2.6);
     crank.ang += crank.grabbing ? 0 : crank.vel * 0.35;
 
-    if (pad.left && !padLeftWas) you.heading = snapCardinal(you.heading - DETENT);
-    if (pad.right && !padRightWas) you.heading = snapCardinal(you.heading + DETENT);
-    padLeftWas = pad.left;
-    padRightWas = pad.right;
-
-    const walk = (pad.up ? 1 : 0) - (pad.down ? 1 : 0);
-    // leash drag: while taut, walk crawls (prior-frame taut). Floor ~18% speed.
+    const ax = stickAxes();
+    // continuous turn (no detents); stick X / arrow L-R
+    you.heading += ax.x * TURN_RATE * dt;
+    // walk: stick forward = up = -ny
+    const walk = -ax.y;
     const drag = Math.max(0.18, 1 - 0.82 * leash.taut);
-    const spd = 2.3 * drag;
+    const spd = WALK_SPD * drag;
     you.x += Math.cos(you.heading) * walk * dt * spd;
     you.y += Math.sin(you.heading) * walk * dt * spd;
 
@@ -302,38 +329,30 @@
     lctx.restore();
   }
 
-  function drawDpad() {
-    const w = dpadEl.width, h = dpadEl.height, cx = w / 2, cy = h / 2;
-    const arm = w * 0.16, thick = w * 0.15;
-    dctx.clearRect(0, 0, w, h);
-    dctx.fillStyle = "#2a241e";
-    dctx.beginPath();
-    dctx.roundRect(cx - thick, cy - arm * 2.1, thick * 2, arm * 4.2, 10);
-    dctx.fill();
-    dctx.beginPath();
-    dctx.roundRect(cx - arm * 2.1, cy - thick, arm * 4.2, thick * 2, 10);
-    dctx.fill();
-    const lit = "#e8c48a", dim = "#6b5b46";
-    dctx.fillStyle = pad.up ? lit : dim;
-    tri(cx, cy - arm * 1.5, 0);
-    dctx.fillStyle = pad.down ? lit : dim;
-    tri(cx, cy + arm * 1.5, Math.PI);
-    dctx.fillStyle = pad.left ? lit : dim;
-    tri(cx - arm * 1.5, cy, -Math.PI / 2);
-    dctx.fillStyle = pad.right ? lit : dim;
-    tri(cx + arm * 1.5, cy, Math.PI / 2);
-    function tri(x, y, rot) {
-      dctx.save();
-      dctx.translate(x, y);
-      dctx.rotate(rot);
-      dctx.beginPath();
-      dctx.moveTo(0, -9);
-      dctx.lineTo(8, 6);
-      dctx.lineTo(-8, 6);
-      dctx.closePath();
-      dctx.fill();
-      dctx.restore();
-    }
+  function drawStick() {
+    const w = stickEl.width, h = stickEl.height, cx = w / 2, cy = h / 2;
+    const outer = w * 0.42, knob = w * 0.16, travel = w * 0.34;
+    const ax = stickAxes();
+    sctx.clearRect(0, 0, w, h);
+    sctx.beginPath();
+    sctx.arc(cx, cy, outer + 3, 0, Math.PI * 2);
+    sctx.fillStyle = "#2a241e";
+    sctx.fill();
+    sctx.beginPath();
+    sctx.arc(cx, cy, outer, 0, Math.PI * 2);
+    sctx.strokeStyle = "#6b5b46";
+    sctx.lineWidth = 5;
+    sctx.stroke();
+    const kx = cx + ax.x * travel;
+    const ky = cy + ax.y * travel;
+    sctx.beginPath();
+    sctx.arc(kx, ky, knob, 0, Math.PI * 2);
+    sctx.fillStyle = "#e8c48a";
+    sctx.fill();
+    sctx.beginPath();
+    sctx.arc(kx, ky, knob * 0.35, 0, Math.PI * 2);
+    sctx.fillStyle = INK;
+    sctx.fill();
   }
 
   function drawCrank() {
@@ -398,13 +417,9 @@
       lctx.stroke();
     }
 
-    const dirs = ["E", "S", "W", "N"];
-    let di = Math.round(you.heading / DETENT) % 4;
-    if (di < 0) di += 4;
     lctx.fillStyle = INK;
     lctx.font = "10px ui-monospace, ui-rounded, system-ui";
     lctx.fillText("MAIL " + mail, 8, 14);
-    lctx.fillText(dirs[di], LCD_W - 16, 14);
     if (tautPulse > 0) {
       lctx.globalAlpha = Math.min(1, tautPulse);
       lctx.fillRect(0, 0, LCD_W, 2);
@@ -419,7 +434,7 @@
     step(dt);
     drawWorld();
     drawCrank();
-    drawDpad();
+    drawStick();
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
