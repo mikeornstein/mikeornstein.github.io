@@ -10,45 +10,48 @@
   body { position: fixed; inset: 0; overscroll-behavior: none; }
   #wrap { height: 100dvh; height: 100%; display: flex; flex-direction: column; }
   #lcdWrap {
-    flex: 0 0 auto;
+    flex: 1 1 0;
+    min-height: 0;
     background: #c9d63a;
     padding-top: env(safe-area-inset-top, 0);
     line-height: 0;
+    display: flex;
+    flex-direction: column;
   }
   #lcd {
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 400 / 240;
+    flex: 1 1 0;
+    min-height: 0;
+    height: 100%;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     touch-action: none;
   }
   #shelf {
-    flex: 1 1 0; min-height: 0; position: relative;
+    flex: 0 0 auto;
+    position: relative;
+    height: calc(128px + 24px + env(safe-area-inset-bottom, 0px));
     background: #1a1714;
-    padding-bottom: max(12px, env(safe-area-inset-bottom, 0));
   }
-  #stick {
-    position: absolute; left: max(12px, env(safe-area-inset-left, 0));
-    bottom: max(16px, env(safe-area-inset-bottom, 12px));
-    width: 132px; height: 132px; touch-action: none; user-select: none;
+  #stick, #crank {
+    position: absolute;
+    bottom: max(12px, env(safe-area-inset-bottom, 12px));
+    width: 128px; height: 128px;
+    touch-action: none; user-select: none;
   }
-  #crank {
-    position: absolute; right: max(12px, env(safe-area-inset-right, 0));
-    bottom: max(16px, env(safe-area-inset-bottom, 12px));
-    width: 96px; height: 96px; touch-action: none; user-select: none;
-  }
+  #stick { left: max(12px, env(safe-area-inset-left, 0)); }
+  #crank { right: max(12px, env(safe-area-inset-right, 0)); }
 </style>
 </head>
 <body>
 <div id="wrap">
   <div id="lcdWrap"><canvas id="lcd" width="400" height="240"></canvas></div>
   <div id="shelf">
-    <canvas id="stick" width="264" height="264"></canvas>
-    <canvas id="crank" width="192" height="192"></canvas>
+    <canvas id="stick" width="256" height="256"></canvas>
+    <canvas id="crank" width="256" height="256"></canvas>
   </div>
 </div>
-<script src="game.js?v=stick1"></script>
+<script src="game.js?v=stick2"></script>
 </body>
 </html>
