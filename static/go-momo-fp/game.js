@@ -226,13 +226,6 @@
     for (const p of posts) if (p.hit > 0) p.hit *= Math.exp(-dt * 0.5);
   }
 
-  function bearingTo(wx, wy) {
-    return Math.atan2(wy - you.y, wx - you.x);
-  }
-  function faceLeash() {
-    const target = bearingTo(momo.x, momo.y);
-    if (Math.abs(wrapPi(target - you.heading)) > 0.001) you.heading = target;
-  }
   let wasTaut = false;
   let tautPulse = 0;
   function pulseTaut() {
@@ -259,7 +252,7 @@
     stepMomo(dt);
 
     const tautNow = leash.taut > 0.55;
-    if (tautNow) faceLeash();
+    // heading stays under stick — leash pull does not yank camera
     if (tautNow && !wasTaut) pulseTaut();
     wasTaut = tautNow;
     if (tautPulse > 0) tautPulse = Math.max(0, tautPulse - dt * 3.2);
@@ -427,6 +420,19 @@
       lctx.globalAlpha = 1;
     }
   }
+
+  function fitLcd() {
+    const wrap = document.getElementById("lcdWrap");
+    const aw = wrap.clientWidth;
+    const ah = wrap.clientHeight;
+    const scale = Math.max(1, Math.floor(Math.min(aw / LCD_W, ah / LCD_H)));
+    lcd.style.width = (LCD_W * scale) + "px";
+    lcd.style.height = (LCD_H * scale) + "px";
+  }
+  addEventListener("resize", fitLcd);
+  // visualViewport covers iOS Safari chrome show/hide
+  if (window.visualViewport) visualViewport.addEventListener("resize", fitLcd);
+  fitLcd();
 
   function frame(now) {
     const dt = Math.min(0.05, (now - tPrev) / 1000);
