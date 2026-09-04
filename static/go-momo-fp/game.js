@@ -223,8 +223,10 @@
     padRightWas = pad.right;
 
     const walk = (pad.up ? 1 : 0) - (pad.down ? 1 : 0);
-    you.x += Math.cos(you.heading) * walk * dt * 2.3;
-    you.y += Math.sin(you.heading) * walk * dt * 2.3;
+    // leash drag: while taut, walking slows (uses prior-frame taut)
+    const spd = 2.3 * (1 - 0.62 * leash.taut);
+    you.x += Math.cos(you.heading) * walk * dt * Math.max(0.28, spd);
+    you.y += Math.sin(you.heading) * walk * dt * Math.max(0.28, spd);
 
     stepMomo(dt);
 
