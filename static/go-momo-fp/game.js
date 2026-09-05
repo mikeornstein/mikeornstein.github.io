@@ -73,7 +73,7 @@
       const img = new Image();
       img.onload = () => { worldReady[key] = true; };
       img.onerror = () => { worldReady[key] = false; };
-      img.src = "world/" + key + ".png?v=art1";
+      img.src = "world/" + key + ".png?v=map1";
       world[key] = img;
     }
   })();
@@ -123,28 +123,28 @@
   // Walk 1 — one short block: porch start → finish house (clamped roam)
   const WORLD_X_MIN = -1.8, WORLD_X_MAX = 25.2;
   const WORLD_Y_MIN = -2.0, WORLD_Y_MAX = 2.0;
+  // Spine per fp-block-map.md (Hephaestus)
   const props = [
-    { id: "porch", kind: "porch", x: -1.2, y: 0, r: 1.4 },
-    { id: "mailbox", kind: "mailbox", x: 2.2, y: 0.95, r: 0.4 },
-    { id: "hydrant", kind: "hydrant", x: 4.0, y: -0.85, r: 0.55, pee: true },
-    { id: "tree1", kind: "tree", x: 6.5, y: 1.05, r: 0.65, pee: true },
-    { id: "car", kind: "car", x: 8.8, y: -1.35, r: 0.9 },
-    { id: "tree2", kind: "tree", x: 11.2, y: 0.95, r: 0.7, pee: true },
-    { id: "gnome", kind: "gnome", x: 13.2, y: -1.05, r: 0.5 },
-    { id: "dog", kind: "dog", x: 16.0, y: 0.35, r: DOG_R },
-    { id: "fence", kind: "fence", x: 18.2, y: -1.2, r: 0.8 },
-    { id: "grandma", kind: "grandma", x: 19.5, y: -0.55, r: GRANDMA_R },
-    { id: "tree3", kind: "tree", x: 21.5, y: 1.0, r: 0.65, pee: true },
-    { id: "home", kind: "home", x: 24.0, y: 0, r: 1.5 }
+    { id: "porch", kind: "porch", x: 0.0, y: 0, r: 1.4 },
+    { id: "mailbox", kind: "mailbox", x: 4.0, y: 1.05, r: 0.4 },
+    { id: "car", kind: "car", x: 8.0, y: -1.4, r: 0.95 },
+    { id: "fence", kind: "fence", x: 12.0, y: -1.15, r: 0.85 },
+    { id: "tree1", kind: "tree", x: 14.5, y: 1.05, r: 0.7, pee: true },
+    { id: "tree2", kind: "tree", x: 15.8, y: -0.95, r: 0.65, pee: true },
+    { id: "dog", kind: "dog", x: 16.8, y: 0.25, r: DOG_R },
+    { id: "hydrant", kind: "hydrant", x: 18.5, y: -0.9, r: 0.55, pee: true },
+    { id: "gnome", kind: "gnome", x: 19.2, y: -1.15, r: 0.5 },
+    { id: "grandma", kind: "grandma", x: 20.5, y: -0.5, r: GRANDMA_R },
+    { id: "home", kind: "home", x: 24.0, y: 0, r: 1.55 }
   ];
   const patches = [
-    { id: "p_patchy", kind: "patchy", x: 5.5, y: -1.35, w: 3.2, d: 1.8, pee: true, poo: false },
-    { id: "p_forbid", kind: "forbidden", x: 12.6, y: -1.45, w: 3.0, d: 1.9, pee: true, poo: false, fail: true },
-    { id: "p_nice", kind: "nice", x: 21.8, y: -1.35, w: 3.6, d: 2.0, pee: true, poo: true }
+    { id: "p_patchy", kind: "patchy", x: 6.0, y: -1.35, w: 2.8, d: 1.6, pee: true, poo: false },
+    { id: "p_forbid", kind: "forbidden", x: 18.8, y: -1.45, w: 2.8, d: 1.7, pee: true, poo: false, fail: true },
+    { id: "p_nice", kind: "nice", x: 22.0, y: -1.3, w: 3.2, d: 1.9, pee: true, poo: true }
   ];
   const marks = [
-    { id: "m_bruno", text: "BRUNO WAS HERE", x: 4.0, y: -0.85, r: 0.85, read: false, prop: "hydrant" },
-    { id: "m_gnome", text: "DO NOT SNIFF THE GNOME LAWN", x: 12.0, y: 0.25, r: 0.75, read: false, prop: "tree" }
+    { id: "m_bruno", text: "BRUNO WAS HERE", x: 18.5, y: -0.9, r: 0.85, read: false, prop: "hydrant" },
+    { id: "m_gnome", text: "DO NOT SNIFF THE GNOME LAWN", x: 19.0, y: 0.2, r: 0.75, read: false, prop: "tree" }
   ];
   const mess = []; // {kind, x, y, bagged, age}
 
@@ -445,8 +445,8 @@
   }
 
   function resetWalk() {
-    you.x = 0.35; you.y = 0; you.heading = 0;
-    momo.x = 1.15; momo.y = 0.12; momo.heading = 0;
+    you.x = 0.8; you.y = 0; you.heading = 0;
+    momo.x = 1.6; momo.y = 0.12; momo.heading = 0;
     momo.state = "heel"; momo.want = "heel";
     momo.wantX = 1.2; momo.wantY = 0.15;
     momo.goT = 0; momo.comeT = 0; momo.yankT = 0;
@@ -866,7 +866,11 @@
       for (let x = (y * 2) % 9; x < LCD_W; x += st) lctx.fillRect(x, y, 1, 1);
     }
     if (worldReady.foliage && world.foliage) {
+      const dense = (you.x >= 13.5 && you.x <= 17.5) ? 1.0 : 0.85;
+      lctx.globalAlpha = dense;
       lctx.drawImage(world.foliage, 0, 0, LCD_W, 72);
+      if (dense > 0.9) lctx.drawImage(world.foliage, -12, 4, LCD_W + 24, 80);
+      lctx.globalAlpha = 1;
     } else {
       const leaves = [
         [24, 8, 16], [70, 4, 12], [120, 10, 14], [180, 3, 11],
