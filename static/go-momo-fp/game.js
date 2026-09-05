@@ -73,7 +73,7 @@
       const img = new Image();
       img.onload = () => { worldReady[key] = true; };
       img.onerror = () => { worldReady[key] = false; };
-      img.src = "world/" + key + ".png?v=map1";
+      img.src = "world/" + key + ".png?v=art2";
       world[key] = img;
     }
   })();
@@ -846,7 +846,7 @@
     lctx.fillRect(0, 0, LCD_W, LCD_H);
     lctx.imageSmoothingEnabled = false;
     if (worldReady.sky && world.sky) {
-      lctx.drawImage(world.sky, 0, 0, LCD_W, 120);
+      lctx.drawImage(world.sky, 0, 0, LCD_W, 100);
     } else {
       lctx.fillStyle = INK;
       for (let y = 0; y < 92; y += 2) {
@@ -868,8 +868,8 @@
     if (worldReady.foliage && world.foliage) {
       const dense = (you.x >= 13.5 && you.x <= 17.5) ? 1.0 : 0.85;
       lctx.globalAlpha = dense;
-      lctx.drawImage(world.foliage, 0, 0, LCD_W, 72);
-      if (dense > 0.9) lctx.drawImage(world.foliage, -12, 4, LCD_W + 24, 80);
+      lctx.drawImage(world.foliage, 0, 0, LCD_W, 80);
+      if (dense > 0.9) lctx.drawImage(world.foliage, -12, 2, LCD_W + 24, 88);
       lctx.globalAlpha = 1;
     } else {
       const leaves = [
@@ -1042,10 +1042,10 @@
     if (worldReady.sidewalk && world.sidewalk) {
       // perspective slab plate into depth (parallax with walk)
       const img = world.sidewalk;
-      const dw = 200, dh = 128;
+      const dw = 160, dh = 128;
       const parallax = ((you.x * 6) % 16) - 8;
       const dx = Math.round((LCD_W - dw) / 2 + parallax);
-      const dy = 112;
+      const dy = 110;
       lctx.globalAlpha = 0.92;
       lctx.drawImage(img, dx, dy, dw, dh);
       lctx.globalAlpha = 1;
