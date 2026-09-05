@@ -119,23 +119,31 @@
   let tPrev = performance.now();
   let plantedHold = false;
 
-  // Walk 1 authored corridor along +X (player starts looking +X)
+  // Walk 1 — one short block: porch start → finish house (clamped roam)
+  const WORLD_X_MIN = -1.8, WORLD_X_MAX = 25.2;
+  const WORLD_Y_MIN = -2.0, WORLD_Y_MAX = 2.0;
   const props = [
-    { id: "hydrant", kind: "hydrant", x: 7.5, y: -0.9, r: 0.55, pee: true },
-    { id: "tree", kind: "tree", x: 15.5, y: 0.85, r: 0.7, pee: true },
-    { id: "gnome", kind: "gnome", x: 22.0, y: -1.1, r: 0.5 },
-    { id: "dog", kind: "dog", x: 27.5, y: 0.4, r: DOG_R },
-    { id: "grandma", kind: "grandma", x: 33.0, y: -0.7, r: GRANDMA_R },
-    { id: "home", kind: "home", x: 48.0, y: 0, r: 1.6 }
+    { id: "porch", kind: "porch", x: -1.2, y: 0, r: 1.4 },
+    { id: "mailbox", kind: "mailbox", x: 2.2, y: 0.95, r: 0.4 },
+    { id: "hydrant", kind: "hydrant", x: 4.0, y: -0.85, r: 0.55, pee: true },
+    { id: "tree1", kind: "tree", x: 6.5, y: 1.05, r: 0.65, pee: true },
+    { id: "car", kind: "car", x: 8.8, y: -1.35, r: 0.9 },
+    { id: "tree2", kind: "tree", x: 11.2, y: 0.95, r: 0.7, pee: true },
+    { id: "gnome", kind: "gnome", x: 13.2, y: -1.05, r: 0.5 },
+    { id: "dog", kind: "dog", x: 16.0, y: 0.35, r: DOG_R },
+    { id: "fence", kind: "fence", x: 18.2, y: -1.2, r: 0.8 },
+    { id: "grandma", kind: "grandma", x: 19.5, y: -0.55, r: GRANDMA_R },
+    { id: "tree3", kind: "tree", x: 21.5, y: 1.0, r: 0.65, pee: true },
+    { id: "home", kind: "home", x: 24.0, y: 0, r: 1.5 }
   ];
   const patches = [
-    { id: "p_patchy", kind: "patchy", x: 11.5, y: -1.4, w: 4.5, d: 2.2, pee: true, poo: false },
-    { id: "p_forbid", kind: "forbidden", x: 20.5, y: -1.6, w: 4.0, d: 2.4, pee: true, poo: false, fail: true },
-    { id: "p_nice", kind: "nice", x: 38.5, y: -1.5, w: 5.5, d: 2.6, pee: true, poo: true }
+    { id: "p_patchy", kind: "patchy", x: 5.5, y: -1.35, w: 3.2, d: 1.8, pee: true, poo: false },
+    { id: "p_forbid", kind: "forbidden", x: 12.6, y: -1.45, w: 3.0, d: 1.9, pee: true, poo: false, fail: true },
+    { id: "p_nice", kind: "nice", x: 21.8, y: -1.35, w: 3.6, d: 2.0, pee: true, poo: true }
   ];
   const marks = [
-    { id: "m_bruno", text: "BRUNO WAS HERE", x: 7.5, y: -0.9, r: 0.85, read: false, prop: "hydrant" },
-    { id: "m_gnome", text: "DO NOT SNIFF THE GNOME LAWN", x: 19.0, y: 0.3, r: 0.75, read: false, prop: "tree" }
+    { id: "m_bruno", text: "BRUNO WAS HERE", x: 4.0, y: -0.85, r: 0.85, read: false, prop: "hydrant" },
+    { id: "m_gnome", text: "DO NOT SNIFF THE GNOME LAWN", x: 12.0, y: 0.25, r: 0.75, read: false, prop: "tree" }
   ];
   const mess = []; // {kind, x, y, bagged, age}
 
@@ -146,6 +154,10 @@
   }
   function dist(ax, ay, bx, by) { return Math.hypot(ax - bx, ay - by); }
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+  function clampWorld(o) {
+    o.x = clamp(o.x, WORLD_X_MIN, WORLD_X_MAX);
+    o.y = clamp(o.y, WORLD_Y_MIN, WORLD_Y_MAX);
+  }
 
   function armAudio() {
     if (audioArmed) return;
@@ -432,8 +444,8 @@
   }
 
   function resetWalk() {
-    you.x = 0; you.y = 0; you.heading = 0;
-    momo.x = 1.2; momo.y = 0.15; momo.heading = 0;
+    you.x = 0.35; you.y = 0; you.heading = 0;
+    momo.x = 1.15; momo.y = 0.12; momo.heading = 0;
     momo.state = "heel"; momo.want = "heel";
     momo.wantX = 1.2; momo.wantY = 0.15;
     momo.goT = 0; momo.comeT = 0; momo.yankT = 0;
@@ -776,6 +788,7 @@
 
     you.x += Math.cos(you.heading) * walk * dt * spd;
     you.y += Math.sin(you.heading) * walk * dt * spd;
+    clampWorld(you);
 
     if (!isCommitted()) {
       if (!didPee) pee = Math.min(1, pee + PEE_RATE * dt);
@@ -784,6 +797,7 @@
     }
 
     stepMomo(dt);
+    clampWorld(momo);
 
     if (isCommitted()) {
       holdWalkerToLeash();
@@ -927,6 +941,54 @@
       lctx.fillText("<3", x - 8, y - s * 2.1);
     }
   }
+
+  function drawPorch(pr) {
+    const s = pr.s * 1.5;
+    const x = Math.round(pr.x), y = Math.round(pr.y);
+    lctx.fillStyle = INK;
+    // house mass behind start
+    lctx.fillRect(x - s * 0.7, y - s * 1.1, s * 1.4, s * 1.1);
+    lctx.beginPath();
+    lctx.moveTo(x - s * 0.85, y - s * 1.1);
+    lctx.lineTo(x, y - s * 1.65);
+    lctx.lineTo(x + s * 0.85, y - s * 1.1);
+    lctx.closePath();
+    lctx.fill();
+    // door
+    lctx.fillStyle = LIME;
+    lctx.fillRect(x - 5, y - s * 0.55, 10, s * 0.55);
+    // porch posts
+    lctx.fillStyle = INK;
+    lctx.fillRect(x - s * 0.55, y - s * 0.35, 3, s * 0.35);
+    lctx.fillRect(x + s * 0.45, y - s * 0.35, 3, s * 0.35);
+  }
+  function drawMailbox(pr) {
+    const s = Math.max(4, pr.s * 0.55);
+    const x = Math.round(pr.x), y = Math.round(pr.y);
+    lctx.fillStyle = INK;
+    lctx.fillRect(x - 1, y - s, 2, s);
+    lctx.fillRect(x - s * 0.55, y - s - 6, s * 1.1, 7);
+    lctx.fillRect(x + s * 0.35, y - s - 4, 3, 2);
+  }
+  function drawCar(pr) {
+    const s = pr.s * 1.1;
+    const x = Math.round(pr.x), y = Math.round(pr.y);
+    lctx.fillStyle = INK;
+    lctx.fillRect(x - s * 0.7, y - s * 0.35, s * 1.4, s * 0.35);
+    lctx.fillRect(x - s * 0.45, y - s * 0.65, s * 0.9, s * 0.35);
+    lctx.fillStyle = LIME;
+    lctx.fillRect(x - s * 0.35, y - s * 0.55, s * 0.25, s * 0.18);
+    lctx.fillRect(x + s * 0.05, y - s * 0.55, s * 0.25, s * 0.18);
+  }
+  function drawFence(pr) {
+    const s = pr.s * 1.0;
+    const x = Math.round(pr.x), y = Math.round(pr.y);
+    lctx.fillStyle = INK;
+    for (let i = -3; i <= 3; i++) {
+      lctx.fillRect(x + i * Math.max(4, s * 0.22), y - s * 0.55, 2, s * 0.55);
+    }
+    lctx.fillRect(x - s * 0.75, y - s * 0.4, s * 1.5, 2);
+  }
   function drawHome(pr) {
     const s = pr.s * 1.4;
     const x = Math.round(pr.x), y = Math.round(pr.y);
@@ -970,12 +1032,17 @@
     }
   }
   function drawSidewalk() {
-    // corridor underfoot along +X
-    const step = 0.34;
-    for (let x = -1; x <= 52; x += step) {
-      for (let y = -0.55; y <= 0.55; y += step) {
+    // short block corridor porch → home
+    const step = 0.28;
+    for (let x = WORLD_X_MIN; x <= WORLD_X_MAX + 0.4; x += step) {
+      for (let y = -0.5; y <= 0.5; y += step) {
         drawGroundSample(x, y, "sidewalk");
       }
+    }
+    // curb edges
+    for (let x = WORLD_X_MIN; x <= WORLD_X_MAX; x += 0.5) {
+      drawGroundSample(x, -0.62, "sidewalk");
+      drawGroundSample(x, 0.62, "sidewalk");
     }
   }
   function drawMess(m) {
@@ -1248,6 +1315,10 @@
             else if (p.kind === "dog") drawDog(pr);
             else if (p.kind === "grandma") drawGrandma(pr);
             else if (p.kind === "home") drawHome(pr);
+            else if (p.kind === "porch") drawPorch(pr);
+            else if (p.kind === "mailbox") drawMailbox(pr);
+            else if (p.kind === "car") drawCar(pr);
+            else if (p.kind === "fence") drawFence(pr);
           }
         });
       }
