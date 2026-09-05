@@ -41,6 +41,26 @@
   }
   #stick { left: max(12px, env(safe-area-inset-left, 0)); }
   #crank { right: max(12px, env(safe-area-inset-right, 0)); }
+  .chip {
+    position: absolute;
+    left: max(12px, env(safe-area-inset-left, 0));
+    width: 56px; height: 28px;
+    border: 2px solid #6b5b46;
+    border-radius: 14px;
+    background: #2a241e;
+    color: #e8c48a;
+    font: 700 11px/24px ui-rounded, system-ui, sans-serif;
+    letter-spacing: 0.04em;
+    text-align: center;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 0;
+    margin: 0;
+  }
+  .chip:active, .chip.on { background: #c9a36a; color: #2a1c12; border-color: #e8c48a; }
+  #btnCome { bottom: calc(128px + 14px + env(safe-area-inset-bottom, 0px)); }
+  #btnBag { bottom: calc(128px + 14px + env(safe-area-inset-bottom, 0px)); left: calc(max(12px, env(safe-area-inset-left, 0)) + 64px); }
 </style>
 </head>
 <body>
@@ -48,9 +68,11 @@
   <div id="lcdWrap"><canvas id="lcd" width="400" height="240"></canvas></div>
   <div id="shelf">
     <canvas id="stick" width="256" height="256"></canvas>
+    <button type="button" class="chip" id="btnCome">COME</button>
+    <button type="button" class="chip" id="btnBag">BAG</button>
     <canvas id="crank" width="256" height="256"></canvas>
   </div>
 </div>
-<script src="game.js?v=cam1"></script>
+<script src="game.js?v=walk1"></script>
 </body>
 </html>
