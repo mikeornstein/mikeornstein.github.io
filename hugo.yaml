@@ -5,6 +5,10 @@ theme: 'PaperMod'
 
 menu:
   main:
+    - identifier: toys
+      name: toys
+      url: /toys/
+      weight: 5
     - identifier: tags
       name: tags
       url: /tags/
@@ -23,6 +27,8 @@ taxonomies:
 
 params:
   title: "another title!"
+  mainSections:
+    - posts
 
 
   defaultTheme: auto # follow the browser color palette
