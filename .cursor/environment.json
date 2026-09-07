@@ -1,0 +1,17 @@
+{
+  "name": "mikeornstein.com (Hugo)",
+  "install": "./.cursor/install.sh",
+  "ports": [
+    {
+      "name": "hugo dev server",
+      "port": 1313
+    }
+  ],
+  "terminals": [
+    {
+      "name": "hugo-server",
+      "command": "hugo server --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313/ --appendPort=false --disableFastRender",
+      "description": "Hugo development server with live reload, serving the site at http://localhost:1313/"
+    }
+  ]
+}
