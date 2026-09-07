@@ -20,23 +20,27 @@
 
 {{- $pages := .RegularPages.ByDate.Reverse }}
 {{- range $pages }}
-{{- $play := .Params.play | default .RelPermalink }}
+{{- $toy := . }}
+{{- $play := $toy.Params.play | default $toy.RelPermalink }}
 {{- $external := strings.HasPrefix $play "http" }}
 <article class="post-entry toy-entry">
-  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false -}}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) -}}
+  {{- with $toy.Params.cover.image }}
+  <figure class="entry-cover">
+    <img src="{{ . | relURL }}" alt="{{ $toy.Params.cover.alt | default $toy.Title }}" width="1280" height="720">
+  </figure>
+  {{- end }}
   <header class="entry-header">
-    <h2>{{ .Title }}</h2>
+    <h2>{{ $toy.Title }}</h2>
   </header>
-  {{- if (ne (.Param "hideSummary") true) }}
+  {{- if (ne ($toy.Param "hideSummary") true) }}
   <div class="entry-content">
-    <p>{{ .Params.summary | default .Summary | plainify | htmlUnescape }}</p>
+    <p>{{ $toy.Params.summary | default $toy.Summary | plainify | htmlUnescape }}</p>
   </div>
   {{- end }}
   <footer class="entry-footer">
-    {{ .Params.play_label | default "open" }} →
+    {{ $toy.Params.play_label | default "play" }} →
   </footer>
-  <a class="entry-link" aria-label="open {{ .Title | plainify }}" href="{{ $play }}"
+  <a class="entry-link" aria-label="open {{ $toy.Title | plainify }}" href="{{ $play }}"
     {{- if $external }} target="_blank" rel="noopener noreferrer"{{- end }}></a>
 </article>
 {{- end }}

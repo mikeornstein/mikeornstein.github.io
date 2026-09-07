@@ -6,4 +6,4 @@ ShowToc: false
 hideMeta: true
 ---
 
-Little interactive things that live on the web. Cards open the toy itself (or a post about it).
+Little interactive things that live on the web. Cards open the toy.

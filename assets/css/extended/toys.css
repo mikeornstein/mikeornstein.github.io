@@ -1,3 +1,39 @@
+.toy-entry {
+    padding: 0;
+    overflow: hidden;
+}
+
+.toy-entry .entry-cover {
+    margin: 0;
+    text-align: inherit;
+}
+
+.toy-entry .entry-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    pointer-events: none;
+}
+
+.toy-entry .entry-header,
+.toy-entry .entry-content,
+.toy-entry .entry-footer {
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+}
+
+.toy-entry .entry-header {
+    padding-top: var(--gap);
+}
+
 .toy-entry .entry-content {
     -webkit-line-clamp: 4;
+}
+
+.toy-entry .entry-footer {
+    padding-bottom: var(--gap);
 }
