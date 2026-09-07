@@ -1,0 +1,44 @@
+{{- define "main" }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{- $pages := .RegularPages.ByDate.Reverse }}
+{{- range $pages }}
+{{- $play := .Params.play | default .RelPermalink }}
+{{- $external := strings.HasPrefix $play "http" }}
+<article class="post-entry toy-entry">
+  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false -}}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) -}}
+  <header class="entry-header">
+    <h2>{{ .Title }}</h2>
+  </header>
+  {{- if (ne (.Param "hideSummary") true) }}
+  <div class="entry-content">
+    <p>{{ .Params.summary | default .Summary | plainify | htmlUnescape }}</p>
+  </div>
+  {{- end }}
+  <footer class="entry-footer">
+    {{ .Params.play_label | default "open" }} →
+  </footer>
+  <a class="entry-link" aria-label="open {{ .Title | plainify }}" href="{{ $play }}"
+    {{- if $external }} target="_blank" rel="noopener noreferrer"{{- end }}></a>
+</article>
+{{- end }}
+
+{{- end }}
