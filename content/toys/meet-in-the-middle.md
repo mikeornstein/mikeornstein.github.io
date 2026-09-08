@@ -1,5 +1,5 @@
 ---
-date: 2026-09-08T00:00:00-07:00
+date: 2026-09-07T18:00:00-07:00
 title: Meet in the Middle
 play: https://meet-in-the-middle.grok.me/
 play_label: play
