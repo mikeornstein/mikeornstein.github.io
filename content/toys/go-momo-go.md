@@ -1,12 +1,12 @@
 ---
-date: 2026-09-04T00:00:00-07:00
+date: 2026-09-15T00:00:00-07:00
 title: Go Momo Go
-play: /go-momo-fp/
+play: /go-momo-go/?seed=20260914
 play_label: play
-summary: First-person dog walk on a fake Game Boy. Stick to roam, crank the leash, collect pee-mail.
+summary: Procedural sidewalk arcade. 4×8 city blocks, snap camera, poop then home — Playdate chrome, generated neighborhood.
 cover:
   image: /toys/go-momo.jpg
-  alt: Go Momo Go first-person walk on a lime Game Boy LCD
+  alt: Go Momo Go arcade in Playdate chrome, a couple of 4×8 city blocks on the LCD
 _build:
   render: never
   list: local
