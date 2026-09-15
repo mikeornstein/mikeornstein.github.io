@@ -6,10 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
     />
+    <meta name="format-detection" content="telephone=no" />
     <title>Go Momo Go — web prototype</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body oncontextmenu="return false;">
     <h1 class="visually-hidden">Go Momo Go</h1>
 
     <div class="device">
@@ -18,15 +19,15 @@
         <canvas id="game" width="400" height="240" tabindex="0" role="img" aria-label="Go Momo Go 400 by 240 game"></canvas>
       </div>
       <div class="controls">
-        <div class="dpad" aria-label="D-pad">
-          <button type="button" data-dir="u" aria-label="Up">▲</button>
-          <button type="button" data-dir="l" aria-label="Left">◀</button>
-          <button type="button" data-dir="r" aria-label="Right">▶</button>
-          <button type="button" data-dir="d" aria-label="Down">▼</button>
+        <div class="dpad" role="group" aria-label="D-pad">
+          <button type="button" data-dir="u" aria-label="Up" draggable="false" unselectable="on"></button>
+          <button type="button" data-dir="l" aria-label="Left" draggable="false" unselectable="on"></button>
+          <button type="button" data-dir="r" aria-label="Right" draggable="false" unselectable="on"></button>
+          <button type="button" data-dir="d" aria-label="Down" draggable="false" unselectable="on"></button>
         </div>
         <div class="faces">
-          <button type="button" class="face" data-action="restart" aria-label="Restart this block" title="Restart this block">A</button>
-          <button type="button" class="face" data-action="new-block" aria-label="New neighborhood" title="New neighborhood">B</button>
+          <button type="button" class="face face-a" data-action="restart" aria-label="Restart this block" draggable="false" unselectable="on"></button>
+          <button type="button" class="face face-b" data-action="new-block" aria-label="New neighborhood" draggable="false" unselectable="on"></button>
         </div>
       </div>
     </div>

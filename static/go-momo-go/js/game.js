@@ -19,8 +19,11 @@
   var CLOCK = 75;
   var PACE_TIME = 2.35;
   var LEASH = 18;
-  var INTERRUPT_R = 16;
-  var CAR_SPOOK_R = 16;
+  // Sidewalk is 20px. Lot-edge grass is ~20px from a sidewalk NPC and ~50px
+  // from asphalt. Tutorial grass sits one fence cell in (~40px / ~70px).
+  var INTERRUPT_R = 44;
+  var PEEMAIL_R = 36;
+  var CAR_SPOOK_R = 80;
   var STUN_TIME = 0.35;
 
   function clamp(v, a, b) {
@@ -88,6 +91,7 @@
     this.messageT = 2.2;
     this.stun = 0;
     this.interruptFlash = 0;
+    this.interruptKind = null;
     this.time = 0;
     this.cam = { x: 0, y: 0 };
     this.frameHome();
@@ -337,21 +341,38 @@
     this.messageT = t == null ? 1.6 : t;
   };
 
+  Game.prototype.carClearance = function (ent, car) {
+    var dx = Math.max(0, Math.abs(ent.x - car.x) - car.w / 2);
+    var dy = Math.max(0, Math.abs(ent.y - car.y) - car.h / 2);
+    return hypot(dx, dy);
+  };
+
   Game.prototype.interruptNear = function () {
     var m = this.momo;
+    var w = this.walker;
     for (var i = 0; i < this.people.length; i++) {
-      if (dist(m, this.people[i]) < INTERRUPT_R) return "person";
+      if (dist(m, this.people[i]) < INTERRUPT_R || dist(w, this.people[i]) < INTERRUPT_R) return "person";
     }
     for (var j = 0; j < this.dogs.length; j++) {
-      if (dist(m, this.dogs[j]) < INTERRUPT_R) return "dog";
+      if (dist(m, this.dogs[j]) < INTERRUPT_R || dist(w, this.dogs[j]) < INTERRUPT_R) return "dog";
     }
     for (var k = 0; k < this.peemail.length; k++) {
-      if (dist(m, this.peemail[k]) < INTERRUPT_R - 2) return "pee-mail";
+      if (dist(m, this.peemail[k]) < PEEMAIL_R || dist(w, this.peemail[k]) < PEEMAIL_R) return "pee-mail";
     }
     for (var c = 0; c < this.cars.length; c++) {
-      if (dist(m, this.cars[c]) < CAR_SPOOK_R) return "car";
+      var car = this.cars[c];
+      if (this.carClearance(m, car) < CAR_SPOOK_R || this.carClearance(w, car) < CAR_SPOOK_R) return "car";
     }
     return null;
+  };
+
+  Game.prototype.applyInterrupt = function (kind) {
+    var hadProgress = this.poop > 0;
+    this.poop = 0;
+    this.interruptFlash = 0.7;
+    this.interruptKind = kind;
+    if (hadProgress) this.say("Interrupted — " + kind + "!", 1.6);
+    else this.say("Too busy — " + kind + ".", 1.1);
   };
 
   Game.prototype.updatePace = function (dt, moving) {
@@ -367,13 +388,7 @@
     }
     var spook = this.interruptNear();
     if (spook) {
-      if (this.poop > 0) {
-        this.poop = 0;
-        this.interruptFlash = 0.45;
-        this.say("Interrupted — " + spook + ".", 1.4);
-      } else {
-        this.say("Too busy. Find calmer grass.", 0.9);
-      }
+      this.applyInterrupt(spook);
       return;
     }
     this.poop = Math.min(1, this.poop + dt / PACE_TIME);
@@ -414,6 +429,7 @@
     this.time += dt;
     if (this.messageT > 0) this.messageT -= dt;
     if (this.interruptFlash > 0) this.interruptFlash -= dt;
+    else this.interruptKind = null;
 
     if (this.state !== "play") {
       if (input.consumeRestart()) this.reset(this.map.seed);
@@ -447,35 +463,55 @@
 
   Game.prototype.patterns = function (ctx) {
     if (this._pats) return this._pats;
-    function pat(dots) {
+    function pat(dots, size) {
+      var n = size || 4;
       var c = document.createElement("canvas");
-      c.width = 4;
-      c.height = 4;
+      c.width = n;
+      c.height = n;
       var g = c.getContext("2d");
       g.fillStyle = BG;
-      g.fillRect(0, 0, 4, 4);
+      g.fillRect(0, 0, n, n);
       g.fillStyle = INK;
-      for (var i = 0; i < dots.length; i++) g.fillRect(dots[i][0], dots[i][1], 1, 1);
+      for (var i = 0; i < dots.length; i++) {
+        var p = dots[i];
+        g.fillRect(p[0], p[1], p[2] || 1, p[3] || 1);
+      }
       return ctx.createPattern(c, "repeat");
     }
     this._pats = {
       street: pat([
         [0, 0],
+        [1, 0],
+        [3, 0],
+        [0, 1],
         [2, 1],
         [1, 2],
+        [3, 2],
+        [0, 3],
+        [2, 3],
         [3, 3],
       ]),
       walk: pat([
         [0, 0],
-        [2, 2],
+        [1, 1],
+        [3, 3],
       ]),
-      grass: pat([
-        [0, 0],
-        [2, 1],
-        [1, 3],
-        [3, 2],
-        [0, 2],
-      ]),
+      grass: pat(
+        [
+          [1, 0, 1, 2],
+          [0, 1],
+          [5, 1, 1, 2],
+          [2, 3],
+          [6, 2],
+          [0, 5, 1, 2],
+          [1, 6],
+          [3, 6, 1, 2],
+          [7, 4],
+          [6, 6, 1, 2],
+          [4, 7],
+        ],
+        8
+      ),
       home: pat([
         [0, 0],
         [2, 1],
@@ -521,11 +557,15 @@
       var vs = this.map.vStreets[i];
       ctx.fillRect(vs.walkL0, 0, vs.walkL1 - vs.walkL0, worldH);
       ctx.fillRect(vs.walkR0, 0, vs.walkR1 - vs.walkR0, worldH);
+      this.drawPavers(ctx, vs.walkL0, 0, vs.walkL1 - vs.walkL0, worldH);
+      this.drawPavers(ctx, vs.walkR0, 0, vs.walkR1 - vs.walkR0, worldH);
     }
     for (i = 0; i < this.map.hStreets.length; i++) {
       var hs = this.map.hStreets[i];
       ctx.fillRect(0, hs.walkT0, worldW, hs.walkT1 - hs.walkT0);
       ctx.fillRect(0, hs.walkB0, worldW, hs.walkB1 - hs.walkB0);
+      this.drawPavers(ctx, 0, hs.walkT0, worldW, hs.walkT1 - hs.walkT0);
+      this.drawPavers(ctx, 0, hs.walkB0, worldW, hs.walkB1 - hs.walkB0);
     }
 
     ctx.fillStyle = pats.street;
@@ -536,6 +576,27 @@
     for (i = 0; i < this.map.hStreets.length; i++) {
       hs = this.map.hStreets[i];
       ctx.fillRect(0, hs.asphalt0, worldW, hs.asphalt1 - hs.asphalt0);
+    }
+
+    this.ink(ctx);
+    for (i = 0; i < this.map.vStreets.length; i++) {
+      vs = this.map.vStreets[i];
+      ctx.fillRect(vs.asphalt0, 0, 1, worldH);
+      ctx.fillRect(vs.asphalt1 - 1, 0, 1, worldH);
+    }
+    for (i = 0; i < this.map.hStreets.length; i++) {
+      hs = this.map.hStreets[i];
+      ctx.fillRect(0, hs.asphalt0, worldW, 1);
+      ctx.fillRect(0, hs.asphalt1 - 1, worldW, 1);
+    }
+
+    for (i = 0; i < this.map.vStreets.length; i++) {
+      vs = this.map.vStreets[i];
+      this.drawLaneDashes(ctx, vs.asphaltCenter, 0, worldH, true);
+    }
+    for (i = 0; i < this.map.hStreets.length; i++) {
+      hs = this.map.hStreets[i];
+      this.drawLaneDashes(ctx, hs.asphaltCenter, 0, worldW, false);
     }
 
     this.ink(ctx);
@@ -587,6 +648,47 @@
     ctx.fillRect(path.x0, path.y0, path.x1 - path.x0, path.y1 - path.y0);
     var stoop = this.map.home.stoop;
     ctx.fillRect(stoop.x - 4, stoop.y - 3, 8, 6);
+  };
+
+  Game.prototype.drawPavers = function (ctx, x, y, w, h) {
+    var x0 = Math.max(x, this.cam.x - 2);
+    var y0 = Math.max(y, this.cam.y - 2);
+    var x1 = Math.min(x + w, this.cam.x + VIEW_W + 2);
+    var y1 = Math.min(y + h, this.cam.y + VIEW_H + 2);
+    if (x1 <= x0 || y1 <= y0) return;
+    ctx.fillStyle = INK;
+    var step = 10;
+    var xx;
+    var yy;
+    for (xx = Math.floor(x0 / step) * step; xx < x1; xx += step) {
+      if (xx >= x0) ctx.fillRect(xx, y0, 1, y1 - y0);
+    }
+    for (yy = Math.floor(y0 / step) * step; yy < y1; yy += step) {
+      if (yy >= y0) ctx.fillRect(x0, yy, x1 - x0, 1);
+    }
+  };
+
+  Game.prototype.drawLaneDashes = function (ctx, center, a0, a1, vertical) {
+    ctx.fillStyle = BG;
+    var t;
+    var vis0;
+    var vis1;
+    if (vertical) {
+      vis0 = Math.max(a0, this.cam.y - 12);
+      vis1 = Math.min(a1, this.cam.y + VIEW_H + 12);
+    } else {
+      vis0 = Math.max(a0, this.cam.x - 12);
+      vis1 = Math.min(a1, this.cam.x + VIEW_W + 12);
+    }
+    for (t = Math.floor(vis0 / 12) * 12; t < vis1; t += 12) {
+      if (vertical) {
+        if (this.cell(center, t + 3) === CELL.CROSSWALK) continue;
+        ctx.fillRect(Math.floor(center) - 1, t, 2, 6);
+      } else {
+        if (this.cell(t + 3, center) === CELL.CROSSWALK) continue;
+        ctx.fillRect(t, Math.floor(center) - 1, 6, 2);
+      }
+    }
   };
 
   Game.prototype.drawZebra = function (ctx, x0, y0, x1, y1, verticalWalk) {
@@ -673,7 +775,16 @@
     ctx.fillStyle = BG;
     ctx.fillRect(mx - 1, my - 2, 3, 3);
     this.ink(ctx);
-    if (this.interruptFlash > 0) ctx.fillRect(mx - 7, my - 11, 4, 4);
+    if (this.interruptFlash > 0) {
+      ctx.fillStyle = BG;
+      ctx.fillRect(mx - 12, my - 18, 24, 6);
+      ctx.fillRect(mx - 13, my - 12, 5, 5);
+      ctx.fillRect(mx + 8, my - 12, 5, 5);
+      this.ink(ctx);
+      ctx.fillRect(mx - 2, my - 21, 3, 6);
+      ctx.fillRect(mx + 8, my - 16, 3, 3);
+      ctx.fillRect(mx - 11, my - 16, 3, 3);
+    }
   };
 
   Game.prototype.drawHud = function (ctx) {
@@ -690,6 +801,18 @@
     ctx.fillRect(meterX + 1, 4, 40, 4);
     ctx.fillStyle = BG;
     ctx.fillRect(meterX + 1, 4, Math.floor(40 * this.poop), 4);
+    if (this.interruptFlash > 0) {
+      ctx.fillStyle = BG;
+      ctx.fillRect(meterX, 3, 42, 6);
+      this.ink(ctx);
+      ctx.fillRect(meterX + 1, 4, 40, 4);
+      ctx.fillStyle = BG;
+      ctx.fillRect(meterX + 2, 4, 4, 4);
+      ctx.fillRect(meterX + 10, 4, 4, 4);
+      ctx.fillRect(meterX + 18, 4, 4, 4);
+      ctx.fillRect(meterX + 26, 4, 4, 4);
+      ctx.fillRect(meterX + 34, 4, 4, 4);
+    }
     ctx.fillStyle = BG;
     var hint = this.messageT > 0 ? this.message : this.didPoop ? "Home before work." : "Sidewalks. Crosswalks. Grass.";
     ctx.fillText(hint, 132, 2);
@@ -742,7 +865,15 @@
     this.drawHud(ctx);
   };
 
-  root.GoMomoGame = { Game: Game, BG: BG, INK: INK, CLOCK: CLOCK };
+  root.GoMomoGame = {
+    Game: Game,
+    BG: BG,
+    INK: INK,
+    CLOCK: CLOCK,
+    INTERRUPT_R: INTERRUPT_R,
+    PEEMAIL_R: PEEMAIL_R,
+    CAR_SPOOK_R: CAR_SPOOK_R,
+  };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = root.GoMomoGame;
   }
