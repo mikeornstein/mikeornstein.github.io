@@ -14,40 +14,52 @@
 html,
 body {
   margin: 0;
-  width: 100%;
   height: 100%;
-  min-height: 100dvh;
+  min-height: 100%;
   min-height: 100svh;
+  min-height: 100dvh;
   background: #1c140e;
   color: var(--ink);
   font-family: ui-rounded, "Trebuchet MS", "Segoe UI", sans-serif;
-  overflow: hidden;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: calc(12px + env(safe-area-inset-top, 0px));
-  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-  padding-left: calc(12px + env(safe-area-inset-left, 0px));
-  padding-right: calc(12px + env(safe-area-inset-right, 0px));
-  -webkit-text-size-adjust: 100%;
+  justify-content: flex-end;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-right: calc(8px + env(safe-area-inset-right, 0px));
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  padding-left: calc(8px + env(safe-area-inset-left, 0px));
+  overflow: hidden;
   overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
   touch-action: manipulation;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .device {
   position: relative;
   background: linear-gradient(180deg, #ffc44a 0%, var(--body) 55%, var(--body-dark) 100%);
   border-radius: 28px;
-  padding: 18px 54px 22px 22px;
+  padding: 18px 54px 28px 22px;
   box-shadow:
     0 0 0 3px #6a4a12,
     0 18px 40px rgba(0, 0, 0, 0.45);
   max-width: 100%;
-  flex: 0 0 auto;
+  flex-shrink: 0;
 }
 
 .crank {
@@ -80,7 +92,7 @@ body {
 
 canvas#game {
   display: block;
-  width: min(400px, calc(100vw - 96px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
+  width: min(400px, calc(100vw - 96px));
   height: auto;
   aspect-ratio: 400 / 240;
   image-rendering: pixelated;
@@ -93,7 +105,7 @@ canvas#game {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 18px;
   gap: 12px;
 }
 
@@ -144,27 +156,24 @@ canvas#game {
 
 @media (max-width: 520px) {
   .device {
-    padding: 14px 48px 16px 14px;
+    padding: 14px 48px 24px 14px;
     border-radius: 22px;
   }
 
   canvas#game {
-    max-width: calc(100vw - 76px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    max-width: calc(100vw - 76px);
   }
 }
 
-/* Phone: dock chrome low so d-pad / A·B sit in the thumb zone. */
+/* iPhone 17 / 17 Pro CSS viewport is 402×874. Chrome sits at the bottom for thumbs. */
 @media (max-width: 430px) {
   body {
-    justify-content: flex-end;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: max(16px, env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
   }
 
   .device {
-    padding: 12px 40px 12px 12px;
+    padding: 12px 40px 22px 12px;
     border-radius: 20px;
-    margin-bottom: 8px;
   }
 
   .crank {
@@ -175,7 +184,11 @@ canvas#game {
   }
 
   canvas#game {
-    width: min(400px, calc(100vw - 64px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
-    max-width: calc(100vw - 64px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    width: min(400px, calc(100vw - 64px));
+    max-width: calc(100vw - 64px);
+  }
+
+  .controls {
+    margin-top: 16px;
   }
 }

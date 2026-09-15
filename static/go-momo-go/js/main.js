@@ -9,11 +9,9 @@
   var seed = GoMomoRng.parseSeed(params.get("seed"));
   var game = new GoMomoGame.Game(seed);
   var input = new GoMomoInput.Input(document.querySelector(".device"));
-  var seedEl = document.getElementById("seed-label");
   window.GoMomo = { game: game, input: input };
 
   function syncSeed() {
-    if (seedEl) seedEl.textContent = String(game.map.seed);
     try {
       var url = new URL(window.location.href);
       url.searchParams.set("seed", String(game.map.seed));

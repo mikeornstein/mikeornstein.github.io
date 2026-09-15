@@ -6,12 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
     />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <title>Go Momo Go</title>
+    <title>Go Momo Go — web prototype</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <h1 class="visually-hidden">Go Momo Go</h1>
+
     <div class="device">
       <div class="crank" aria-hidden="true"></div>
       <div class="bezel">
@@ -19,14 +19,14 @@
       </div>
       <div class="controls">
         <div class="dpad" aria-label="D-pad">
-          <button type="button" data-dir="u">▲</button>
-          <button type="button" data-dir="l">◀</button>
-          <button type="button" data-dir="r">▶</button>
-          <button type="button" data-dir="d">▼</button>
+          <button type="button" data-dir="u" aria-label="Up">▲</button>
+          <button type="button" data-dir="l" aria-label="Left">◀</button>
+          <button type="button" data-dir="r" aria-label="Right">▶</button>
+          <button type="button" data-dir="d" aria-label="Down">▼</button>
         </div>
         <div class="faces">
-          <button type="button" class="face" data-action="restart" title="Restart this block">A</button>
-          <button type="button" class="face" data-action="new-block" title="New neighborhood">B</button>
+          <button type="button" class="face" data-action="restart" aria-label="Restart this block" title="Restart this block">A</button>
+          <button type="button" class="face" data-action="new-block" aria-label="New neighborhood" title="New neighborhood">B</button>
         </div>
       </div>
     </div>
