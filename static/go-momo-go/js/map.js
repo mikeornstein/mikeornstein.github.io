@@ -503,7 +503,19 @@
     return false;
   }
 
-  function generateNeighborhood(seed) {
+  function spawnBudget(level, rng, laneCount) {
+    var lv = Math.max(1, level | 0);
+    var bump = lv - 1;
+    return {
+      people: 6 + rng.int(0, 3) + bump * 3,
+      dogs: 2 + rng.int(0, 2) + bump * 2,
+      peemail: 5 + rng.int(0, 3) + bump * 2,
+      cars: Math.min(laneCount, 7 + bump * 2),
+    };
+  }
+
+  function generateNeighborhood(seed, level) {
+    var lv = level == null ? 1 : Math.max(1, level | 0);
     var rng = new root.GoMomoRng.Rng(seed);
     var cells = new Uint8Array(GRID_W * GRID_H);
     var vStreets = [];
@@ -532,9 +544,8 @@
     var grass = collectGrass(cells, lots, home);
     var samples = collectSamples(cells);
 
-    var peopleN = 6 + rng.int(0, 3);
-    var dogsN = 2 + rng.int(0, 2);
-    var mailN = 5 + rng.int(0, 3);
+    var laneCount = vStreets.length + hStreets.length;
+    var budget = spawnBudget(lv, rng, laneCount);
     var calmX = grass.tutorial ? grass.tutorial.cx : home.stoop.x;
     var calmY = grass.tutorial ? grass.tutorial.cy : home.stoop.y;
     function awayFromTutorial(list) {
@@ -543,9 +554,9 @@
       });
     }
     var sidewalkAway = awayFromTutorial(samples.sidewalk);
-    var people = pickBusyQuiet(sidewalkAway, rng, peopleN, 0.8);
-    var dogs = pickBusyQuiet(sidewalkAway, rng, dogsN, 0.84);
-    var peemail = pickBusyQuiet(sidewalkAway, rng, mailN, 0.78);
+    var people = pickBusyQuiet(sidewalkAway, rng, budget.people, 0.8);
+    var dogs = pickBusyQuiet(sidewalkAway, rng, budget.dogs, 0.84);
+    var peemail = pickBusyQuiet(sidewalkAway, rng, budget.peemail, 0.78);
 
     var lanes = carLanes(vStreets, hStreets);
     var ranked = lanes.slice().sort(function (a, b) {
@@ -556,7 +567,7 @@
       return Math.hypot(ax - WORLD_W / 2, ay - WORLD_H / 2) - Math.hypot(bx - WORLD_W / 2, by - WORLD_H / 2);
     });
     var cars = [];
-    var carCount = Math.min(ranked.length, 7);
+    var carCount = Math.min(ranked.length, budget.cars);
     for (var ci = 0; ci < carCount; ci++) {
       var lane = ranked[ci];
       var along = rng.next();
@@ -594,6 +605,7 @@
       blockW: BLOCK_W,
       blockH: BLOCK_H,
       seed: rng.seed,
+      level: lv,
       cells: cells,
       vStreets: vStreets,
       hStreets: hStreets,
@@ -647,6 +659,7 @@
     CELL_KIND: CELL_KIND,
     CELL: CELL_KIND,
     generateNeighborhood: generateNeighborhood,
+    spawnBudget: spawnBudget,
     get: get,
     getCell: getCell,
     isWalkableAt: isWalkableAt,
