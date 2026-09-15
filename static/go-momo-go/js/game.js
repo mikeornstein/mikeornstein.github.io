@@ -12,11 +12,17 @@
 
   var BG = "#c9d63a";
   var INK = "#2a1c12";
+  var ROAD = "#0e0c0a";
+  var WALK = "#8f8f88";
+  var WALK_LINE = "#6c6c66";
+  var CURB = "#2a2824";
 
   var WALK_SPEED = 60;
   var CAR_SPEED = 36;
   var NPC_SPEED = 18;
   var CLOCK = 75;
+  var CLOCK_STEP = 8;
+  var CLOCK_MIN = 32;
   var PACE_TIME = 2.35;
   var LEASH = 18;
   // Sidewalk is 20px. Lot-edge grass is ~20px from a sidewalk NPC and ~50px
@@ -45,15 +51,24 @@
     return m + ":" + (r < 10 ? "0" : "") + r;
   }
 
+  function clockForLevel(level) {
+    var lv = Math.max(1, level | 0);
+    return Math.max(CLOCK_MIN, CLOCK - (lv - 1) * CLOCK_STEP);
+  }
+
   function Game(seed) {
     this.debug =
       typeof location !== "undefined" && /[?&]debug=1/.test(location.search || "");
-    this.reset(seed);
+    this.originSeed = seed == null ? 20260914 : seed;
+    this.level = 1;
+    this.reset(this.originSeed, 1);
   }
 
-  Game.prototype.reset = function (seed) {
-    if (seed == null) seed = this.map ? this.map.seed : 20260914;
-    this.map = Map.generateNeighborhood(seed);
+  Game.prototype.reset = function (seed, level) {
+    if (level == null) level = this.level != null ? this.level : 1;
+    if (seed == null) seed = this.map ? this.map.seed : this.originSeed;
+    this.level = Math.max(1, level | 0);
+    this.map = Map.generateNeighborhood(seed, this.level);
     this.walker = {
       x: this.map.home.stoop.x,
       y: this.map.home.stoop.y,
@@ -81,7 +96,11 @@
     this.peemail = this.map.spawns.peemail.map(function (p) {
       return { x: p.x, y: p.y };
     });
-    this.clock = CLOCK;
+    var bump = this.level - 1;
+    this.interruptR = INTERRUPT_R + bump * 4;
+    this.peemailR = PEEMAIL_R + bump * 3;
+    this.carSpookR = CAR_SPOOK_R + bump * 8;
+    this.clock = clockForLevel(this.level);
     this.poop = 0;
     this.didPoop = false;
     this.hasLeftHome = false;
@@ -350,20 +369,32 @@
   Game.prototype.interruptNear = function () {
     var m = this.momo;
     var w = this.walker;
+    var r = this.interruptR;
+    var pr = this.peemailR;
+    var cr = this.carSpookR;
     for (var i = 0; i < this.people.length; i++) {
-      if (dist(m, this.people[i]) < INTERRUPT_R || dist(w, this.people[i]) < INTERRUPT_R) return "person";
+      if (dist(m, this.people[i]) < r || dist(w, this.people[i]) < r) return "person";
     }
     for (var j = 0; j < this.dogs.length; j++) {
-      if (dist(m, this.dogs[j]) < INTERRUPT_R || dist(w, this.dogs[j]) < INTERRUPT_R) return "dog";
+      if (dist(m, this.dogs[j]) < r || dist(w, this.dogs[j]) < r) return "dog";
     }
     for (var k = 0; k < this.peemail.length; k++) {
-      if (dist(m, this.peemail[k]) < PEEMAIL_R || dist(w, this.peemail[k]) < PEEMAIL_R) return "pee-mail";
+      if (dist(m, this.peemail[k]) < pr || dist(w, this.peemail[k]) < pr) return "pee-mail";
     }
     for (var c = 0; c < this.cars.length; c++) {
       var car = this.cars[c];
-      if (this.carClearance(m, car) < CAR_SPOOK_R || this.carClearance(w, car) < CAR_SPOOK_R) return "car";
+      if (this.carClearance(m, car) < cr || this.carClearance(w, car) < cr) return "car";
     }
     return null;
+  };
+
+  Game.prototype.advanceLevel = function () {
+    this.reset((this.map.seed + 1) >>> 0, this.level + 1);
+  };
+
+  Game.prototype.startOver = function (freshNeighborhood) {
+    if (freshNeighborhood) this.originSeed = (this.map.seed + 1) >>> 0;
+    this.reset(this.originSeed, 1);
   };
 
   Game.prototype.applyInterrupt = function (kind) {
@@ -432,17 +463,23 @@
     else this.interruptKind = null;
 
     if (this.state !== "play") {
-      if (input.consumeRestart()) this.reset(this.map.seed);
-      if (input.consumeNewBlock()) this.reset((this.map.seed + 1) >>> 0);
+      if (input.consumeRestart()) {
+        if (this.state === "won") this.advanceLevel();
+        else this.startOver(false);
+      }
+      if (input.consumeNewBlock()) {
+        if (this.state === "won") this.advanceLevel();
+        else this.startOver(true);
+      }
       return;
     }
 
     if (input.consumeRestart()) {
-      this.reset(this.map.seed);
+      this.reset(this.map.seed, this.level);
       return;
     }
     if (input.consumeNewBlock()) {
-      this.reset((this.map.seed + 1) >>> 0);
+      this.reset((this.map.seed + 1) >>> 0, this.level);
       return;
     }
 
@@ -479,23 +516,6 @@
       return ctx.createPattern(c, "repeat");
     }
     this._pats = {
-      street: pat([
-        [0, 0],
-        [1, 0],
-        [3, 0],
-        [0, 1],
-        [2, 1],
-        [1, 2],
-        [3, 2],
-        [0, 3],
-        [2, 3],
-        [3, 3],
-      ]),
-      walk: pat([
-        [0, 0],
-        [1, 1],
-        [3, 3],
-      ]),
       grass: pat(
         [
           [1, 0, 1, 2],
@@ -552,7 +572,7 @@
     var worldW = this.map.worldW;
     var worldH = this.map.worldH;
 
-    ctx.fillStyle = pats.walk;
+    ctx.fillStyle = WALK;
     for (i = 0; i < this.map.vStreets.length; i++) {
       var vs = this.map.vStreets[i];
       ctx.fillRect(vs.walkL0, 0, vs.walkL1 - vs.walkL0, worldH);
@@ -568,7 +588,7 @@
       this.drawPavers(ctx, 0, hs.walkB0, worldW, hs.walkB1 - hs.walkB0);
     }
 
-    ctx.fillStyle = pats.street;
+    ctx.fillStyle = ROAD;
     for (i = 0; i < this.map.vStreets.length; i++) {
       vs = this.map.vStreets[i];
       ctx.fillRect(vs.asphalt0, 0, vs.asphalt1 - vs.asphalt0, worldH);
@@ -578,7 +598,7 @@
       ctx.fillRect(0, hs.asphalt0, worldW, hs.asphalt1 - hs.asphalt0);
     }
 
-    this.ink(ctx);
+    ctx.fillStyle = CURB;
     for (i = 0; i < this.map.vStreets.length; i++) {
       vs = this.map.vStreets[i];
       ctx.fillRect(vs.asphalt0, 0, 1, worldH);
@@ -656,7 +676,7 @@
     var x1 = Math.min(x + w, this.cam.x + VIEW_W + 2);
     var y1 = Math.min(y + h, this.cam.y + VIEW_H + 2);
     if (x1 <= x0 || y1 <= y0) return;
-    ctx.fillStyle = INK;
+    ctx.fillStyle = WALK_LINE;
     var step = 10;
     var xx;
     var yy;
@@ -794,8 +814,9 @@
     ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
     ctx.textBaseline = "top";
     ctx.fillText(formatClock(this.clock), 4, 2);
-    ctx.fillText(this.didPoop ? "POOP OK" : "POOP", 48, 2);
-    var meterX = 84;
+    ctx.fillText("L" + this.level, 36, 2);
+    ctx.fillText(this.didPoop ? "POOP OK" : "POOP", 56, 2);
+    var meterX = 96;
     ctx.fillRect(meterX, 3, 42, 6);
     ctx.fillStyle = INK;
     ctx.fillRect(meterX + 1, 4, 40, 4);
@@ -815,7 +836,7 @@
     }
     ctx.fillStyle = BG;
     var hint = this.messageT > 0 ? this.message : this.didPoop ? "Home before work." : "Sidewalks. Crosswalks. Grass.";
-    ctx.fillText(hint, 132, 2);
+    ctx.fillText(hint, 144, 2);
 
     if (this.state !== "play") {
       ctx.fillStyle = BG;
@@ -826,8 +847,13 @@
       ctx.font = "13px ui-monospace, SFMono-Regular, Menlo, monospace";
       ctx.fillText(this.endCopy, 62, 90);
       ctx.font = "10px ui-monospace, SFMono-Regular, Menlo, monospace";
-      ctx.fillText(this.state === "won" ? "Enter / A — same block" : "Enter / A — try this block", 62, 118);
-      ctx.fillText("N / B — new neighborhood", 62, 134);
+      if (this.state === "won") {
+        ctx.fillText("Enter / A — next level (" + (this.level + 1) + ")", 62, 118);
+        ctx.fillText("N / B — next neighborhood", 62, 134);
+      } else {
+        ctx.fillText("Enter / A — start over (level 1)", 62, 118);
+        ctx.fillText("N / B — new neighborhood (level 1)", 62, 134);
+      }
     }
   };
 
@@ -869,7 +895,12 @@
     Game: Game,
     BG: BG,
     INK: INK,
+    ROAD: ROAD,
+    WALK: WALK,
     CLOCK: CLOCK,
+    CLOCK_STEP: CLOCK_STEP,
+    CLOCK_MIN: CLOCK_MIN,
+    clockForLevel: clockForLevel,
     INTERRUPT_R: INTERRUPT_R,
     PEEMAIL_R: PEEMAIL_R,
     CAR_SPOOK_R: CAR_SPOOK_R,
