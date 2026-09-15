@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Go Momo Go</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="device">
+      <div class="crank" aria-hidden="true"></div>
+      <div class="bezel">
+        <canvas id="game" width="400" height="240" tabindex="0" role="img" aria-label="Go Momo Go 400 by 240 game"></canvas>
+      </div>
+      <div class="controls">
+        <div class="dpad" aria-label="D-pad">
+          <button type="button" data-dir="u">▲</button>
+          <button type="button" data-dir="l">◀</button>
+          <button type="button" data-dir="r">▶</button>
+          <button type="button" data-dir="d">▼</button>
+        </div>
+        <div class="faces">
+          <button type="button" class="face" data-action="restart" title="Restart this block">A</button>
+          <button type="button" class="face" data-action="new-block" title="New neighborhood">B</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/rng.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

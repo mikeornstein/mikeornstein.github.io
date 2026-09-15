@@ -1,0 +1,181 @@
+:root {
+  --bg: #c9d63a;
+  --ink: #2a1c12;
+  --body: #f3b42e;
+  --body-dark: #d89a1c;
+  --bezel: #1a140f;
+  --plastic: #2a1c12;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  min-height: 100svh;
+  background: #1c140e;
+  color: var(--ink);
+  font-family: ui-rounded, "Trebuchet MS", "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(12px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  padding-left: calc(12px + env(safe-area-inset-left, 0px));
+  padding-right: calc(12px + env(safe-area-inset-right, 0px));
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+}
+
+.device {
+  position: relative;
+  background: linear-gradient(180deg, #ffc44a 0%, var(--body) 55%, var(--body-dark) 100%);
+  border-radius: 28px;
+  padding: 18px 54px 22px 22px;
+  box-shadow:
+    0 0 0 3px #6a4a12,
+    0 18px 40px rgba(0, 0, 0, 0.45);
+  max-width: 100%;
+  flex: 0 0 auto;
+}
+
+.crank {
+  position: absolute;
+  right: 10px;
+  top: 72px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #6d5340, var(--plastic));
+  box-shadow: inset 0 0 0 3px #1a140f, 0 2px 0 #0006;
+}
+
+.crank::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c9d63a;
+  top: 6px;
+  left: 13px;
+}
+
+.bezel {
+  background: var(--bezel);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+canvas#game {
+  display: block;
+  width: min(400px, calc(100vw - 96px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
+  height: auto;
+  aspect-ratio: 400 / 240;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background: var(--bg);
+  outline: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  gap: 12px;
+}
+
+.dpad {
+  display: grid;
+  grid-template-columns: 36px 36px 36px;
+  grid-template-rows: 36px 36px 36px;
+  gap: 2px;
+}
+
+.dpad button {
+  border: 0;
+  background: var(--plastic);
+  color: var(--bg);
+  border-radius: 6px;
+  font-size: 14px;
+  touch-action: none;
+  user-select: none;
+}
+
+.dpad button:nth-child(1) { grid-column: 2; grid-row: 1; }
+.dpad button:nth-child(2) { grid-column: 1; grid-row: 2; }
+.dpad button:nth-child(3) { grid-column: 3; grid-row: 2; }
+.dpad button:nth-child(4) { grid-column: 2; grid-row: 3; }
+
+.dpad button.is-down,
+.face.is-down {
+  transform: translateY(1px);
+  filter: brightness(1.25);
+}
+
+.faces {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.face {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--plastic);
+  color: var(--bg);
+  font-weight: 700;
+  touch-action: manipulation;
+}
+
+@media (max-width: 520px) {
+  .device {
+    padding: 14px 48px 16px 14px;
+    border-radius: 22px;
+  }
+
+  canvas#game {
+    max-width: calc(100vw - 76px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+  }
+}
+
+/* Phone: dock chrome low so d-pad / A·B sit in the thumb zone. */
+@media (max-width: 430px) {
+  body {
+    justify-content: flex-end;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  }
+
+  .device {
+    padding: 12px 40px 12px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+
+  .crank {
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    top: 64px;
+  }
+
+  canvas#game {
+    width: min(400px, calc(100vw - 64px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
+    max-width: calc(100vw - 64px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+  }
+}
