@@ -222,7 +222,7 @@
     }
   }
 
-  function placeHouseFacing(local, face, rng, buildings, origin) {
+  function placeHouseFacing(local, face, rng, buildings, origin, lotIndex) {
     var pair = rng.int(0, 2);
     var c0 = pair === 2 ? 2 : pair;
     var c1 = c0 + 1;
@@ -268,6 +268,9 @@
       w: CELL * 2,
       h: CELL * 2,
       roof: rng.chance(0.75),
+      variant: rng.int(0, 3),
+      face: face,
+      lotIndex: lotIndex,
     });
   }
 
@@ -293,7 +296,7 @@
     }
   }
 
-  function layoutHome(local, buildings, origin) {
+  function layoutHome(local, buildings, origin, lotIndex) {
     fencePerimeter(local);
     var c, r;
     for (c = 1; c <= 2; c++) {
@@ -312,6 +315,9 @@
       h: CELL * 3,
       roof: true,
       home: true,
+      variant: 0,
+      face: "s",
+      lotIndex: lotIndex,
     });
     return {
       building: { x: px(origin.c + 1), y: px(origin.r + 2), w: CELL * 2, h: CELL * 3 },
@@ -325,13 +331,13 @@
     };
   }
 
-  function layoutLot(local, lot, rng, buildings) {
+  function layoutLot(local, lot, rng, buildings, lotIndex) {
     var origin = { c: lot.c0, r: lot.r0 };
     var c, r;
     for (r = 0; r < BLOCK_H; r++) {
       for (c = 0; c < BLOCK_W; c++) localSet(local, c, r, CELL_KIND.YARD);
     }
-    if (lot.isHome) return layoutHome(local, buildings, origin);
+    if (lot.isHome) return layoutHome(local, buildings, origin, lotIndex);
 
     fencePerimeter(local);
     var nHouses;
@@ -342,8 +348,8 @@
 
     if (nHouses >= 1) {
       var first = rng.chance(0.5) ? "n" : "s";
-      placeHouseFacing(local, first, rng, buildings, origin);
-      if (nHouses >= 2) placeHouseFacing(local, first === "n" ? "s" : "n", rng, buildings, origin);
+      placeHouseFacing(local, first, rng, buildings, origin, lotIndex);
+      if (nHouses >= 2) placeHouseFacing(local, first === "n" ? "s" : "n", rng, buildings, origin, lotIndex);
     } else {
       punchGrassOpening(local, rng);
     }
@@ -506,12 +512,138 @@
   function spawnBudget(level, rng, laneCount) {
     var lv = Math.max(1, level | 0);
     var bump = lv - 1;
+    var dogs = 2 + rng.int(0, 2) + bump * 2;
+    var mimis = 1 + rng.int(0, 2) + bump;
     return {
-      people: 6 + rng.int(0, 3) + bump * 3,
-      dogs: 2 + rng.int(0, 2) + bump * 2,
+      dogs: dogs,
+      mimis: mimis,
+      people: dogs + mimis,
       peemail: 5 + rng.int(0, 3) + bump * 2,
       cars: Math.min(laneCount, 7 + bump * 2),
     };
+  }
+
+  function sidewalkRing(lot, vStreets, hStreets) {
+    var west = vStreets[lot.col];
+    var east = vStreets[lot.col + 1];
+    var north = hStreets[lot.row];
+    var south = hStreets[lot.row + 1];
+    var westX = (west.walkR0 + west.walkR1) / 2;
+    var eastX = (east.walkL0 + east.walkL1) / 2;
+    var northY = (north.walkB0 + north.walkB1) / 2;
+    var southY = (south.walkT0 + south.walkT1) / 2;
+    return {
+      westX: westX,
+      eastX: eastX,
+      northY: northY,
+      southY: southY,
+    };
+  }
+
+  function doorPoint(building, ring) {
+    var cx = building.x + building.w / 2;
+    if (building.face === "n") return { x: cx, y: ring.northY };
+    return { x: cx, y: ring.southY };
+  }
+
+  function loopWaypoints(building, door, ring) {
+    if (building.face === "n") {
+      return [
+        door,
+        { x: ring.eastX, y: ring.northY },
+        { x: ring.eastX, y: ring.southY },
+        { x: ring.westX, y: ring.southY },
+        { x: ring.westX, y: ring.northY },
+        { x: door.x, y: door.y },
+      ];
+    }
+    return [
+      door,
+      { x: ring.eastX, y: ring.southY },
+      { x: ring.eastX, y: ring.northY },
+      { x: ring.westX, y: ring.northY },
+      { x: ring.westX, y: ring.southY },
+      { x: door.x, y: door.y },
+    ];
+  }
+
+  function householdPads(buildings, lots, vStreets, hStreets, calmX, calmY) {
+    var pads = [];
+    var i;
+    for (i = 0; i < buildings.length; i++) {
+      var b = buildings[i];
+      if (b.home) continue;
+      var lot = lots[b.lotIndex];
+      if (!lot) continue;
+      var ring = sidewalkRing(lot, vStreets, hStreets);
+      var door = doorPoint(b, ring);
+      if (Math.hypot(door.x - calmX, door.y - calmY) <= CELL * 2.5) continue;
+      pads.push({
+        building: b,
+        lot: lot,
+        door: door,
+        waypoints: loopWaypoints(b, door, ring),
+        density: lot.density,
+      });
+    }
+    pads.sort(function (a, b) {
+      return b.density - a.density;
+    });
+    return pads;
+  }
+
+  function pickPad(pads, rng) {
+    if (!pads.length) return null;
+    var nearCut = Math.max(1, Math.ceil(pads.length * 0.55));
+    var pool = rng.chance(0.8) ? pads.slice(0, nearCut) : pads;
+    return rng.pick(pool);
+  }
+
+  function placeOnLoop(pad, rng) {
+    var wps = pad.waypoints;
+    var outWalking = rng.chance(0.55);
+    var wp = outWalking ? 1 + rng.int(0, Math.max(0, wps.length - 2)) : 0;
+    var at = wps[wp];
+    return {
+      x: at.x,
+      y: at.y,
+      wp: wp,
+      wait: outWalking ? 0 : rng.next() * 2.5,
+      dropT: 2.5 + rng.next() * 4,
+      waypoints: wps,
+      homeX: pad.door.x,
+      homeY: pad.door.y,
+      density: pad.density,
+    };
+  }
+
+  function spawnHouseholds(pads, rng, budget) {
+    var people = [];
+    var dogs = [];
+    var i;
+    var nWalk = budget.dogs;
+    for (i = 0; i < nWalk; i++) {
+      var pad = pickPad(pads, rng);
+      if (!pad) break;
+      var placed = placeOnLoop(pad, rng);
+      placed.kind = "person";
+      people.push(placed);
+      dogs.push({
+        x: placed.x + (rng.chance(0.5) ? -8 : 8),
+        y: placed.y + 2,
+        ownerIndex: people.length - 1,
+        density: placed.density,
+      });
+    }
+    var nMimi = budget.mimis;
+    for (i = 0; i < nMimi; i++) {
+      pad = pickPad(pads, rng);
+      if (!pad) break;
+      placed = placeOnLoop(pad, rng);
+      placed.kind = "mimi";
+      people.push(placed);
+    }
+    return { people: people, dogs: dogs };
   }
 
   function generateNeighborhood(seed, level) {
@@ -533,7 +665,7 @@
     var homeLot = null;
     for (i = 0; i < lots.length; i++) {
       var local = new Uint8Array(BLOCK_W * BLOCK_H);
-      var placed = layoutLot(local, lots[i], rng, buildings);
+      var placed = layoutLot(local, lots[i], rng, buildings, i);
       stampLocal(cells, lots[i], local);
       if (lots[i].isHome) {
         home = placed;
@@ -554,8 +686,10 @@
       });
     }
     var sidewalkAway = awayFromTutorial(samples.sidewalk);
-    var people = pickBusyQuiet(sidewalkAway, rng, budget.people, 0.8);
-    var dogs = pickBusyQuiet(sidewalkAway, rng, budget.dogs, 0.84);
+    var pads = householdPads(buildings, lots, vStreets, hStreets, calmX, calmY);
+    var households = spawnHouseholds(pads, rng, budget);
+    var people = households.people;
+    var dogs = households.dogs;
     var peemail = pickBusyQuiet(sidewalkAway, rng, budget.peemail, 0.78);
 
     var lanes = carLanes(vStreets, hStreets);
@@ -668,6 +802,8 @@
     sidewalksBothSides: sidewalksBothSides,
     homeContainsCenter: homeContainsCenter,
     lotHasKind: lotHasKind,
+    sidewalkRing: sidewalkRing,
+    householdPads: householdPads,
     idx: idx,
     cellOf: cellOf,
   };
