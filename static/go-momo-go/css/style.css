@@ -127,7 +127,8 @@ canvas#game {
 }
 
 .dpad button,
-.face {
+.face,
+.menu-btn {
   position: relative;
   display: flex;
   align-items: center;
@@ -149,7 +150,8 @@ canvas#game {
 }
 
 .dpad button::before,
-.face::before {
+.face::before,
+.menu-btn::before {
   content: "";
   display: block;
   pointer-events: none;
@@ -194,9 +196,30 @@ canvas#game {
 .dpad button:nth-child(4) { grid-column: 2; grid-row: 3; }
 
 .dpad button.is-down,
-.face.is-down {
+.face.is-down,
+.menu-btn.is-down {
   transform: translateY(1px);
   filter: brightness(1.25);
+}
+
+.menu-btn {
+  width: 52px;
+  height: 44px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.menu-btn::before {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+  background: linear-gradient(
+    to right,
+    var(--bg) 0 5px,
+    transparent 5px 11px,
+    var(--bg) 11px 16px
+  );
 }
 
 .faces {

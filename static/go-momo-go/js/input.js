@@ -26,6 +26,7 @@
     this.held = { u: false, d: false, l: false, r: false };
     this.restartQueued = false;
     this.newBlockQueued = false;
+    this.menuQueued = false;
     this._onKeyDown = this._onKeyDown.bind(this);
     this._onKeyUp = this._onKeyUp.bind(this);
     window.addEventListener("keydown", this._onKeyDown, { passive: false });
@@ -58,6 +59,10 @@
     }
     if (e.key === "n" || e.key === "N" || e.key === "b" || e.key === "B") {
       this.newBlockQueued = true;
+    }
+    if (e.key === "Escape" || e.key === "p" || e.key === "P") {
+      this.menuQueued = true;
+      e.preventDefault();
     }
   };
 
@@ -139,6 +144,9 @@
     bindTap(rootEl.querySelector("[data-action=new-block]"), function () {
       self.newBlockQueued = true;
     });
+    bindTap(rootEl.querySelector("[data-action=menu]"), function () {
+      self.menuQueued = true;
+    });
   };
 
   Input.prototype.axis = function () {
@@ -160,6 +168,12 @@
   Input.prototype.consumeNewBlock = function () {
     var v = this.newBlockQueued;
     this.newBlockQueued = false;
+    return v;
+  };
+
+  Input.prototype.consumeMenu = function () {
+    var v = this.menuQueued;
+    this.menuQueued = false;
     return v;
   };
 

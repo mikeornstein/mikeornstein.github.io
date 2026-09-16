@@ -7,6 +7,7 @@
   var Map = root.GoMomoMap;
   var Dither = root.GoMomoDither;
   var Art = root.GoMomoArt;
+  var Font = root.GoMomoFont;
   var CELL = Map.CELL;
   var VIEW_W = Map.VIEW_W;
   var VIEW_H = Map.VIEW_H;
@@ -29,7 +30,14 @@
     house: "Home before poop. Accident inside.",
     splashTitle: "Go Momo Go",
     splashSub: "Poop. Then home.",
+    splashStart: "A / B  -  start day 1",
+    pause: "PAUSED",
+    resume: "A  Resume",
+    restartDay: "B  Restart at day 1",
   };
+  // Lime band for the procedural fallback splash only. Art Director splash.png
+  // is blitted full-canvas (title already in the bitmap).
+  var SPLASH_TITLE_BAND = 102;
 
   var CAR_W_X = 20;
   var CAR_H_X = 12;
@@ -685,21 +693,29 @@
     this.noteBestDay();
   };
 
+  Game.prototype.menuPressed = function (input) {
+    return input.consumeMenu ? input.consumeMenu() : false;
+  };
+
   Game.prototype.update = function (dt, input) {
-    this.time += dt;
-    if (this.messageT > 0) this.messageT -= dt;
-    if (this.interruptFlash > 0) this.interruptFlash -= dt;
-    else {
-      this.interruptKind = null;
-      this.interruptTarget = null;
+    if (this.state === "splash") {
+      this.time += dt;
+      if (input.consumeRestart() || input.consumeNewBlock() || this.menuPressed(input)) {
+        this.state = "play";
+      }
+      return;
     }
 
-    if (this.state === "splash") {
-      if (input.consumeRestart() || input.consumeNewBlock()) this.state = "play";
+    if (this.state === "paused") {
+      var restartDay = input.consumeNewBlock();
+      var resume = input.consumeRestart() || this.menuPressed(input);
+      if (restartDay) this.startOver(false);
+      else if (resume) this.state = "play";
       return;
     }
 
     if (this.state !== "play") {
+      this.menuPressed(input);
       if (input.consumeRestart()) {
         if (this.state === "won") this.advanceLevel();
         else this.startOver(false);
@@ -711,10 +727,22 @@
       return;
     }
 
-    // A/B (Enter/N and face buttons) are splash + end-screen only. Discard so a
-    // play-frame press cannot leak into the next overlay.
+    // A/B (Enter/N and face buttons) are splash + pause + end-screen only.
+    // Discard so a play-frame press cannot leak into the next overlay.
     input.consumeRestart();
     input.consumeNewBlock();
+    if (this.menuPressed(input)) {
+      this.state = "paused";
+      return;
+    }
+
+    this.time += dt;
+    if (this.messageT > 0) this.messageT -= dt;
+    if (this.interruptFlash > 0) this.interruptFlash -= dt;
+    else {
+      this.interruptKind = null;
+      this.interruptTarget = null;
+    }
 
     var axis = input.axis();
     var walk = this.updateWalker(dt, axis);
@@ -1025,20 +1053,22 @@
     ctx.fillRect(mx - 1, my - 4, 3, 2);
   };
 
-  Game.prototype.drawEndCopy = function (ctx, text, x, y) {
+  Game.prototype.drawEndCopy = function (ctx, text, x, y, scale) {
+    scale = scale || 2;
     var raw = String(text || "");
     var parts = raw.split(". ");
-    if (parts.length < 2) {
-      ctx.fillText(raw, x, y);
-      return 1;
-    }
+    var lh = Font.H * scale + 4;
     var i;
+    if (parts.length < 2) {
+      Font.draw(ctx, raw, x, y, { scale: scale, color: BG });
+      return { lines: 1, h: Font.H * scale };
+    }
     for (i = 0; i < parts.length; i++) {
       var line = parts[i];
       if (i < parts.length - 1 && line.charAt(line.length - 1) !== ".") line += ".";
-      ctx.fillText(line, x, y + i * 16);
+      Font.draw(ctx, line, x, y + i * lh, { scale: scale, color: BG });
     }
-    return parts.length;
+    return { lines: parts.length, h: parts.length * lh - 4 };
   };
 
   Game.prototype.drawCar = function (ctx, c) {
@@ -1176,55 +1206,67 @@
 
   Game.prototype.drawHud = function (ctx) {
     this.ink(ctx);
-    ctx.fillRect(0, 0, VIEW_W, 12);
+    ctx.fillRect(0, 0, VIEW_W, 13);
+    var x = 4;
+    var y = 3;
+    Font.draw(ctx, formatClock(this.clock), x, y, { color: BG });
+    x += Font.measure(formatClock(this.clock)).w + 8;
+    Font.draw(ctx, this.dayLabel(), x, y, { color: BG });
+    x += Font.measure(this.dayLabel()).w + 8;
+    var poopLabel = this.didPoop ? "POOP OK" : "POOP";
+    Font.draw(ctx, poopLabel, x, y, { color: BG });
+    x += Font.measure(poopLabel).w + 8;
+    var meterX = x;
     ctx.fillStyle = BG;
-    ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
-    ctx.textBaseline = "top";
-    ctx.fillText(formatClock(this.clock), 4, 2);
-    ctx.fillText(this.dayLabel(), 36, 2);
-    ctx.fillText(this.didPoop ? "POOP OK" : "POOP", 58, 2);
-    var meterX = 96;
-    ctx.fillRect(meterX, 3, 42, 6);
+    ctx.fillRect(meterX, 3, 42, 7);
     ctx.fillStyle = INK;
-    ctx.fillRect(meterX + 1, 4, 40, 4);
+    ctx.fillRect(meterX + 1, 4, 40, 5);
     ctx.fillStyle = BG;
-    ctx.fillRect(meterX + 1, 4, Math.floor(40 * this.poop), 4);
+    ctx.fillRect(meterX + 1, 4, Math.floor(40 * this.poop), 5);
     if (this.interruptFlash > 0) {
       ctx.fillStyle = BG;
-      ctx.fillRect(meterX, 3, 42, 6);
+      ctx.fillRect(meterX, 3, 42, 7);
       this.ink(ctx);
-      ctx.fillRect(meterX + 1, 4, 40, 4);
+      ctx.fillRect(meterX + 1, 4, 40, 5);
       ctx.fillStyle = BG;
-      ctx.fillRect(meterX + 2, 4, 4, 4);
-      ctx.fillRect(meterX + 10, 4, 4, 4);
-      ctx.fillRect(meterX + 18, 4, 4, 4);
-      ctx.fillRect(meterX + 26, 4, 4, 4);
-      ctx.fillRect(meterX + 34, 4, 4, 4);
+      ctx.fillRect(meterX + 2, 4, 4, 5);
+      ctx.fillRect(meterX + 10, 4, 4, 5);
+      ctx.fillRect(meterX + 18, 4, 4, 5);
+      ctx.fillRect(meterX + 26, 4, 4, 5);
+      ctx.fillRect(meterX + 34, 4, 4, 5);
     }
-    ctx.fillStyle = BG;
     var hint = this.messageT > 0 ? this.message : this.didPoop ? "Home before work." : "Sidewalks. Crosswalks. Grass.";
-    ctx.fillText(hint, 144, 2);
+    Font.draw(ctx, hint, meterX + 48, y, { color: BG });
+  };
 
-    if (this.state !== "play" && this.state !== "splash") {
-      ctx.fillStyle = BG;
-      ctx.fillRect(48, 58, 304, 124);
-      this.ink(ctx);
-      ctx.fillRect(50, 60, 300, 120);
-      ctx.fillStyle = BG;
-      ctx.font = "13px ui-monospace, SFMono-Regular, Menlo, monospace";
-      var copyLines = this.drawEndCopy(ctx, this.endCopy, 62, 76);
-      ctx.font = "10px ui-monospace, SFMono-Regular, Menlo, monospace";
-      var hintY = 76 + copyLines * 16 + 8;
-      ctx.fillText("Day " + this.level + "  ·  best D" + this.bestDay, 62, hintY);
-      hintY += 14;
-      if (this.state === "won") {
-        ctx.fillText("Enter / A — next day (" + (this.level + 1) + ")", 62, hintY);
-        ctx.fillText("N / B — next neighborhood", 62, hintY + 16);
-      } else {
-        ctx.fillText("Streak over. Enter / A — day 1", 62, hintY);
-        ctx.fillText("N / B — new neighborhood (day 1)", 62, hintY + 16);
-      }
+  Game.prototype.drawEndOverlay = function (ctx) {
+    if (this.state !== "won" && this.state !== "lost") return;
+    ctx.fillStyle = BG;
+    ctx.fillRect(48, 58, 304, 124);
+    this.ink(ctx);
+    ctx.fillRect(50, 60, 300, 120);
+    var copy = this.drawEndCopy(ctx, this.endCopy, 62, 76, 2);
+    var hintY = 76 + copy.h + 10;
+    Font.draw(ctx, "Day " + this.level + " - best D" + this.bestDay, 62, hintY, { color: BG });
+    hintY += Font.H + 6;
+    if (this.state === "won") {
+      Font.draw(ctx, "Enter / A - next day (" + (this.level + 1) + ")", 62, hintY, { color: BG });
+      Font.draw(ctx, "N / B - next neighborhood", 62, hintY + Font.H + 5, { color: BG });
+    } else {
+      Font.draw(ctx, "Streak over. Enter / A - day 1", 62, hintY, { color: BG });
+      Font.draw(ctx, "N / B - new neighborhood (day 1)", 62, hintY + Font.H + 5, { color: BG });
     }
+  };
+
+  Game.prototype.drawPauseOverlay = function (ctx) {
+    if (this.state !== "paused") return;
+    ctx.fillStyle = BG;
+    ctx.fillRect(48, 58, 304, 124);
+    this.ink(ctx);
+    ctx.fillRect(50, 60, 300, 120);
+    Font.draw(ctx, COPY.pause, 200, 78, { scale: 2, color: BG, align: "center" });
+    Font.draw(ctx, COPY.resume, 62, 116, { color: BG });
+    Font.draw(ctx, COPY.restartDay, 62, 132, { color: BG });
   };
 
   Game.prototype.drawDebug = function (ctx) {
@@ -1245,30 +1287,27 @@
     }
   };
 
-  Game.prototype.drawSplash = function (ctx) {
+  Game.prototype.drawSplashScene = function (ctx) {
     if (this.art && this.art.tryBlitSplash(ctx)) {
-      ctx.fillStyle = BG;
-      ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
-      ctx.textBaseline = "top";
-      ctx.fillText("A / B", 8, 226);
+      this._splashFallback = false;
       return;
     }
+    if (this.art && !this.art.ready) {
+      this._splashFallback = false;
+      ctx.fillStyle = BG;
+      ctx.fillRect(0, 0, VIEW_W, VIEW_H);
+      return;
+    }
+    this._splashFallback = true;
     ctx.fillStyle = BG;
-    ctx.fillRect(36, 28, 328, 168);
+    ctx.fillRect(0, 0, VIEW_W, VIEW_H);
     this.ink(ctx);
-    ctx.fillRect(38, 30, 324, 164);
-    ctx.fillStyle = BG;
-    ctx.font = "22px ui-monospace, SFMono-Regular, Menlo, monospace";
-    ctx.textBaseline = "top";
-    ctx.fillText(COPY.splashTitle, 78, 46);
-    ctx.font = "12px ui-monospace, SFMono-Regular, Menlo, monospace";
-    ctx.fillText(COPY.splashSub, 78, 78);
-    ctx.font = "10px ui-monospace, SFMono-Regular, Menlo, monospace";
-    ctx.fillText("A / B  —  start day 1", 78, 160);
-    ctx.fillText("Best  D" + this.bestDay, 78, 176);
+    ctx.fillRect(0, 148, VIEW_W, 2);
+    var i;
+    for (i = 0; i < VIEW_W; i += 6) ctx.fillRect(i, 128, 2, 20);
 
     var mx = 92;
-    var my = 122;
+    var my = 142;
     ctx.fillStyle = BG;
     ctx.fillRect(mx - 7, my - 9, 14, 13);
     this.ink(ctx);
@@ -1281,14 +1320,29 @@
     this.ink(ctx);
     ctx.beginPath();
     ctx.moveTo(mx + 8, my - 2);
-    ctx.lineTo(140, 118);
+    ctx.lineTo(140, 138);
     ctx.stroke();
     ctx.fillStyle = BG;
-    ctx.fillRect(136, 108, 10, 16);
+    ctx.fillRect(136, 128, 10, 16);
     this.ink(ctx);
-    ctx.fillRect(137, 109, 8, 14);
+    ctx.fillRect(137, 129, 8, 14);
     ctx.fillStyle = BG;
-    ctx.fillRect(139, 111, 3, 3);
+    ctx.fillRect(139, 131, 3, 3);
+  };
+
+  Game.prototype.drawSplashUi = function (ctx) {
+    if (this._splashFallback) {
+      ctx.fillStyle = BG;
+      ctx.fillRect(0, 0, VIEW_W, SPLASH_TITLE_BAND);
+      Font.draw(ctx, COPY.splashTitle, 200, 24, { scale: 2, color: INK, align: "center" });
+      var tw = Font.measure(COPY.splashTitle, 2).w;
+      this.ink(ctx);
+      ctx.fillRect(Math.round(200 - tw / 2), 24 + Font.H * 2 + 3, tw, 1);
+      Font.draw(ctx, COPY.splashSub, 200, 46, { scale: 1, color: INK, align: "center" });
+      Font.draw(ctx, "tmp splash", 200, 62, { color: INK, align: "center" });
+    }
+    Font.draw(ctx, COPY.splashStart, 8, 222, { color: INK, bg: BG, pad: 2 });
+    Font.draw(ctx, "Best  D" + this.bestDay, VIEW_W - 8, 222, { color: INK, bg: BG, pad: 2, align: "right" });
   };
 
   Game.prototype.ensureWorld = function () {
@@ -1302,12 +1356,23 @@
     return this._worldCtx;
   };
 
+  Game.prototype.drawUi = function (ctx) {
+    ctx.imageSmoothingEnabled = false;
+    if (this.state === "splash") {
+      this.drawSplashUi(ctx);
+      return;
+    }
+    this.drawHud(ctx);
+    this.drawPauseOverlay(ctx);
+    this.drawEndOverlay(ctx);
+  };
+
   Game.prototype.draw = function (ctx) {
     ctx.imageSmoothingEnabled = false;
     var g = this.ensureWorld();
     g.imageSmoothingEnabled = false;
     if (this.state === "splash") {
-      this.drawSplash(g);
+      this.drawSplashScene(g);
     } else {
       g.save();
       g.beginPath();
@@ -1320,7 +1385,6 @@
       this.drawActors(g);
       this.drawDebug(g);
       g.restore();
-      this.drawHud(g);
     }
     if (Dither) {
       var img = g.getImageData(0, 0, VIEW_W, VIEW_H);
@@ -1329,6 +1393,7 @@
     } else {
       ctx.drawImage(this._world, 0, 0);
     }
+    this.drawUi(ctx);
   };
 
   root.GoMomoGame = {
@@ -1337,6 +1402,7 @@
     INK: INK,
     COPY: COPY,
     PRE: PRE,
+    SPLASH_TITLE_BAND: SPLASH_TITLE_BAND,
     CLOCK: CLOCK,
     CLOCK_STEP: CLOCK_STEP,
     CLOCK_MIN: CLOCK_MIN,
