@@ -1,138 +1,195 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Watch Atlas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root { --ink:#0b0b0c; --paper:#f3ece1; --gold:#c4a574; --mute:#8a8074; --line:rgba(243,236,225,.12); }
-    * { box-sizing: border-box; }
-    body { margin:0; background:radial-gradient(1200px 700px at 15% -10%,#1c1814 0%,var(--ink) 55%); color:var(--paper); font-family:'IBM Plex Sans',system-ui,sans-serif; }
-    .shell { max-width:1280px; margin:0 auto; padding:40px 28px 80px; }
-    .top { display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:end; margin-bottom:40px; }
-    .eyebrow { letter-spacing:.22em; text-transform:uppercase; font-size:11px; color:var(--gold); }
-    h1 { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(40px,6vw,72px); line-height:.95; margin:8px 0 0; }
-    .lede { color:var(--mute); max-width:42ch; }
-    .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:28px; margin-bottom:36px; }
-    .hero img { width:100%; height:480px; object-fit:cover; background:#161311; }
-    h2 { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:500; line-height:1; margin:8px 0 12px; }
-    h2 em { display:block; font-style:italic; font-weight:400; }
-    .specs { display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; }
-    .specs dt { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--mute); }
-    .specs dd { margin:4px 0 0; }
-    input { width:100%; background:transparent; border:1px solid var(--line); color:inherit; padding:12px; margin:8px 0 16px; }
-    .pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
-    button { background:transparent; border:1px solid var(--line); color:inherit; padding:8px 12px; cursor:pointer; }
-    button.on { border-color:var(--gold); color:var(--gold); }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    article { background:#14110e; cursor:pointer; }
-    article img { width:100%; height:200px; object-fit:cover; }
-    article header, .score { padding:10px 12px 0; }
-    .score { color:var(--gold); padding-bottom:14px; font-size:13px; }
-    h3 { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:28px; }
-    .strip { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
-    .card { padding:0; text-align:left; }
-    .card img { width:100%; height:130px; object-fit:cover; display:block; }
-    .card span,.card em { display:block; padding:0 8px; }
-    .card span { padding-top:8px; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--mute); }
-    .card em { font-style:normal; padding-bottom:10px; }
-    .card.on { outline:1px solid var(--gold); }
-    @media (max-width:900px) { .top,.hero,.grid { grid-template-columns:1fr; } .hero img { height:280px; } }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Watch Atlas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{--ink:#0b0b0c;--paper:#f3ece1;--gold:#c4a574;--mute:#8a8074;--line:rgba(243,236,225,.12)}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#0b0b0c;color:var(--paper);font-family:'IBM Plex Sans',system-ui,sans-serif}
+.layout{display:grid;grid-template-columns:380px 1fr;height:100vh}
+.side{padding:22px 20px;overflow:auto;border-right:1px solid var(--line);background:#0e0c0a}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:10px;color:var(--gold);margin:0}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;margin:6px 0 10px;line-height:.95}
+.lede{color:var(--mute);font-size:13px;margin:0 0 16px}
+.hero-img{width:100%;height:220px;object-fit:contain;background:#161311;margin-bottom:12px}
+h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;margin:0 0 8px;line-height:1.05}
+h2 em{display:block;font-style:italic;font-weight:400}
+.note{color:#cfc6b8;font-size:13px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin:14px 0}
+.specs dt{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.specs dd{margin:2px 0 0;font-size:13px}
+.stage{position:relative;background:radial-gradient(circle at 50% 40%,#1a1612,#080808 70%)}
+#c3d{width:100%;height:100%;display:block}
+.hud{position:absolute;left:16px;bottom:16px;right:16px;display:flex;gap:8px;flex-wrap:wrap;pointer-events:none}
+.hud span{pointer-events:auto;border:1px solid var(--line);padding:6px 10px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:#0b0b0ccc}
+.legend{position:absolute;top:16px;right:16px;font-size:12px;color:var(--mute);text-align:right}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.card{padding:0;border:1px solid var(--line);background:transparent;color:inherit;cursor:pointer;text-align:left}
+.card img{width:100%;height:88px;object-fit:contain;background:#14110e;display:block}
+.card em{display:block;font-style:normal;padding:6px 8px 8px;font-size:11px}
+.card.on{outline:1px solid var(--gold)}
+@media(max-width:900px){.layout{grid-template-columns:1fr;grid-template-rows:auto 55vh}}
+</style>
 </head>
 <body>
-<div class="shell" id="app"></div>
-<script>
-const img = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=80`;
+<div class="layout">
+  <aside class="side" id="side"></aside>
+  <section class="stage">
+    <canvas id="c3d"></canvas>
+    <div class="legend" id="legend"></div>
+    <div class="hud">
+      <span>drag to orbit · scroll to zoom</span>
+      <span>nodes colored by cluster</span>
+      <span>lines = nearest-neighbor tree</span>
+    </div>
+  </section>
+</div>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const commons = (file) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}`;
+
 const W = [
-  {id:'sub-126610ln',brand:'Rolex',model:'Submariner Date',reference:'126610LN',diameter:41,thickness:12.3,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:11350,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:img('photo-1523170335258-f5ed11844a49'),note:'Anchor vector. Cerachrom dive bezel, Mercedes hands, Oyster.'},
-  {id:'sub-16610',brand:'Rolex',model:'Submariner Date',reference:'16610',diameter:40,thickness:13,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:9800,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:img('photo-1547996160-81dfa63595aa'),note:'Five-digit Sub. Aluminum insert instead of ceramic.'},
-  {id:'steinhart-o39',brand:'Steinhart',model:'Ocean One 39',reference:'O39-BLK',diameter:39,thickness:12.5,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:535,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:img('photo-1524805444758-089113d48a6d'),note:'Expected near-neighbor: same bezel job and Mercedes kit.'},
-  {id:'sanmartin-sn0121',brand:'San Martin',model:'SN0121G',reference:'SN0121G',diameter:40,thickness:13.2,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:200,priceUsd:289,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:img('photo-1509048191080-d2984bad6ae5'),note:'Geometry homage. Water rating is the main spec gap.'},
-  {id:'pagani-pd1661',brand:'Pagani Design',model:'PD-1661',reference:'PD-1661',diameter:40,thickness:13.5,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:200,priceUsd:129,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:img('photo-1539874754764-5a96559165b0'),note:'Cheap homage. Kit still matches.'},
-  {id:'tudor-bb58',brand:'Tudor',model:'Black Bay Fifty-Eight',reference:'M79030N',diameter:39,thickness:11.9,crystal:'domed sapphire',material:'steel',movement:'automatic',waterM:200,priceUsd:3750,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'snowflake',bezelFunction:'elapsed dive',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'bracelet other',complications:[],cluster:'dive homage',image:img('photo-1614164185128-e4ec99c436d7'),note:'Dive neighbor. Domed crystal and snowflake hands pull it off-axis.'},
-  {id:'seiko-skx007',brand:'Seiko',model:'SKX007',reference:'SKX007',diameter:42,thickness:13.4,crystal:'acrylic',material:'steel',movement:'automatic',waterM:200,priceUsd:280,caseShape:'round',dialColor:'black',dialFinish:'textured',indices:'applied baton',hands:'sword',bezelFunction:'elapsed dive',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'bracelet other',complications:['date'],cluster:'dive homage',image:img('photo-1434056886845-dac89ffe9b56'),note:'Same job, different kit.'},
-  {id:'omega-smp300',brand:'Omega',model:'Seamaster Diver 300M',reference:'210.30.42.20.01.001',diameter:42,thickness:13.6,crystal:'domed sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:5400,caseShape:'round',dialColor:'black',dialFinish:'textured',indices:'applied baton',hands:'sword',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'bracelet other',complications:['date'],cluster:'dive homage',image:img('photo-1612817159949-195b6eb9e31a'),note:'Peer diver, not a clone.'},
-  {id:'omega-speedy',brand:'Omega',model:'Speedmaster Professional',reference:'310.30.42.50.01.001',diameter:42,thickness:13.2,crystal:'domed sapphire',material:'steel',movement:'manual',waterM:50,priceUsd:7400,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied baton',hands:'chrono baton',bezelFunction:'tachymeter',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'bracelet other',complications:['chronograph'],cluster:'tool chrono',image:img('photo-1619134778706-7015533a6330'),note:'Tachymeter + chrono leave the dive neighborhood.'},
-  {id:'rolex-daytona',brand:'Rolex',model:'Daytona',reference:'126500LN',diameter:40,thickness:12.2,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:100,priceUsd:14900,caseShape:'round',dialColor:'white',dialFinish:'gloss',indices:'applied baton',hands:'chrono baton',bezelFunction:'tachymeter',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['chronograph'],cluster:'tool chrono',image:img('photo-1622434641406-a158123450f9'),note:'Same house, different sport.'},
-  {id:'nomos-tangente',brand:'Nomos',model:'Tangente 38',reference:'164',diameter:37.5,thickness:6.7,crystal:'domed sapphire',material:'steel',movement:'manual',waterM:30,priceUsd:1960,caseShape:'round',dialColor:'white',dialFinish:'matte',indices:'printed arabic',hands:'leaf',bezelFunction:'none',bezelMaterial:'steel',bezelColor:'steel',braceletType:'leather',complications:[],cluster:'dress dome',image:img('photo-1522312346375-d1a52e2b99b3'),note:'Thin, no bezel. Opposite of a dive case.'},
-  {id:'panerai-luminor',brand:'Panerai',model:'Luminor Marina',reference:'PAM01312',diameter:44,thickness:13.2,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:5900,caseShape:'cushion',dialColor:'black',dialFinish:'matte',indices:'mixed',hands:'sword',bezelFunction:'none',bezelMaterial:'steel',bezelColor:'steel',braceletType:'leather',complications:['date'],cluster:'dive homage',image:img('photo-1609587312208-cea54be969c7'),note:'Same water rating. Cushion case keeps it out of homage space.'},
+  {id:'sub-126610ln',brand:'Rolex',model:'Submariner Date',reference:'126610LN',diameter:41,thickness:12.3,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:11350,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:commons('Rolex Submariner diving watch.jpg'),note:'Ceramic-bezel Sub. Anchor vector.'},
+  {id:'sub-16610',brand:'Rolex',model:'Submariner Date',reference:'16610',diameter:40,thickness:13,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:9800,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:commons('Rolex-Submariner.jpg'),note:'Five-digit Sub. Aluminum insert.'},
+  {id:'steinhart-o39',brand:'Steinhart',model:'Ocean One 39',reference:'O39-BLK',diameter:39,thickness:12.5,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:535,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:commons('Original Rolex Submariner diving wristwatch (l.) and three watches copying its design (Alpha, Invicta and Steeldive).jpg'),note:'Homage geometry. Same bezel job.'},
+  {id:'sanmartin-sn0121',brand:'San Martin',model:'SN0121G',reference:'SN0121G',diameter:40,thickness:13.2,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:200,priceUsd:289,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:commons('Rolex Submariner diving watch.jpg'),note:'Geometry homage. Water rating is the gap.'},
+  {id:'pagani-pd1661',brand:'Pagani Design',model:'PD-1661',reference:'PD-1661',diameter:40,thickness:13.5,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:200,priceUsd:129,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'mercedes',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['date'],cluster:'dive homage',image:commons('Rolex-Submariner.jpg'),note:'Cheap homage. Kit still matches.'},
+  {id:'tudor-bb58',brand:'Tudor',model:'Black Bay Fifty-Eight',reference:'M79030N',diameter:39,thickness:11.9,crystal:'domed sapphire',material:'steel',movement:'automatic',waterM:200,priceUsd:3750,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied mercedes',hands:'snowflake',bezelFunction:'elapsed dive',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'bracelet other',complications:[],cluster:'dive homage',image:commons('Rolex Submariner Professional.jpg'),note:'Dive neighbor. Snowflake hands + dome.'},
+  {id:'seiko-skx007',brand:'Seiko',model:'SKX007',reference:'SKX007',diameter:42,thickness:13.4,crystal:'acrylic',material:'steel',movement:'automatic',waterM:200,priceUsd:280,caseShape:'round',dialColor:'black',dialFinish:'textured',indices:'applied baton',hands:'sword',bezelFunction:'elapsed dive',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'bracelet other',complications:['date'],cluster:'dive homage',image:commons('Seiko 5 Sports SRPD55K1.jpg'),note:'Same job, different kit.'},
+  {id:'omega-smp300',brand:'Omega',model:'Seamaster Diver 300M',reference:'210.30.42.20.01.001',diameter:42,thickness:13.6,crystal:'domed sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:5400,caseShape:'round',dialColor:'black',dialFinish:'textured',indices:'applied baton',hands:'sword',bezelFunction:'elapsed dive',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'bracelet other',complications:['date'],cluster:'dive homage',image:commons('Omega Seamaster 300.jpg'),note:'Peer diver, not a clone.'},
+  {id:'omega-speedy',brand:'Omega',model:'Speedmaster Professional',reference:'310.30.42.50.01.001',diameter:42,thickness:13.2,crystal:'domed sapphire',material:'steel',movement:'manual',waterM:50,priceUsd:7400,caseShape:'round',dialColor:'black',dialFinish:'matte',indices:'applied baton',hands:'chrono baton',bezelFunction:'tachymeter',bezelMaterial:'aluminum',bezelColor:'black',braceletType:'bracelet other',complications:['chronograph'],cluster:'tool chrono',image:commons('OMEGA-Speedmaster-Professional-Front.jpg'),note:'Tachymeter + chrono leave the dive neighborhood.'},
+  {id:'rolex-daytona',brand:'Rolex',model:'Daytona',reference:'126500LN',diameter:40,thickness:12.2,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:100,priceUsd:14900,caseShape:'round',dialColor:'white',dialFinish:'gloss',indices:'applied baton',hands:'chrono baton',bezelFunction:'tachymeter',bezelMaterial:'ceramic',bezelColor:'black',braceletType:'oyster 3-link',complications:['chronograph'],cluster:'tool chrono',image:commons('Rolex Daytona.jpg'),note:'Same house, different sport.'},
+  {id:'nomos-tangente',brand:'Nomos',model:'Tangente 38',reference:'164',diameter:37.5,thickness:6.7,crystal:'domed sapphire',material:'steel',movement:'manual',waterM:30,priceUsd:1960,caseShape:'round',dialColor:'white',dialFinish:'matte',indices:'printed arabic',hands:'leaf',bezelFunction:'none',bezelMaterial:'steel',bezelColor:'steel',braceletType:'leather',complications:[],cluster:'dress dome',image:commons('NOMOS Glashütte Tangente.jpg'),note:'Thin, no bezel. Opposite of a dive case.'},
+  {id:'panerai-luminor',brand:'Panerai',model:'Luminor Marina',reference:'PAM01312',diameter:44,thickness:13.2,crystal:'flat sapphire',material:'steel',movement:'automatic',waterM:300,priceUsd:5900,caseShape:'cushion',dialColor:'black',dialFinish:'matte',indices:'mixed',hands:'sword',bezelFunction:'none',bezelMaterial:'steel',bezelColor:'steel',braceletType:'leather',complications:['date'],cluster:'dive homage',image:commons('Panerai Luminor Marina.jpg'),note:'Cushion case keeps it out of homage space.'},
 ];
-const code = {
-  crystal:{'flat sapphire':1,'domed sapphire':.45,acrylic:0},
-  case:{round:1,cushion:.45,rectangle:0},
-  bezel:{'elapsed dive':1,gmt:.55,tachymeter:.2,none:0},
-  bezM:{ceramic:1,aluminum:.7,steel:.5},
-  brace:{'oyster 3-link':1,'bracelet other':.55,leather:.1},
-  hands:{mercedes:1,snowflake:.55,sword:.45,'chrono baton':.2,leaf:.1},
-};
-function vec(w){
-  return [
-    w.diameter/50, w.thickness/16,
-    (code.crystal[w.crystal]||0)*1.6,
-    (code.case[w.caseShape]||0)*1.3,
-    (code.bezel[w.bezelFunction]||0)*1.6,
-    (code.bezM[w.bezelMaterial]||0)*1.4,
-    (code.brace[w.braceletType]||0)*1.3,
-    (code.hands[w.hands]||0)*1.2,
-    w.complications.includes('chronograph')?1.4:0,
-    Math.log10(w.priceUsd)/5*.35,
-  ];
+
+const COLORS = {'dive homage':0xc4a574,'tool chrono':0x7aa2c4,'dress dome':0xd9c7a3,'field':0x8fbf88};
+const code = {crystal:{'flat sapphire':1,'domed sapphire':.45,acrylic:0},case:{round:1,cushion:.45,rectangle:0},bezel:{'elapsed dive':1,gmt:.55,tachymeter:.2,none:0},bezM:{ceramic:1,aluminum:.7,steel:.5},brace:{'oyster 3-link':1,'bracelet other':.55,leather:.1},hands:{mercedes:1,snowflake:.55,sword:.45,'chrono baton':.2,leaf:.1}};
+function vec(w){return [w.diameter/50,w.thickness/16,(code.crystal[w.crystal]||0)*1.6,(code.case[w.caseShape]||0)*1.3,(code.bezel[w.bezelFunction]||0)*1.6,(code.bezM[w.bezelMaterial]||0)*1.4,(code.brace[w.braceletType]||0)*1.3,(code.hands[w.hands]||0)*1.2,w.complications.includes('chronograph')?1.4:0,Math.log10(w.priceUsd)/5*.35];}
+function cos(a,b){let d=0,na=0,nb=0;for(let i=0;i<a.length;i++){d+=a[i]*b[i];na+=a[i]*a[i];nb+=b[i]*b[i];}return d/Math.sqrt(na*nb);}
+function pca3(vecs){
+  const n=vecs.length,d=vecs[0].length;
+  const mean=Array(d).fill(0); vecs.forEach(v=>v.forEach((x,i)=>mean[i]+=x/n));
+  const X=vecs.map(v=>v.map((x,i)=>x-mean[i]));
+  // power iteration on X^T X for 3 components
+  const axes=[];
+  const XtX = (v)=>{const out=Array(d).fill(0); for(const row of X){const dot=row.reduce((s,x,i)=>s+x*v[i],0); row.forEach((x,i)=>out[i]+=x*dot);} return out;};
+  const norm=v=>{const n=Math.sqrt(v.reduce((s,x)=>s+x*x,0))||1; return v.map(x=>x/n);};
+  for(let k=0;k<3;k++){
+    let v=norm(Array.from({length:d},()=>Math.random()));
+    for(let it=0;it<40;it++){
+      let w=XtX(v);
+      axes.forEach(a=>{const p=w.reduce((s,x,i)=>s+x*a[i],0); w=w.map((x,i)=>x-p*a[i]);});
+      v=norm(w);
+    }
+    axes.push(v);
+  }
+  return X.map(row=>axes.map(a=>row.reduce((s,x,i)=>s+x*a[i],0)));
 }
-function cos(a,b){let d=0,na=0,nb=0; for(let i=0;i<a.length;i++){d+=a[i]*b[i];na+=a[i]*a[i];nb+=b[i]*b[i];} return d/Math.sqrt(na*nb);}
-function neighbors(seed){
-  const sv=vec(seed);
-  return W.filter(w=>w.id!==seed.id).map(w=>({w,s:cos(sv,vec(w))})).sort((a,b)=>b.s-a.s).slice(0,6);
+function mst(ids, score){
+  const edges=[]; const used=new Set([ids[0]]);
+  while(used.size<ids.length){
+    let best=null;
+    for(const a of used) for(const b of ids) if(!used.has(b)){
+      const s=score(a,b); if(!best||s>best.s) best={a,b,s};
+    }
+    used.add(best.b); edges.push(best);
+  }
+  return edges;
 }
-let sel='sub-126610ln', q='', cluster='all', bezel='all';
-const clusters=['all',...new Set(W.map(w=>w.cluster))];
-const bezels=['all',...new Set(W.map(w=>w.bezelFunction))];
-function render(){
-  const s=W.find(w=>w.id===sel);
-  const near=neighbors(s);
-  const filtered=W.filter(w=>{
-    const hit=!q || `${w.brand} ${w.model} ${w.reference}`.toLowerCase().includes(q.toLowerCase());
-    return hit && (cluster==='all'||w.cluster===cluster) && (bezel==='all'||w.bezelFunction===bezel);
-  });
-  document.getElementById('app').innerHTML = `
-    <header class="top">
-      <div><p class="eyebrow">mikeornstein.com · toys</p><h1>Watch Atlas</h1></div>
-      <p class="lede">Pick a watch. Neighbors are weighted cosine on case, crystal, bezel job, bracelet, hands, and complications. Price is a whisper.</p>
-    </header>
-    <section class="hero">
-      <img src="${s.image}" alt="" />
-      <div>
-        <p class="eyebrow">${s.cluster}</p>
-        <h2>${s.brand}<em>${s.model}</em></h2>
-        <p>${s.note}</p>
-        <dl class="specs">
-          <div><dt>Case</dt><dd>${s.caseShape} · ${s.diameter}×${s.thickness} mm</dd></div>
-          <div><dt>Crystal</dt><dd>${s.crystal}</dd></div>
-          <div><dt>Dial</dt><dd>${s.dialColor} ${s.dialFinish}</dd></div>
-          <div><dt>Indices / hands</dt><dd>${s.indices} · ${s.hands}</dd></div>
-          <div><dt>Bezel</dt><dd>${s.bezelFunction} · ${s.bezelMaterial} ${s.bezelColor}</dd></div>
-          <div><dt>Bracelet</dt><dd>${s.braceletType}</dd></div>
-          <div><dt>Complications</dt><dd>${s.complications.join(', ')||'none'}</dd></div>
-          <div><dt>Water / price</dt><dd>${s.waterM} m · $${s.priceUsd.toLocaleString()}</dd></div>
-        </dl>
-      </div>
-    </section>
-    <input id="q" placeholder="Search brand, model, reference" value="${q.replace(/"/g,'&quot;')}" />
-    <div class="pills">${clusters.map(c=>`<button data-c="${c}" class="${c===cluster?'on':''}">${c}</button>`).join('')}</div>
-    <div class="pills">${bezels.map(c=>`<button data-b="${c}" class="${c===bezel?'on':''}">${c}</button>`).join('')}</div>
-    <h3>Neighborhood</h3>
-    <div class="grid">${near.map(({w,s})=>`<article data-id="${w.id}"><img src="${w.image}"/><header><strong>${w.brand}</strong><div>${w.model}</div></header><p class="score">${(s*100).toFixed(1)} similar · ${w.bezelFunction}</p></article>`).join('')}</div>
-    <h3>Catalog · ${filtered.length}</h3>
-    <div class="strip">${filtered.map(w=>`<button class="card ${w.id===sel?'on':''}" data-id="${w.id}"><img src="${w.image}"/><span>${w.brand}</span><em>${w.model}</em></button>`).join('')}</div>
-  `;
-  document.getElementById('q').addEventListener('input',e=>{q=e.target.value;render();});
-  document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{cluster=b.dataset.c;render();});
-  document.querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{bezel=b.dataset.b;render();});
-  document.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{sel=b.dataset.id;render();});
+
+const V=W.map(vec);
+const P=pca3(V).map(p=>[p[0]*8,p[1]*8,p[2]*8]);
+const scores=(i,j)=>cos(V[i],V[j]);
+const tree=mst(W.map((_,i)=>i), scores);
+
+let sel=0;
+const canvas=document.getElementById('c3d');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(50,1,.1,100);
+camera.position.set(10,7,14);
+const controls=new OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;
+scene.add(new THREE.AmbientLight(0xffffff,.55));
+const key=new THREE.DirectionalLight(0xffe6c0,.7); key.position.set(6,10,4); scene.add(key);
+
+const nodes=[];
+W.forEach((w,i)=>{
+  const g=new THREE.SphereGeometry(.38,24,24);
+  const m=new THREE.MeshStandardMaterial({color:COLORS[w.cluster]||0xaaaaaa,roughness:.35,metalness:.2});
+  const mesh=new THREE.Mesh(g,m);
+  mesh.position.set(...P[i]);
+  mesh.userData.i=i;
+  scene.add(mesh);
+  const loader=new THREE.TextureLoader();
+  loader.crossOrigin='anonymous';
+  loader.load(w.image, tex=>{
+    tex.colorSpace=THREE.SRGBColorSpace;
+    const spr=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true}));
+    spr.scale.set(1.6,1.6,1);
+    spr.position.set(P[i][0],P[i][1]+.95,P[i][2]);
+    scene.add(spr);
+  },undefined,()=>{});
+  nodes.push(mesh);
+});
+const linePos=[];
+tree.forEach(e=>{linePos.push(...P[e.a],...P[e.b]);});
+const lg=new THREE.BufferGeometry();
+lg.setAttribute('position',new THREE.Float32BufferAttribute(linePos,3));
+scene.add(new THREE.LineSegments(lg,new THREE.LineBasicMaterial({color:0x6a5a45,transparent:true,opacity:.55})));
+
+const ray=new THREE.Raycaster(); const mouse=new THREE.Vector2();
+function pick(ev){
+  const r=canvas.getBoundingClientRect();
+  mouse.x=((ev.clientX-r.left)/r.width)*2-1;
+  mouse.y=-((ev.clientY-r.top)/r.height)*2+1;
+  ray.setFromCamera(mouse,camera);
+  const hit=ray.intersectObjects(nodes)[0];
+  if(hit){sel=hit.object.userData.i; paint();}
 }
-render();
+canvas.addEventListener('click',pick);
+
+function resize(){
+  const r=canvas.parentElement.getBoundingClientRect();
+  renderer.setSize(r.width,r.height,false);
+  camera.aspect=r.width/Math.max(r.height,1); camera.updateProjectionMatrix();
+}
+addEventListener('resize',resize); resize();
+
+function paint(){
+  const s=W[sel];
+  const near=W.map((w,i)=>({w,i,s:i===sel?-1:cos(V[sel],V[i])})).filter(x=>x.s>=0).sort((a,b)=>b.s-a.s).slice(0,5);
+  document.getElementById('side').innerHTML=`
+    <p class="eyebrow">mikeornstein.com · toys</p>
+    <h1>Watch Atlas</h1>
+    <p class="lede">3D PCA of the weighted spec vector. Lines are a nearest-neighbor tree. Color is cluster.</p>
+    <img class="hero-img" src="${s.image}" alt="${s.brand} ${s.model}" />
+    <h2>${s.brand}<em>${s.model}</em></h2>
+    <p class="note">${s.note}</p>
+    <dl class="specs">
+      <div><dt>Case</dt><dd>${s.caseShape} · ${s.diameter}×${s.thickness}</dd></div>
+      <div><dt>Crystal</dt><dd>${s.crystal}</dd></div>
+      <div><dt>Dial</dt><dd>${s.dialColor} ${s.dialFinish}</dd></div>
+      <div><dt>Hands</dt><dd>${s.indices} · ${s.hands}</dd></div>
+      <div><dt>Bezel</dt><dd>${s.bezelFunction} · ${s.bezelMaterial}</dd></div>
+      <div><dt>Bracelet</dt><dd>${s.braceletType}</dd></div>
+    </dl>
+    <p class="eyebrow">nearest</p>
+    <div class="list">${near.map(n=>`<button class="card" data-i="${n.i}"><img src="${n.w.image}"/><em>${n.w.brand} ${(n.s*100).toFixed(0)}</em></button>`).join('')}</div>
+    <p class="eyebrow" style="margin-top:16px">catalog</p>
+    <div class="list">${W.map((w,i)=>`<button class="card ${i===sel?'on':''}" data-i="${i}"><img src="${w.image}"/><em>${w.brand}</em></button>`).join('')}</div>`;
+  document.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{sel=+b.dataset.i;paint();});
+  nodes.forEach((m,i)=>m.scale.setScalar(i===sel?1.45:1));
+  document.getElementById('legend').innerHTML=Object.entries(COLORS).map(([k,c])=>`<div><span class="dot" style="background:#${c.toString(16).padStart(6,'0')}"></span>${k}</div>`).join('');
+}
+paint();
+(function loop(){controls.update();renderer.render(scene,camera);requestAnimationFrame(loop);})();
 </script>
-</body>
-</html>
+</body></html>
