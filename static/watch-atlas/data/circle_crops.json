@@ -1,0 +1,6928 @@
+{
+  "note": "cx and cy are fractions of image width and height. r is the circle radius as a fraction of min(width, height). The same fractions apply to the thumb and the large file. fallback rows include a reason.",
+  "fallback_reasons": {
+    "dark-border": 214,
+    "uneven-border": 20,
+    "colored-border": 6
+  },
+  "crops": {
+    "addiesdive|ad2023": {
+      "cx": 0.49722,
+      "cy": 0.46944,
+      "r": 0.27978,
+      "fallback": false
+    },
+    "addiesdive|ad2063": {
+      "cx": 0.49722,
+      "cy": 0.73611,
+      "r": 0.18636,
+      "fallback": false
+    },
+    "addiesdive|ad2086": {
+      "cx": 0.50556,
+      "cy": 0.46389,
+      "r": 0.28674,
+      "fallback": false
+    },
+    "addiesdive|ad2101": {
+      "cx": 0.50556,
+      "cy": 0.45278,
+      "r": 0.28057,
+      "fallback": false
+    },
+    "addiesdive|ad2104": {
+      "cx": 0.5,
+      "cy": 0.48056,
+      "r": 0.30481,
+      "fallback": false
+    },
+    "alpina|al-525n4e6b": {
+      "cx": 0.48333,
+      "cy": 0.49167,
+      "r": 0.28284,
+      "fallback": false
+    },
+    "anordain|model-1": {
+      "cx": 0.50278,
+      "cy": 0.17827,
+      "r": 0.21804,
+      "fallback": false
+    },
+    "anordain|model-2": {
+      "cx": 0.52778,
+      "cy": 0.18487,
+      "r": 0.24375,
+      "fallback": false
+    },
+    "anordain|model-3": {
+      "cx": 0.49722,
+      "cy": 0.49444,
+      "r": 0.29747,
+      "fallback": false
+    },
+    "apple|watch-ultra-2": {
+      "cx": 0.43333,
+      "cy": 0.54497,
+      "r": 0.39423,
+      "fallback": false
+    },
+    "aquatico|oceanstar": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "baltany|s202001": {
+      "cx": 0.49722,
+      "cy": 0.43333,
+      "r": 0.2857,
+      "fallback": false
+    },
+    "baltany|s202005": {
+      "cx": 0.49722,
+      "cy": 0.43889,
+      "r": 0.28365,
+      "fallback": false
+    },
+    "baltany|s202031": {
+      "cx": 0.47778,
+      "cy": 0.44722,
+      "r": 0.30584,
+      "fallback": false
+    },
+    "baltic|aquascaphe": {
+      "cx": 0.52049,
+      "cy": 0.46111,
+      "r": 0.5413,
+      "fallback": false
+    },
+    "baltic|aquascaphe-bronze": {
+      "cx": 0.52459,
+      "cy": 0.46389,
+      "r": 0.54566,
+      "fallback": false
+    },
+    "baltic|aquascaphe-classic": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "baltic|hms-002": {
+      "cx": 0.50626,
+      "cy": 0.45278,
+      "r": 0.51705,
+      "fallback": false
+    },
+    "baltic|mr01": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "boldr-venture|41": {
+      "cx": 0.5,
+      "cy": 0.46667,
+      "r": 0.21318,
+      "fallback": false
+    },
+    "boldr|odyssey": {
+      "cx": 0.5,
+      "cy": 0.45833,
+      "r": 0.23674,
+      "fallback": false
+    },
+    "boldr|safari": {
+      "cx": 0.50556,
+      "cy": 0.46111,
+      "r": 0.24875,
+      "fallback": false
+    },
+    "breitling|a17320": {
+      "cx": 0.5,
+      "cy": 0.50556,
+      "r": 0.53734,
+      "fallback": false
+    },
+    "breitling|a17326": {
+      "cx": 0.5,
+      "cy": 0.48611,
+      "r": 0.30387,
+      "fallback": false
+    },
+    "breitling|a17331": {
+      "cx": 0.46,
+      "cy": 0.51667,
+      "r": 0.57212,
+      "fallback": false
+    },
+    "breitling|a17375": {
+      "cx": 0.66311,
+      "cy": 0.50274,
+      "r": 0.52365,
+      "fallback": false
+    },
+    "breitling|ab0138": {
+      "cx": 0.5,
+      "cy": 0.49722,
+      "r": 0.29465,
+      "fallback": false
+    },
+    "brew-metric|38": {
+      "cx": 0.49167,
+      "cy": 0.46111,
+      "r": 0.32641,
+      "fallback": false
+    },
+    "brew|retrograph": {
+      "cx": 0.48056,
+      "cy": 0.46111,
+      "r": 0.33973,
+      "fallback": false
+    },
+    "bulova|96b349": {
+      "cx": 0.48889,
+      "cy": 0.45833,
+      "r": 0.32861,
+      "fallback": false
+    },
+    "bulova|97a136": {
+      "cx": 0.5,
+      "cy": 0.49722,
+      "r": 0.35981,
+      "fallback": false
+    },
+    "bulova|98a178": {
+      "cx": 0.49167,
+      "cy": 0.46111,
+      "r": 0.34759,
+      "fallback": false
+    },
+    "bulova|98b320": {
+      "cx": 0.48056,
+      "cy": 0.5,
+      "r": 0.34231,
+      "fallback": false
+    },
+    "cartier|wsbb0025": {
+      "cx": 0.48333,
+      "cy": 0.48889,
+      "r": 0.39861,
+      "fallback": false
+    },
+    "cartier|wssa0018": {
+      "cx": 0.29155,
+      "cy": 0.44167,
+      "r": 0.29155,
+      "fallback": false
+    },
+    "cartier|wssa0029": {
+      "cx": 0.47619,
+      "cy": 0.49722,
+      "r": 0.61905,
+      "fallback": false
+    },
+    "cartier|wssa0039": {
+      "cx": 0.5,
+      "cy": 0.51667,
+      "r": 0.56681,
+      "fallback": false
+    },
+    "casio|a168wa-1": {
+      "cx": 0.53611,
+      "cy": 0.52778,
+      "r": 0.2969,
+      "fallback": false
+    },
+    "casio|dw5600e-1v": {
+      "cx": 0.48794,
+      "cy": 0.48611,
+      "r": 0.53149,
+      "fallback": false
+    },
+    "casio|f91w-1": {
+      "cx": 0.5,
+      "cy": 0.525,
+      "r": 0.58384,
+      "fallback": false
+    },
+    "casio|ga2100-1a1": {
+      "cx": 0.5,
+      "cy": 0.50556,
+      "r": 0.3906,
+      "fallback": false
+    },
+    "casio|gmw-b5000d-1": {
+      "cx": 0.49722,
+      "cy": 0.41111,
+      "r": 0.33808,
+      "fallback": false
+    },
+    "casio|gw-m5610u-1": {
+      "cx": 0.60213,
+      "cy": 0.54642,
+      "r": 0.69919,
+      "fallback": false
+    },
+    "casio|mdv106-1a": {
+      "cx": 0.47407,
+      "cy": 0.51389,
+      "r": 0.56078,
+      "fallback": false
+    },
+    "casio|mdv107-1a1": {
+      "cx": 0.48333,
+      "cy": 0.48611,
+      "r": 0.41628,
+      "fallback": false
+    },
+    "certina|c032.430.11.051.00": {
+      "cx": 0.53333,
+      "cy": 0.75632,
+      "r": 0.2556,
+      "fallback": false
+    },
+    "certina|c032.807.11.051.00": {
+      "cx": 0.50521,
+      "cy": 0.475,
+      "r": 0.49197,
+      "fallback": false
+    },
+    "christopher-ward|c60-sapphire": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.30217,
+      "fallback": false
+    },
+    "christopher-ward|c60-trident-pro-300-40": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.27843,
+      "fallback": false
+    },
+    "christopher-ward|c63-sealander-36": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.25889,
+      "fallback": false
+    },
+    "christopher-ward|c63-sealander-39": {
+      "cx": 0.48889,
+      "cy": 0.49167,
+      "r": 0.28445,
+      "fallback": false
+    },
+    "christopher-ward|c65-aquitaine": {
+      "cx": 0.5,
+      "cy": 0.49444,
+      "r": 0.30436,
+      "fallback": false
+    },
+    "christopher-ward|c65-super-compressor": {
+      "cx": 0.50278,
+      "cy": 0.52222,
+      "r": 0.31778,
+      "fallback": false
+    },
+    "citizen|at8020-54l": {
+      "cx": 0.48889,
+      "cy": 0.50833,
+      "r": 0.33435,
+      "fallback": false
+    },
+    "citizen|bn0150-10e": {
+      "cx": 0.48889,
+      "cy": 0.475,
+      "r": 0.59713,
+      "fallback": false
+    },
+    "citizen|bn0150-28e": {
+      "cx": 0.48333,
+      "cy": 0.49444,
+      "r": 0.34854,
+      "fallback": false
+    },
+    "citizen|bn0151-17l": {
+      "cx": 0.48519,
+      "cy": 0.50556,
+      "r": 0.61456,
+      "fallback": false
+    },
+    "citizen|nb6021-17e": {
+      "cx": 0.47778,
+      "cy": 0.44167,
+      "r": 0.32662,
+      "fallback": false
+    },
+    "citizen|nb6021-68l": {
+      "cx": 0.36023,
+      "cy": 0.49639,
+      "r": 0.79096,
+      "fallback": false
+    },
+    "doxa|ddr-600t": {
+      "cx": 0.5,
+      "cy": 0.44167,
+      "r": 0.28226,
+      "fallback": false
+    },
+    "doxa|ddr-700t": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "doxa|ddr-800t": {
+      "cx": 0.5,
+      "cy": 0.675,
+      "r": 0.16228,
+      "fallback": false
+    },
+    "farer|lander-iv": {
+      "cx": 0.5,
+      "cy": 0.49167,
+      "r": 0.27857,
+      "fallback": false
+    },
+    "formex|essence-39": {
+      "cx": 0.50278,
+      "cy": 0.88889,
+      "r": 0.11019,
+      "fallback": false
+    },
+    "formex|reef-39": {
+      "cx": 0.48889,
+      "cy": 0.43889,
+      "r": 0.31906,
+      "fallback": false
+    },
+    "formex|reef-42": {
+      "cx": 0.48889,
+      "cy": 0.45556,
+      "r": 0.29682,
+      "fallback": false
+    },
+    "formex|stratos": {
+      "cx": 0.475,
+      "cy": 0.46389,
+      "r": 0.33283,
+      "fallback": false
+    },
+    "frederique-constant|fc-303s5b6": {
+      "cx": 0.475,
+      "cy": 0.48611,
+      "r": 0.35631,
+      "fallback": false
+    },
+    "garmin|fenix-7": {
+      "cx": 0.44722,
+      "cy": 0.425,
+      "r": 0.35479,
+      "fallback": false
+    },
+    "grand-seiko|sbga211": {
+      "cx": 0.49722,
+      "cy": 0.35433,
+      "r": 0.14499,
+      "fallback": false
+    },
+    "grand-seiko|sbga413": {
+      "cx": 0.53056,
+      "cy": 0.625,
+      "r": 0.3847,
+      "fallback": false
+    },
+    "grand-seiko|sbga415": {
+      "cx": 0.48611,
+      "cy": 0.4625,
+      "r": 0.13378,
+      "fallback": false
+    },
+    "grand-seiko|sbga443": {
+      "cx": 0.475,
+      "cy": 0.81063,
+      "r": 0.21783,
+      "fallback": false
+    },
+    "grand-seiko|sbgh267": {
+      "cx": 0.48056,
+      "cy": 0.42222,
+      "r": 0.29578,
+      "fallback": false
+    },
+    "grand-seiko|sbgh273": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "halios|seaforth": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.49853,
+      "fallback": false
+    },
+    "halios|universa": {
+      "cx": 0.48214,
+      "cy": 0.49444,
+      "r": 0.48278,
+      "fallback": false
+    },
+    "hamilton|h69439411": {
+      "cx": 0.475,
+      "cy": 0.43333,
+      "r": 0.32861,
+      "fallback": false
+    },
+    "hamilton|h69439931": {
+      "cx": 0.49722,
+      "cy": 0.46944,
+      "r": 0.30148,
+      "fallback": false
+    },
+    "heimdallr|h8": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "heimdallr|hmsr101": {
+      "cx": 0.50556,
+      "cy": 0.51389,
+      "r": 0.31275,
+      "fallback": false
+    },
+    "heimdallr|hmsr101-green": {
+      "cx": 0.50833,
+      "cy": 0.50833,
+      "r": 0.32938,
+      "fallback": false
+    },
+    "heimdallr|sharkey": {
+      "cx": 0.46667,
+      "cy": 0.49167,
+      "r": 0.31805,
+      "fallback": false
+    },
+    "invicta|8926ob": {
+      "cx": 0.46389,
+      "cy": 0.45556,
+      "r": 0.28351,
+      "fallback": false
+    },
+    "invicta|9204": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.60067,
+      "fallback": false
+    },
+    "islander|isl-121": {
+      "cx": 0.45556,
+      "cy": 0.40833,
+      "r": 0.34871,
+      "fallback": false
+    },
+    "islander|isl-160": {
+      "cx": 0.46389,
+      "cy": 0.45833,
+      "r": 0.38,
+      "fallback": false
+    },
+    "islander|isl-18": {
+      "cx": 0.48889,
+      "cy": 0.43889,
+      "r": 0.31654,
+      "fallback": false
+    },
+    "islander|isl-47": {
+      "cx": 0.46111,
+      "cy": 0.43333,
+      "r": 0.32173,
+      "fallback": false
+    },
+    "islander|isl-51": {
+      "cx": 0.48889,
+      "cy": 0.48889,
+      "r": 0.55339,
+      "fallback": false
+    },
+    "islander|isl-63": {
+      "cx": 0.48333,
+      "cy": 0.425,
+      "r": 0.33459,
+      "fallback": false
+    },
+    "iwc|iw328201": {
+      "cx": 0.45,
+      "cy": 0.45,
+      "r": 0.36235,
+      "fallback": false
+    },
+    "iwc|iw328203": {
+      "cx": 0.5,
+      "cy": 0.45278,
+      "r": 0.36013,
+      "fallback": false
+    },
+    "iwc|iw328801": {
+      "cx": 0.48333,
+      "cy": 0.475,
+      "r": 0.38759,
+      "fallback": false
+    },
+    "iwc|iw371605": {
+      "cx": 0.45833,
+      "cy": 0.44444,
+      "r": 0.42252,
+      "fallback": false
+    },
+    "iwc|iw377709": {
+      "cx": 0.48611,
+      "cy": 0.48333,
+      "r": 0.38242,
+      "fallback": false
+    },
+    "iwc|iw501001": {
+      "cx": 0.50833,
+      "cy": 0.47633,
+      "r": 0.31121,
+      "fallback": false
+    },
+    "junghans|027.3501.00": {
+      "cx": 0.49798,
+      "cy": 0.5,
+      "r": 0.43306,
+      "fallback": false
+    },
+    "junghans|027.3502.00": {
+      "cx": 0.49798,
+      "cy": 0.49722,
+      "r": 0.43455,
+      "fallback": false
+    },
+    "junghans|027.4002.44": {
+      "cx": 0.49798,
+      "cy": 0.5,
+      "r": 0.42362,
+      "fallback": false
+    },
+    "junghans|027.4700.00": {
+      "cx": 0.49798,
+      "cy": 0.5,
+      "r": 0.43306,
+      "fallback": false
+    },
+    "laco-aachen|39": {
+      "cx": 0.48333,
+      "cy": 0.49167,
+      "r": 0.25686,
+      "fallback": false
+    },
+    "laco|aachen-42": {
+      "cx": 0.48889,
+      "cy": 0.49444,
+      "r": 0.27729,
+      "fallback": false
+    },
+    "laco|augsburg-39": {
+      "cx": 0.48056,
+      "cy": 0.49167,
+      "r": 0.25734,
+      "fallback": false
+    },
+    "laco|paderborn": {
+      "cx": 0.49444,
+      "cy": 0.49444,
+      "r": 0.327,
+      "fallback": false
+    },
+    "longines|l2.793.4.73.2": {
+      "cx": 0.49722,
+      "cy": 0.45556,
+      "r": 0.31173,
+      "fallback": false
+    },
+    "longines|l2.828.4.73.0": {
+      "cx": 0.46667,
+      "cy": 0.46667,
+      "r": 0.49455,
+      "fallback": false
+    },
+    "longines|l3.781.4.56.6": {
+      "cx": 0.49167,
+      "cy": 0.425,
+      "r": 0.29515,
+      "fallback": false
+    },
+    "longines|l3.782.4.96.6": {
+      "cx": 0.48611,
+      "cy": 0.43611,
+      "r": 0.33242,
+      "fallback": false
+    },
+    "longines|l3.810.4.53.0": {
+      "cx": 0.50347,
+      "cy": 0.80556,
+      "r": 0.20737,
+      "fallback": false
+    },
+    "longines|l3.812.4.63.6": {
+      "cx": 0.50164,
+      "cy": 0.41111,
+      "r": 0.24811,
+      "fallback": false
+    },
+    "lorier|falcon-ii": {
+      "cx": 0.5,
+      "cy": 0.47222,
+      "r": 0.21587,
+      "fallback": false
+    },
+    "lorier|neptune-iii": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "maurice-lacroix|ai6007-ss002-331-1": {
+      "cx": 0.49722,
+      "cy": 0.45278,
+      "r": 0.27723,
+      "fallback": false
+    },
+    "maurice-lacroix|ai6008-ss002-330-1": {
+      "cx": 0.48056,
+      "cy": 0.44722,
+      "r": 0.31847,
+      "fallback": false
+    },
+    "mido|m026.430.11.041.00": {
+      "cx": 0.49167,
+      "cy": 0.46667,
+      "r": 0.27501,
+      "fallback": false
+    },
+    "mido|m026.430.11.051.00": {
+      "cx": 0.49444,
+      "cy": 0.475,
+      "r": 0.28783,
+      "fallback": false
+    },
+    "mido|m026.830.11.051.00": {
+      "cx": 0.50196,
+      "cy": 0.44722,
+      "r": 0.45443,
+      "fallback": false
+    },
+    "mido|m038.431.11.031.00": {
+      "cx": 0.49722,
+      "cy": 0.46944,
+      "r": 0.29892,
+      "fallback": false
+    },
+    "nodus|sector-deep": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "nodus|sector-dive": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "nomos|club-campus-36": {
+      "cx": 0.49167,
+      "cy": 0.475,
+      "r": 0.29778,
+      "fallback": false
+    },
+    "nomos|club-campus-38": {
+      "cx": 0.49444,
+      "cy": 0.49444,
+      "r": 0.32236,
+      "fallback": false
+    },
+    "nomos|metro-38": {
+      "cx": 0.5,
+      "cy": 0.49722,
+      "r": 0.30387,
+      "fallback": false
+    },
+    "nomos|orion-38": {
+      "cx": 0.49167,
+      "cy": 0.49444,
+      "r": 0.31749,
+      "fallback": false
+    },
+    "nomos|tangente-38": {
+      "cx": 0.49722,
+      "cy": 0.48056,
+      "r": 0.30898,
+      "fallback": false
+    },
+    "nomos|tetra-27": {
+      "cx": 0.49722,
+      "cy": 0.48889,
+      "r": 0.29127,
+      "fallback": false
+    },
+    "nth|devilray": {
+      "cx": 0.46389,
+      "cy": 0.47222,
+      "r": 0.39278,
+      "fallback": false
+    },
+    "nth|nacken": {
+      "cx": 0.45278,
+      "cy": 0.41111,
+      "r": 0.33634,
+      "fallback": false
+    },
+    "omega|130.30.39.21.03.001": {
+      "cx": 0.49618,
+      "cy": 0.525,
+      "r": 0.34863,
+      "fallback": false
+    },
+    "omega|145.022": {
+      "cx": 0.5,
+      "cy": 0.50556,
+      "r": 0.57191,
+      "fallback": false
+    },
+    "omega|210.30.42.20.01.001": {
+      "cx": 0.49618,
+      "cy": 0.86258,
+      "r": 0.23304,
+      "fallback": false
+    },
+    "omega|210.30.42.20.01.002": {
+      "cx": 0.5,
+      "cy": 0.49722,
+      "r": 0.40325,
+      "fallback": false
+    },
+    "omega|210.30.42.20.03.001": {
+      "cx": 0.49618,
+      "cy": 0.86272,
+      "r": 0.22815,
+      "fallback": false
+    },
+    "omega|210.30.42.20.04.001": {
+      "cx": 0.60674,
+      "cy": 0.51817,
+      "r": 0.59685,
+      "fallback": false
+    },
+    "omega|210.32.42.20.04.001": {
+      "cx": 0.49618,
+      "cy": 0.49722,
+      "r": 0.40423,
+      "fallback": false
+    },
+    "omega|215.30.40.20.01.001": {
+      "cx": 0.49167,
+      "cy": 0.51667,
+      "r": 0.3432,
+      "fallback": false
+    },
+    "omega|215.30.44.21.01.002": {
+      "cx": 0.49618,
+      "cy": 0.50278,
+      "r": 0.40298,
+      "fallback": false
+    },
+    "omega|220.10.38.20.01.002": {
+      "cx": 0.51145,
+      "cy": 0.883,
+      "r": 0.19995,
+      "fallback": false
+    },
+    "omega|220.10.41.21.01.001": {
+      "cx": 0.50833,
+      "cy": 0.40278,
+      "r": 0.3164,
+      "fallback": false
+    },
+    "omega|220.12.41.21.03.002": {
+      "cx": 0.50382,
+      "cy": 0.54444,
+      "r": 0.37517,
+      "fallback": false
+    },
+    "omega|2254.50.00": {
+      "cx": 0.46565,
+      "cy": 0.54167,
+      "r": 0.34944,
+      "fallback": false
+    },
+    "omega|233.30.41.21.01.001": {
+      "cx": 0.5,
+      "cy": 0.50833,
+      "r": 0.39552,
+      "fallback": false
+    },
+    "omega|2531.80.00": {
+      "cx": 0.49618,
+      "cy": 0.55833,
+      "r": 0.34935,
+      "fallback": false
+    },
+    "omega|310.30.42.50.01.001": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.57702,
+      "fallback": false
+    },
+    "omega|310.30.42.50.01.002": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.35484,
+      "fallback": false
+    },
+    "omega|310.32.42.50.01.001": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.35552,
+      "fallback": false
+    },
+    "omega|311.30.42.30.01.005": {
+      "cx": 0.49618,
+      "cy": 0.82865,
+      "r": 0.25326,
+      "fallback": false
+    },
+    "omega|311.33.42.30.01.001": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "omega|327.10.43.50.01.001": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.38213,
+      "fallback": false
+    },
+    "omega|329.30.44.51.01.001": {
+      "cx": 0.49618,
+      "cy": 0.49722,
+      "r": 0.40088,
+      "fallback": false
+    },
+    "omega|3570.50.00": {
+      "cx": 0.49618,
+      "cy": 0.84167,
+      "r": 0.17863,
+      "fallback": false
+    },
+    "orient|ra-aa0001b": {
+      "cx": 0.48333,
+      "cy": 0.44167,
+      "r": 0.38626,
+      "fallback": false
+    },
+    "orient|ra-aa0811e": {
+      "cx": 0.48333,
+      "cy": 0.4375,
+      "r": 0.4143,
+      "fallback": false
+    },
+    "orient|ra-aa0815l": {
+      "cx": 0.71389,
+      "cy": 0.63333,
+      "r": 0.36784,
+      "fallback": false
+    },
+    "orient|ra-ar0001s": {
+      "cx": 0.5,
+      "cy": 0.44167,
+      "r": 0.48992,
+      "fallback": false
+    },
+    "oris|01-754-7749-4067": {
+      "cx": 0.38567,
+      "cy": 0.51389,
+      "r": 0.30588,
+      "fallback": false
+    },
+    "pagani-design|pd-1639": {
+      "cx": 0.48611,
+      "cy": 0.45556,
+      "r": 0.4531,
+      "fallback": false
+    },
+    "pagani-design|pd-1644": {
+      "cx": 0.48333,
+      "cy": 0.47222,
+      "r": 0.44142,
+      "fallback": false
+    },
+    "pagani-design|pd-1651": {
+      "cx": 0.48611,
+      "cy": 0.46389,
+      "r": 0.49903,
+      "fallback": false
+    },
+    "pagani-design|pd-1661": {
+      "cx": 0.5,
+      "cy": 0.46326,
+      "r": 0.49677,
+      "fallback": false
+    },
+    "pagani-design|pd-1661-gold": {
+      "cx": 0.49167,
+      "cy": 0.45556,
+      "r": 0.36686,
+      "fallback": false
+    },
+    "pagani-design|pd-1661-gold-black": {
+      "cx": 0.49722,
+      "cy": 0.45,
+      "r": 0.36878,
+      "fallback": false
+    },
+    "pagani-design|pd-1661-gold-green": {
+      "cx": 0.49722,
+      "cy": 0.45,
+      "r": 0.37132,
+      "fallback": false
+    },
+    "pagani-design|pd-1662": {
+      "cx": 0.48333,
+      "cy": 0.46111,
+      "r": 0.45568,
+      "fallback": false
+    },
+    "pagani-design|pd-1667": {
+      "cx": 0.54167,
+      "cy": 0.48333,
+      "r": 0.48696,
+      "fallback": false
+    },
+    "pagani-design|pd-1671": {
+      "cx": 0.47222,
+      "cy": 0.45556,
+      "r": 0.44842,
+      "fallback": false
+    },
+    "pagani-design|pd-1682": {
+      "cx": 0.48056,
+      "cy": 0.45617,
+      "r": 0.45617,
+      "fallback": false
+    },
+    "pagani-design|pd-1692": {
+      "cx": 0.50833,
+      "cy": 0.44444,
+      "r": 0.40553,
+      "fallback": false
+    },
+    "pagani-design|pd-1701": {
+      "cx": 0.50556,
+      "cy": 0.44722,
+      "r": 0.31514,
+      "fallback": false
+    },
+    "pagani-design|pd-1731": {
+      "cx": 0.48333,
+      "cy": 0.42222,
+      "r": 0.436,
+      "fallback": false
+    },
+    "pagani-design|pd-1752": {
+      "cx": 0.55,
+      "cy": 0.39167,
+      "r": 0.38341,
+      "fallback": false
+    },
+    "pagani-design|pd-1788": {
+      "cx": 0.5,
+      "cy": 0.46111,
+      "r": 0.41767,
+      "fallback": false
+    },
+    "panerai|pam00774": {
+      "cx": 0.46671,
+      "cy": 0.5,
+      "r": 0.5899,
+      "fallback": false
+    },
+    "panerai|pam01312": {
+      "cx": 0.48889,
+      "cy": 0.49167,
+      "r": 0.45827,
+      "fallback": false
+    },
+    "panerai|pam01359": {
+      "cx": 0.4375,
+      "cy": 0.20084,
+      "r": 0.34009,
+      "fallback": false
+    },
+    "panerai|pam01662": {
+      "cx": 0.45303,
+      "cy": 0.50278,
+      "r": 0.5876,
+      "fallback": false
+    },
+    "phoibos|px005": {
+      "cx": 0.475,
+      "cy": 0.44444,
+      "r": 0.32173,
+      "fallback": false
+    },
+    "phoibos|py024": {
+      "cx": 0.5,
+      "cy": 0.45,
+      "r": 0.32045,
+      "fallback": false
+    },
+    "phoibos|py039": {
+      "cx": 0.46667,
+      "cy": 0.45,
+      "r": 0.32431,
+      "fallback": false
+    },
+    "rado|r32105203": {
+      "cx": 0.47222,
+      "cy": 0.41389,
+      "r": 0.33894,
+      "fallback": false
+    },
+    "raymond-weil|rw2780": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "raymond-weil|rw2780-st-20001": {
+      "cx": 0.49823,
+      "cy": 0.43333,
+      "r": 0.37758,
+      "fallback": false
+    },
+    "rolex|114060": {
+      "cx": 0.50357,
+      "cy": 0.48333,
+      "r": 0.41208,
+      "fallback": false
+    },
+    "rolex|116400gv": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "rolex|116500ln": {
+      "cx": 0.47425,
+      "cy": 0.48611,
+      "r": 0.57366,
+      "fallback": false
+    },
+    "rolex|116610ln": {
+      "cx": 0.46809,
+      "cy": 0.50278,
+      "r": 0.58209,
+      "fallback": false
+    },
+    "rolex|116610lv": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.52958,
+      "fallback": false
+    },
+    "rolex|124060": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.31984,
+      "fallback": false
+    },
+    "rolex|124270": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.27622,
+      "fallback": false
+    },
+    "rolex|124273": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.25497,
+      "fallback": false
+    },
+    "rolex|124300": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "rolex|126000": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.27918,
+      "fallback": false
+    },
+    "rolex|126000-turquoise-dial": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.27918,
+      "fallback": false
+    },
+    "rolex|126200": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.28027,
+      "fallback": false
+    },
+    "rolex|126233": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.28027,
+      "fallback": false
+    },
+    "rolex|126234": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.28027,
+      "fallback": false
+    },
+    "rolex|126301": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.31008,
+      "fallback": false
+    },
+    "rolex|126334": {
+      "cx": 0.5,
+      "cy": 0.51667,
+      "r": 0.30102,
+      "fallback": false
+    },
+    "rolex|126500ln": {
+      "cx": 0.50413,
+      "cy": 0.50278,
+      "r": 0.28662,
+      "fallback": false
+    },
+    "rolex|126600": {
+      "cx": 0.5,
+      "cy": 0.50556,
+      "r": 0.30923,
+      "fallback": false
+    },
+    "rolex|126610ln": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.29524,
+      "fallback": false
+    },
+    "rolex|126610lv": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.31984,
+      "fallback": false
+    },
+    "rolex|126613lb": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.32061,
+      "fallback": false
+    },
+    "rolex|126613ln": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.29595,
+      "fallback": false
+    },
+    "rolex|126618lb": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.29595,
+      "fallback": false
+    },
+    "rolex|126618ln": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.29707,
+      "fallback": false
+    },
+    "rolex|126619lb": {
+      "cx": 0.46982,
+      "cy": 0.47617,
+      "r": 0.7112,
+      "fallback": false
+    },
+    "rolex|126655": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.2934,
+      "fallback": false
+    },
+    "rolex|126660": {
+      "cx": 0.5,
+      "cy": 0.48889,
+      "r": 0.52941,
+      "fallback": false
+    },
+    "rolex|126710blnr": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.31817,
+      "fallback": false
+    },
+    "rolex|126710blro": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.29361,
+      "fallback": false
+    },
+    "rolex|126710grnr": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.29369,
+      "fallback": false
+    },
+    "rolex|126900": {
+      "cx": 0.49587,
+      "cy": 0.53056,
+      "r": 0.29628,
+      "fallback": false
+    },
+    "rolex|14060": {
+      "cx": 0.5,
+      "cy": 0.48056,
+      "r": 0.41091,
+      "fallback": false
+    },
+    "rolex|14060m": {
+      "cx": 0.5,
+      "cy": 0.49167,
+      "r": 0.52784,
+      "fallback": false
+    },
+    "rolex|16610": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.52754,
+      "fallback": false
+    },
+    "rolex|16610lv": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "rolex|16613": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.53673,
+      "fallback": false
+    },
+    "rolex|1680": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.52643,
+      "fallback": false
+    },
+    "rolex|16800": {
+      "cx": 0.46383,
+      "cy": 0.525,
+      "r": 0.57877,
+      "fallback": false
+    },
+    "rolex|214270": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "rolex|224270": {
+      "cx": 0.46383,
+      "cy": 0.44167,
+      "r": 0.56718,
+      "fallback": false
+    },
+    "rolex|226570": {
+      "cx": 0.45957,
+      "cy": 0.53889,
+      "r": 0.57372,
+      "fallback": false
+    },
+    "rolex|226570-white-dial": {
+      "cx": 0.5,
+      "cy": 0.51667,
+      "r": 0.55493,
+      "fallback": false
+    },
+    "rolex|226627": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.307,
+      "fallback": false
+    },
+    "rolex|228238": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.28208,
+      "fallback": false
+    },
+    "rolex|5513": {
+      "cx": 0.45106,
+      "cy": 0.50556,
+      "r": 0.55785,
+      "fallback": false
+    },
+    "rze-resolute|42": {
+      "cx": 0.5,
+      "cy": 0.50833,
+      "r": 0.17385,
+      "fallback": false
+    },
+    "rze|valour": {
+      "cx": 0.5,
+      "cy": 0.76944,
+      "r": 0.15728,
+      "fallback": false
+    },
+    "san-martin|sn0008-g": {
+      "cx": 0.49722,
+      "cy": 0.44444,
+      "r": 0.30607,
+      "fallback": false
+    },
+    "san-martin|sn0008-gd": {
+      "cx": 0.49722,
+      "cy": 0.47778,
+      "r": 0.28284,
+      "fallback": false
+    },
+    "san-martin|sn0044": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "san-martin|sn0086": {
+      "cx": 0.53608,
+      "cy": 0.45851,
+      "r": 0.7333,
+      "fallback": false
+    },
+    "san-martin|sn0107": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "san-martin|sn0112": {
+      "cx": 0.73988,
+      "cy": 0.29994,
+      "r": 0.44449,
+      "fallback": false
+    },
+    "san-martin|sn0116": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "san-martin|sn0119": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "san-martin|sn0121gb": {
+      "cx": 0.48056,
+      "cy": 0.44722,
+      "r": 0.30148,
+      "fallback": false
+    },
+    "san-martin|sn0121td": {
+      "cx": 0.51944,
+      "cy": 0.46389,
+      "r": 0.302,
+      "fallback": false
+    },
+    "san-martin|sn0129": {
+      "cx": 0.48333,
+      "cy": 0.45,
+      "r": 0.27857,
+      "fallback": false
+    },
+    "seestern|s434": {
+      "cx": 0.48611,
+      "cy": 0.43889,
+      "r": 0.28783,
+      "fallback": false
+    },
+    "seestern|s446": {
+      "cx": 0.47778,
+      "cy": 0.44722,
+      "r": 0.31241,
+      "fallback": false
+    },
+    "seestern|s446-blue": {
+      "cx": 0.47778,
+      "cy": 0.44722,
+      "r": 0.31248,
+      "fallback": false
+    },
+    "seiko|sary163": {
+      "cx": 0.48611,
+      "cy": 0.47778,
+      "r": 0.36522,
+      "fallback": false
+    },
+    "seiko|sbdc053": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.53233,
+      "fallback": false
+    },
+    "seiko|sbdc087": {
+      "cx": 0.47222,
+      "cy": 0.47222,
+      "r": 0.36899,
+      "fallback": false
+    },
+    "seiko|sbdc111": {
+      "cx": 0.48333,
+      "cy": 0.48889,
+      "r": 0.37029,
+      "fallback": false
+    },
+    "seiko|skx007": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "seiko|skx009": {
+      "cx": 0.47037,
+      "cy": 0.45,
+      "r": 0.44322,
+      "fallback": false
+    },
+    "seiko|sla017": {
+      "cx": 0.49722,
+      "cy": 0.43056,
+      "r": 0.27878,
+      "fallback": false
+    },
+    "seiko|sna411": {
+      "cx": 0.46667,
+      "cy": 0.46389,
+      "r": 0.52695,
+      "fallback": false
+    },
+    "seiko|snr029": {
+      "cx": 0.48056,
+      "cy": 0.46667,
+      "r": 0.37673,
+      "fallback": false
+    },
+    "seiko|snr031": {
+      "cx": 0.475,
+      "cy": 0.46667,
+      "r": 0.38403,
+      "fallback": false
+    },
+    "seiko|spb077": {
+      "cx": 0.48333,
+      "cy": 0.46667,
+      "r": 0.37357,
+      "fallback": false
+    },
+    "seiko|spb079": {
+      "cx": 0.48333,
+      "cy": 0.475,
+      "r": 0.37268,
+      "fallback": false
+    },
+    "seiko|spb101": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "seiko|spb121": {
+      "cx": 0.48889,
+      "cy": 0.46944,
+      "r": 0.33535,
+      "fallback": false
+    },
+    "seiko|spb143": {
+      "cx": 0.48611,
+      "cy": 0.45833,
+      "r": 0.34683,
+      "fallback": false
+    },
+    "seiko|spb147": {
+      "cx": 0.47778,
+      "cy": 0.47222,
+      "r": 0.34917,
+      "fallback": false
+    },
+    "seiko|spb149": {
+      "cx": 0.47778,
+      "cy": 0.46944,
+      "r": 0.34707,
+      "fallback": false
+    },
+    "seiko|spb151": {
+      "cx": 0.48611,
+      "cy": 0.525,
+      "r": 0.39434,
+      "fallback": false
+    },
+    "seiko|spb155": {
+      "cx": 0.49444,
+      "cy": 0.46667,
+      "r": 0.30782,
+      "fallback": false
+    },
+    "seiko|spb175": {
+      "cx": 0.50556,
+      "cy": 0.46389,
+      "r": 0.38783,
+      "fallback": false
+    },
+    "seiko|spb185": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "seiko|spb187": {
+      "cx": 0.49167,
+      "cy": 0.46667,
+      "r": 0.36486,
+      "fallback": false
+    },
+    "seiko|spb217": {
+      "cx": 0.47778,
+      "cy": 0.46944,
+      "r": 0.36249,
+      "fallback": false
+    },
+    "seiko|spb237": {
+      "cx": 0.48056,
+      "cy": 0.48056,
+      "r": 0.36668,
+      "fallback": false
+    },
+    "seiko|spb259": {
+      "cx": 0.48333,
+      "cy": 0.46667,
+      "r": 0.3597,
+      "fallback": false
+    },
+    "seiko|spb317": {
+      "cx": 0.49722,
+      "cy": 0.45556,
+      "r": 0.35333,
+      "fallback": false
+    },
+    "seiko|spb381": {
+      "cx": 0.48611,
+      "cy": 0.46944,
+      "r": 0.36099,
+      "fallback": false
+    },
+    "seiko|spb451": {
+      "cx": 0.48056,
+      "cy": 0.47222,
+      "r": 0.33989,
+      "fallback": false
+    },
+    "seiko|spb453": {
+      "cx": 0.47778,
+      "cy": 0.46389,
+      "r": 0.34387,
+      "fallback": false
+    },
+    "seiko|srpb41": {
+      "cx": 0.47456,
+      "cy": 0.475,
+      "r": 0.47456,
+      "fallback": false
+    },
+    "seiko|srpd51": {
+      "cx": 0.48611,
+      "cy": 0.47222,
+      "r": 0.39495,
+      "fallback": false
+    },
+    "seiko|srpd55": {
+      "cx": 0.47842,
+      "cy": 0.47842,
+      "r": 0.47842,
+      "fallback": false
+    },
+    "seiko|srpd73": {
+      "cx": 0.48333,
+      "cy": 0.47222,
+      "r": 0.36668,
+      "fallback": false
+    },
+    "seiko|srpe03": {
+      "cx": 0.5,
+      "cy": 0.48611,
+      "r": 0.56345,
+      "fallback": false
+    },
+    "seiko|srpe51": {
+      "cx": 0.46944,
+      "cy": 0.46389,
+      "r": 0.32872,
+      "fallback": false
+    },
+    "seiko|srpe53": {
+      "cx": 0.47778,
+      "cy": 0.46389,
+      "r": 0.33797,
+      "fallback": false
+    },
+    "seiko|srpe57": {
+      "cx": 0.46944,
+      "cy": 0.46667,
+      "r": 0.33042,
+      "fallback": false
+    },
+    "seiko|srpe93": {
+      "cx": 0.48611,
+      "cy": 0.46944,
+      "r": 0.41889,
+      "fallback": false
+    },
+    "seiko|srpe99": {
+      "cx": 0.48889,
+      "cy": 0.46389,
+      "r": 0.38667,
+      "fallback": false
+    },
+    "seiko|srpj47": {
+      "cx": 0.48056,
+      "cy": 0.48611,
+      "r": 0.29008,
+      "fallback": false
+    },
+    "seiko|srpk33": {
+      "cx": 0.5,
+      "cy": 0.78056,
+      "r": 0.1971,
+      "fallback": false
+    },
+    "seiko|ssa425": {
+      "cx": 0.47778,
+      "cy": 0.46667,
+      "r": 0.34745,
+      "fallback": false
+    },
+    "seiko|ssa441": {
+      "cx": 0.48333,
+      "cy": 0.475,
+      "r": 0.36472,
+      "fallback": false
+    },
+    "seiko|ssb397": {
+      "cx": 0.48333,
+      "cy": 0.36667,
+      "r": 0.29899,
+      "fallback": false
+    },
+    "seiko|ssc813": {
+      "cx": 0.50833,
+      "cy": 0.5,
+      "r": 0.27867,
+      "fallback": false
+    },
+    "seiko|ssc911": {
+      "cx": 0.48056,
+      "cy": 0.49167,
+      "r": 0.29876,
+      "fallback": false
+    },
+    "seiko|sur455": {
+      "cx": 0.5,
+      "cy": 0.79444,
+      "r": 0.33802,
+      "fallback": false
+    },
+    "serica|4512": {
+      "cx": 0.49805,
+      "cy": 0.20556,
+      "r": 0.07197,
+      "fallback": false
+    },
+    "serica|5303": {
+      "cx": 0.49805,
+      "cy": 0.46667,
+      "r": 0.24703,
+      "fallback": false
+    },
+    "serica|6190": {
+      "cx": 0.49805,
+      "cy": 0.46667,
+      "r": 0.25897,
+      "fallback": false
+    },
+    "sinn|104-st-sa-a": {
+      "cx": 0.49819,
+      "cy": 0.5,
+      "r": 0.38907,
+      "fallback": false
+    },
+    "sinn|104-st-sa-iba": {
+      "cx": 0.475,
+      "cy": 0.5,
+      "r": 0.30826,
+      "fallback": false
+    },
+    "sinn|556-a": {
+      "cx": 0.50181,
+      "cy": 0.50278,
+      "r": 0.40002,
+      "fallback": false
+    },
+    "sinn|556-i": {
+      "cx": 0.50542,
+      "cy": 0.49722,
+      "r": 0.39459,
+      "fallback": false
+    },
+    "sinn|u50": {
+      "cx": 0.46944,
+      "cy": 0.50278,
+      "r": 0.41039,
+      "fallback": false
+    },
+    "spinnaker|sp-5062": {
+      "cx": 0.48611,
+      "cy": 0.49722,
+      "r": 0.26769,
+      "fallback": false
+    },
+    "spinnaker|sp-5081": {
+      "cx": 0.50833,
+      "cy": 0.49444,
+      "r": 0.33,
+      "fallback": false
+    },
+    "squale|1521-50": {
+      "cx": 0.5,
+      "cy": 0.52419,
+      "r": 0.50046,
+      "fallback": false
+    },
+    "squale|1521-black": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "squale|1545": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "steeldive|sd1928": {
+      "cx": 0.49722,
+      "cy": 0.44444,
+      "r": 0.30594,
+      "fallback": false
+    },
+    "steeldive|sd1940": {
+      "cx": 0.55278,
+      "cy": 0.34722,
+      "r": 0.44871,
+      "fallback": false
+    },
+    "steeldive|sd1953": {
+      "cx": 0.5,
+      "cy": 0.46389,
+      "r": 0.33335,
+      "fallback": false
+    },
+    "steeldive|sd1953t": {
+      "cx": 0.5,
+      "cy": 0.44722,
+      "r": 0.31903,
+      "fallback": false
+    },
+    "steeldive|sd1954": {
+      "cx": 0.5,
+      "cy": 0.44167,
+      "r": 0.31007,
+      "fallback": false
+    },
+    "steeldive|sd1954v": {
+      "cx": 0.5,
+      "cy": 0.44444,
+      "r": 0.29853,
+      "fallback": false
+    },
+    "steeldive|sd1964": {
+      "cx": 0.50278,
+      "cy": 0.52222,
+      "r": 0.47504,
+      "fallback": false
+    },
+    "steeldive|sd1970": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "steeldive|sd1975": {
+      "cx": 0.49444,
+      "cy": 0.45833,
+      "r": 0.38872,
+      "fallback": false
+    },
+    "steinhart|nav-b-chrono": {
+      "cx": 0.47925,
+      "cy": 0.49811,
+      "r": 0.29055,
+      "fallback": false
+    },
+    "steinhart|ocean-39-premium": {
+      "cx": 0.49811,
+      "cy": 0.49434,
+      "r": 0.25636,
+      "fallback": false
+    },
+    "steinhart|ocean-one-39": {
+      "cx": 0.49722,
+      "cy": 0.50278,
+      "r": 0.27028,
+      "fallback": false
+    },
+    "steinhart|ocean-one-39-nova": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.26183,
+      "fallback": false
+    },
+    "steinhart|ocean-one-42": {
+      "cx": 0.49811,
+      "cy": 0.50189,
+      "r": 0.26162,
+      "fallback": false
+    },
+    "steinhart|ocean-one-green": {
+      "cx": 0.50566,
+      "cy": 0.49434,
+      "r": 0.27339,
+      "fallback": false
+    },
+    "steinhart|ocean-one-vintage": {
+      "cx": 0.50189,
+      "cy": 0.49811,
+      "r": 0.28079,
+      "fallback": false
+    },
+    "steinhart|ocean-one-vintage-red": {
+      "cx": 0.50189,
+      "cy": 0.50189,
+      "r": 0.27507,
+      "fallback": false
+    },
+    "stowa|marine-classic-36": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.3142,
+      "fallback": false
+    },
+    "stowa|partie-top": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.35297,
+      "fallback": false
+    },
+    "sugess|su116610ld": {
+      "cx": 0.50833,
+      "cy": 0.46111,
+      "r": 0.28333,
+      "fallback": false
+    },
+    "sugess|su116610ln": {
+      "cx": 0.50833,
+      "cy": 0.46111,
+      "r": 0.28241,
+      "fallback": false
+    },
+    "swatch|so33c100": {
+      "cx": 0.36667,
+      "cy": 0.49167,
+      "r": 0.34106,
+      "fallback": false
+    },
+    "swatch|so33m106": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "swatch|so33n100": {
+      "cx": 0.36667,
+      "cy": 0.49167,
+      "r": 0.34106,
+      "fallback": false
+    },
+    "tag-heuer|cbl2111": {
+      "cx": 0.50655,
+      "cy": 0.51111,
+      "r": 0.44929,
+      "fallback": false
+    },
+    "tag-heuer|waz1110": {
+      "cx": 0.47778,
+      "cy": 0.44722,
+      "r": 0.31007,
+      "fallback": false
+    },
+    "tag-heuer|waz2113": {
+      "cx": 0.48611,
+      "cy": 0.48889,
+      "r": 0.3289,
+      "fallback": false
+    },
+    "tag-heuer|wbp2010": {
+      "cx": 0.50218,
+      "cy": 0.49167,
+      "r": 0.36561,
+      "fallback": false
+    },
+    "tag-heuer|wbp2110": {
+      "cx": 0.49782,
+      "cy": 0.5,
+      "r": 0.34218,
+      "fallback": false
+    },
+    "timex|tw2r47900": {
+      "cx": 0.48667,
+      "cy": 0.49722,
+      "r": 0.35536,
+      "fallback": false
+    },
+    "timex|tw2t69900": {
+      "cx": 0.47667,
+      "cy": 0.48333,
+      "r": 0.41394,
+      "fallback": false
+    },
+    "timex|tw2t80700": {
+      "cx": 0.5,
+      "cy": 0.49444,
+      "r": 0.53252,
+      "fallback": false
+    },
+    "timex|tw2u42500": {
+      "cx": 0.48056,
+      "cy": 0.5,
+      "r": 0.37084,
+      "fallback": false
+    },
+    "timex|tw2u84300": {
+      "cx": 0.49722,
+      "cy": 0.49444,
+      "r": 0.30361,
+      "fallback": false
+    },
+    "timex|tw2v44100": {
+      "cx": 0.47,
+      "cy": 0.50278,
+      "r": 0.44355,
+      "fallback": false
+    },
+    "timex|tw2w93300": {
+      "cx": 0.49,
+      "cy": 0.51944,
+      "r": 0.37138,
+      "fallback": false
+    },
+    "tissot|t120.407.11.041.01": {
+      "cx": 0.48056,
+      "cy": 0.43333,
+      "r": 0.31022,
+      "fallback": false
+    },
+    "tissot|t120.407.17.041.00": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.29935,
+      "fallback": false
+    },
+    "tissot|t125.617.11.051.00": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.3171,
+      "fallback": false
+    },
+    "tissot|t137.407.11.091.00": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.28144,
+      "fallback": false
+    },
+    "tissot|t137.407.11.351.00": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.28144,
+      "fallback": false
+    },
+    "tissot|t137.410.11.041.00": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.28144,
+      "fallback": false
+    },
+    "tissot|t137.410.11.091.00": {
+      "cx": 0.49722,
+      "cy": 0.5,
+      "r": 0.28144,
+      "fallback": false
+    },
+    "traska|commuter-v3": {
+      "cx": 0.49722,
+      "cy": 0.43333,
+      "r": 0.28636,
+      "fallback": false
+    },
+    "traska|freediver-v3": {
+      "cx": 0.49722,
+      "cy": 0.425,
+      "r": 0.29713,
+      "fallback": false
+    },
+    "traska|summiteer-36": {
+      "cx": 0.49722,
+      "cy": 0.43056,
+      "r": 0.29248,
+      "fallback": false
+    },
+    "tudor|m12510": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m25500tn": {
+      "cx": 0.5,
+      "cy": 0.49444,
+      "r": 0.55968,
+      "fallback": false
+    },
+    "tudor|m25600tn": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m25707b": {
+      "cx": 0.5,
+      "cy": 0.52222,
+      "r": 0.31669,
+      "fallback": false
+    },
+    "tudor|m55000": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m79010ng": {
+      "cx": 0.5,
+      "cy": 0.52778,
+      "r": 0.48452,
+      "fallback": false
+    },
+    "tudor|m79010sg": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m79030b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m79030n": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m79230n": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m79360n": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tudor|m7941a1a0nu": {
+      "cx": 0.49653,
+      "cy": 0.50278,
+      "r": 0.32596,
+      "fallback": false
+    },
+    "tudor|m79470": {
+      "cx": 0.49653,
+      "cy": 0.53333,
+      "r": 0.29872,
+      "fallback": false
+    },
+    "tudor|m79950": {
+      "cx": 0.5,
+      "cy": 0.52778,
+      "r": 0.30176,
+      "fallback": false
+    },
+    "tudor|m91350": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "unimatic|u1-m": {
+      "cx": 0.5,
+      "cy": 0.48889,
+      "r": 0.21911,
+      "fallback": false
+    },
+    "unimatic|u2-m": {
+      "cx": 0.49722,
+      "cy": 0.475,
+      "r": 0.19889,
+      "fallback": false
+    },
+    "unimatic|u3-m": {
+      "cx": 0.5,
+      "cy": 0.48333,
+      "r": 0.23672,
+      "fallback": false
+    },
+    "vaer|a5": {
+      "cx": 0.49444,
+      "cy": 0.50556,
+      "r": 0.30694,
+      "fallback": false
+    },
+    "vaer|d5": {
+      "cx": 0.49722,
+      "cy": 0.49444,
+      "r": 0.31111,
+      "fallback": false
+    },
+    "vaer|g5": {
+      "cx": 0.49444,
+      "cy": 0.50556,
+      "r": 0.29682,
+      "fallback": false
+    },
+    "vaer|s3": {
+      "cx": 0.5,
+      "cy": 0.49167,
+      "r": 0.24585,
+      "fallback": false
+    },
+    "yema|ysup20b41": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "zelos|swordfish": {
+      "cx": 0.49167,
+      "cy": 0.46667,
+      "r": 0.42297,
+      "fallback": false
+    },
+    "zelos|swordfish-bronze": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "zenith|03.3100.3600": {
+      "cx": 0.50397,
+      "cy": 0.48333,
+      "r": 0.35228,
+      "fallback": false
+    },
+    "zenith|03.9300.3620": {
+      "cx": 0.51587,
+      "cy": 0.5,
+      "r": 0.39722,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-103-021-8": {
+      "cx": 0.48587,
+      "cy": 0.46111,
+      "r": 0.74099,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-107-031-13": {
+      "cx": 0.49853,
+      "cy": 0.525,
+      "r": 0.74113,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-109-021-1": {
+      "cx": 0.49744,
+      "cy": 0.47253,
+      "r": 0.46519,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-118-021-12": {
+      "cx": 0.49551,
+      "cy": 0.525,
+      "r": 0.75911,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-153-022-10": {
+      "cx": 0.49231,
+      "cy": 0.75824,
+      "r": 0.26226,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-203-042-9": {
+      "cx": 0.48488,
+      "cy": 0.49444,
+      "r": 0.71343,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-203-043-6": {
+      "cx": 0.48488,
+      "cy": 0.49444,
+      "r": 0.71343,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-404-035-4": {
+      "cx": 0.5,
+      "cy": 0.46154,
+      "r": 0.4988,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-801-039-11": {
+      "cx": 0.47692,
+      "cy": 0.48718,
+      "r": 0.39866,
+      "fallback": false
+    },
+    "tpp|tpp-a-lange-s-hne-808-035-14": {
+      "cx": 0.47692,
+      "cy": 0.49451,
+      "r": 0.43176,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25770st-o-0009xx-04-26": {
+      "cx": 0.5,
+      "cy": 0.43889,
+      "r": 0.52068,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25807st-o-1010-st-01-21": {
+      "cx": 0.4598,
+      "cy": 0.43333,
+      "r": 0.5044,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25808ba-o-0009-01-25": {
+      "cx": 0.44324,
+      "cy": 0.15204,
+      "r": 0.36505,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25808st-o-0009-01-28": {
+      "cx": 0.48803,
+      "cy": 0.42778,
+      "r": 0.48919,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25808st-o-0009-04-24": {
+      "cx": 0.47058,
+      "cy": 0.4,
+      "r": 0.58316,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25808st-o-0009-06-23": {
+      "cx": 0.50307,
+      "cy": 0.4,
+      "r": 0.46978,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25808st-o-0009-08-27": {
+      "cx": 0.45399,
+      "cy": 0.38611,
+      "r": 0.57958,
+      "fallback": false
+    },
+    "tpp|tpp-audemars-piguet-25854bc-o-1150bc-01-20": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.55463,
+      "fallback": false
+    },
+    "tpp|tpp-bell-ross-space-1-m-53": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-certina-c001-007-11-013-00-63": {
+      "cx": 0.49645,
+      "cy": 0.48889,
+      "r": 0.54584,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c001-007-11-053-00-62": {
+      "cx": 0.5,
+      "cy": 0.48889,
+      "r": 0.50328,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c001-007-16-423-00-60": {
+      "cx": 0.5,
+      "cy": 0.48889,
+      "r": 0.50242,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c0172101103700-83": {
+      "cx": 0.46995,
+      "cy": 0.45455,
+      "r": 0.37971,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c033-051-11-058-00-71": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.50589,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c033-051-11-118-00-73": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.50672,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c033-051-22-128-00-75": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.50672,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c033-051-36-128-00-70": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.50672,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c035-210-11-012-00-84": {
+      "cx": 0.49624,
+      "cy": 0.47778,
+      "r": 0.55024,
+      "fallback": false
+    },
+    "tpp|tpp-certina-c035-210-11-057-00-80": {
+      "cx": 0.48872,
+      "cy": 0.48056,
+      "r": 0.54474,
+      "fallback": false
+    },
+    "tpp|tpp-giuliano-mazzuoli-mscf03-86": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-glash-tte-original-39-32-09-05-04-91": {
+      "cx": 0.4999,
+      "cy": 0.51312,
+      "r": 0.68378,
+      "fallback": false
+    },
+    "tpp|tpp-glash-tte-original-39-32-13-17-04-87": {
+      "cx": 0.5,
+      "cy": 0.51097,
+      "r": 0.54606,
+      "fallback": false
+    },
+    "tpp|tpp-iwc-iw3712-13-aka-3712-13-iw371213-92": {
+      "cx": 0.49451,
+      "cy": 0.47122,
+      "r": 0.47824,
+      "fallback": false
+    },
+    "tpp|tpp-iwc-iw3714-10-aka-iw371410-93": {
+      "cx": 0.47977,
+      "cy": 0.50365,
+      "r": 0.46115,
+      "fallback": false
+    },
+    "tpp|tpp-ligure-lwt21001-99": {
+      "cx": 0.49041,
+      "cy": 0.46715,
+      "r": 0.49041,
+      "fallback": false
+    },
+    "tpp|tpp-ligure-lwt210010-97": {
+      "cx": 0.5,
+      "cy": 0.4684,
+      "r": 0.50565,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l2-263-5-72-7-aka-l22635727-109": {
+      "cx": 0.5,
+      "cy": 0.48333,
+      "r": 0.53614,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l4-309-4-77-6-aka-l43094776-107": {
+      "cx": 0.46479,
+      "cy": 0.46389,
+      "r": 0.57348,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l4-309-4-78-6-aka-l43094786-108": {
+      "cx": 0.46853,
+      "cy": 0.45556,
+      "r": 0.56232,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l5-155-4-76-2-aka-l51554762-102": {
+      "cx": 0.49585,
+      "cy": 0.46111,
+      "r": 0.60326,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l5-155-5-89-7-aka-l51555897-103": {
+      "cx": 0.5,
+      "cy": 0.58611,
+      "r": 0.58265,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l5-155-5-99-7-aka-l51555997-104": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.60664,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l5-255-4-87-6-aka-l52554876-106": {
+      "cx": 0.5,
+      "cy": 0.45,
+      "r": 0.57687,
+      "fallback": false
+    },
+    "tpp|tpp-longines-l5-512-4-57-6-aka-l55124576-105": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.59619,
+      "fallback": false
+    },
+    "tpp|tpp-omega-1900-40-51-110": {
+      "cx": 0.50286,
+      "cy": 0.50175,
+      "r": 0.42503,
+      "fallback": false
+    },
+    "tpp|tpp-omega-1920-18-00-111": {
+      "cx": 0.50857,
+      "cy": 0.49123,
+      "r": 0.42636,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2101-11-00-162": {
+      "cx": 0.51429,
+      "cy": 0.51579,
+      "r": 0.44211,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2101-21-00-aka-21012100-158": {
+      "cx": 0.47429,
+      "cy": 0.50526,
+      "r": 0.44163,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2101-81-00-157": {
+      "cx": 0.50857,
+      "cy": 0.51228,
+      "r": 0.44312,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-10-00-aka-21051000-161": {
+      "cx": 0.49714,
+      "cy": 0.49123,
+      "r": 0.43741,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-11-00-aka-21051100-165": {
+      "cx": 0.50286,
+      "cy": 0.51579,
+      "r": 0.43552,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-15-00-aka-21051500-164": {
+      "cx": 0.50286,
+      "cy": 0.51579,
+      "r": 0.43633,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-20-00-aka-21052000-159": {
+      "cx": 0.50857,
+      "cy": 0.50175,
+      "r": 0.44126,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-21-00-aka-21052100-156": {
+      "cx": 0.48571,
+      "cy": 0.48421,
+      "r": 0.43891,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-45-00-aka-21054500-163": {
+      "cx": 0.50857,
+      "cy": 0.51579,
+      "r": 0.43854,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-80-00-aka-21058000-155": {
+      "cx": 0.50286,
+      "cy": 0.50526,
+      "r": 0.44227,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2105-81-00-aka-21058100-154": {
+      "cx": 0.49143,
+      "cy": 0.48421,
+      "r": 0.43482,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2111-11-00-153": {
+      "cx": 0.49714,
+      "cy": 0.50175,
+      "r": 0.47913,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2111-21-00-160": {
+      "cx": 0.49143,
+      "cy": 0.50877,
+      "r": 0.48034,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2131-20-00-aka-21312000-ba-368-1502-184": {
+      "cx": 0.5,
+      "cy": 0.51228,
+      "r": 0.49756,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2133-80-00-175": {
+      "cx": 0.5,
+      "cy": 0.51228,
+      "r": 0.49864,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2151-20-00-aka-21512000-198": {
+      "cx": 0.49714,
+      "cy": 0.51228,
+      "r": 0.45075,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2153-80-00-aka-21538000-179": {
+      "cx": 0.49143,
+      "cy": 0.50526,
+      "r": 0.45075,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2182-20-00-aka-21822000-189": {
+      "cx": 0.50286,
+      "cy": 0.50175,
+      "r": 0.35186,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2182-80-00-aka-21828000-199": {
+      "cx": 0.48,
+      "cy": 0.49474,
+      "r": 0.35186,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2194-85-00-195": {
+      "cx": 0.5,
+      "cy": 0.50175,
+      "r": 0.51479,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2195-25-00-208": {
+      "cx": 0.5,
+      "cy": 0.49474,
+      "r": 0.67534,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2196-20-00-174": {
+      "cx": 0.5,
+      "cy": 0.49123,
+      "r": 0.55328,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2198-80-00-178": {
+      "cx": 0.49259,
+      "cy": 0.49474,
+      "r": 0.5598,
+      "fallback": false
+    },
+    "tpp|tpp-omega-222-62-42-20-01-001-aka-22262422001001-213": {
+      "cx": 0.48571,
+      "cy": 0.49474,
+      "r": 0.42097,
+      "fallback": false
+    },
+    "tpp|tpp-omega-222-62-46-20-01-001-aka-22262462001001-214": {
+      "cx": 0.49143,
+      "cy": 0.47018,
+      "r": 0.45594,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2232-30-00-aka-22323000-166": {
+      "cx": 0.49647,
+      "cy": 0.48772,
+      "r": 0.49647,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2250-50-00-aka-22505000-172": {
+      "cx": 0.48,
+      "cy": 0.46667,
+      "r": 0.48171,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2251-50-00-aka-22515000-169": {
+      "cx": 0.47476,
+      "cy": 0.45614,
+      "r": 0.53388,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2282-50-00-aka-22825000-191": {
+      "cx": 0.48571,
+      "cy": 0.47719,
+      "r": 0.36882,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2352-20-00-aka-23522000-186": {
+      "cx": 0.47429,
+      "cy": 0.18947,
+      "r": 0.28505,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2352-80-00-aka-23528000-171": {
+      "cx": 0.50286,
+      "cy": 0.50877,
+      "r": 0.43244,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2362-20-00-aka-23622000-197": {
+      "cx": 0.50857,
+      "cy": 0.49123,
+      "r": 0.43982,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2362-80-00-aka-23628000-183": {
+      "cx": 0.49714,
+      "cy": 0.49123,
+      "r": 0.43676,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2382-80-00-aka-23828000-201": {
+      "cx": 0.50857,
+      "cy": 0.49123,
+      "r": 0.34395,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2398-20-00-188": {
+      "cx": 0.5,
+      "cy": 0.50175,
+      "r": 0.61569,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2398-80-00-209": {
+      "cx": 0.5,
+      "cy": 0.50175,
+      "r": 0.50969,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2432-20-00-aka-24322000-176": {
+      "cx": 0.49071,
+      "cy": 0.49123,
+      "r": 0.49071,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2432-80-00-aka-24328000-180": {
+      "cx": 0.4909,
+      "cy": 0.49825,
+      "r": 0.4909,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2442-80-00-aka-24428000-202": {
+      "cx": 0.49071,
+      "cy": 0.49474,
+      "r": 0.49071,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2452-20-00-aka-24522000-203": {
+      "cx": 0.48,
+      "cy": 0.48772,
+      "r": 0.43244,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2452-80-00-aka-24528000-192": {
+      "cx": 0.49143,
+      "cy": 0.49825,
+      "r": 0.43368,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2453-80-00-aka-24538000-204": {
+      "cx": 0.5,
+      "cy": 0.49225,
+      "r": 0.51316,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2455-50-00-aka-24555000-181": {
+      "cx": 0.49448,
+      "cy": 0.49474,
+      "r": 0.49448,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2462-20-00-aka-24622000-194": {
+      "cx": 0.47429,
+      "cy": 0.48421,
+      "r": 0.43547,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2462-80-00-aka-24628000-193": {
+      "cx": 0.46857,
+      "cy": 0.4807,
+      "r": 0.43292,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2482-20-00-aka-24822000-205": {
+      "cx": 0.52,
+      "cy": 0.50175,
+      "r": 0.34045,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2482-80-00-aka-24828000-206": {
+      "cx": 0.51429,
+      "cy": 0.48772,
+      "r": 0.34272,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2498-20-00-210": {
+      "cx": 0.46857,
+      "cy": 0.17669,
+      "r": 0.33261,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2498-80-00-196": {
+      "cx": 0.5,
+      "cy": 0.51228,
+      "r": 0.69208,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2501-33-00-152": {
+      "cx": 0.47429,
+      "cy": 0.4807,
+      "r": 0.46254,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2552-20-00-182": {
+      "cx": 0.50857,
+      "cy": 0.48421,
+      "r": 0.43368,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2552-80-00-aka-25528000-168": {
+      "cx": 0.50857,
+      "cy": 0.50175,
+      "r": 0.43854,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2583-20-00-aka-25832000-207": {
+      "cx": 0.52,
+      "cy": 0.51228,
+      "r": 0.33628,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2603-52-31-aka-26035231-149": {
+      "cx": 0.50286,
+      "cy": 0.47018,
+      "r": 0.47754,
+      "fallback": false
+    },
+    "tpp|tpp-omega-2812-52-31-aka-28125231-150": {
+      "cx": 0.50286,
+      "cy": 0.53333,
+      "r": 0.5183,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3193-50-00-223": {
+      "cx": 0.5,
+      "cy": 0.49123,
+      "r": 0.51103,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3510-52-00-218": {
+      "cx": 0.50286,
+      "cy": 0.47368,
+      "r": 0.45588,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3510-80-00-220": {
+      "cx": 0.49143,
+      "cy": 0.50526,
+      "r": 0.46477,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3510-82-00-219": {
+      "cx": 0.48,
+      "cy": 0.45614,
+      "r": 0.46674,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3511-50-00-217": {
+      "cx": 0.48571,
+      "cy": 0.48421,
+      "r": 0.47055,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3513-33-00-aka-35133300-215": {
+      "cx": 0.49143,
+      "cy": 0.48772,
+      "r": 0.50819,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3523-30-00-aka-35233000-216": {
+      "cx": 0.5,
+      "cy": 0.47432,
+      "r": 0.51095,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3810-12-06-aka-38101206-222": {
+      "cx": 0.50286,
+      "cy": 0.5193,
+      "r": 0.46356,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3810-51-41-221": {
+      "cx": 0.48,
+      "cy": 0.4807,
+      "r": 0.47493,
+      "fallback": false
+    },
+    "tpp|tpp-omega-3990-50-41-aka-39905041-224": {
+      "cx": 0.5,
+      "cy": 0.48421,
+      "r": 0.50525,
+      "fallback": false
+    },
+    "tpp|tpp-omega-4531-32-00-115": {
+      "cx": 0.50857,
+      "cy": 0.4807,
+      "r": 0.48171,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5200-50-00-126": {
+      "cx": 0.46574,
+      "cy": 0.48421,
+      "r": 0.47803,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5202-51-00-131": {
+      "cx": 0.48,
+      "cy": 0.48772,
+      "r": 0.47182,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5240-50-00-127": {
+      "cx": 0.52,
+      "cy": 0.83158,
+      "r": 0.26127,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5250-50-40-aka-52505040-129": {
+      "cx": 0.49714,
+      "cy": 0.49825,
+      "r": 0.48108,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5250-50-41-130": {
+      "cx": 0.48,
+      "cy": 0.50526,
+      "r": 0.48286,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5290-50-40-128": {
+      "cx": 0.50286,
+      "cy": 0.51228,
+      "r": 0.47566,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5290-50-41-132": {
+      "cx": 0.46843,
+      "cy": 0.47368,
+      "r": 0.50482,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5755-20-01-aka-57552001-139": {
+      "cx": 0.49714,
+      "cy": 0.81754,
+      "r": 0.2905,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5770-71-01-142": {
+      "cx": 0.50286,
+      "cy": 0.66667,
+      "r": 0.40857,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5770-73-03-136": {
+      "cx": 0.50857,
+      "cy": 0.48772,
+      "r": 0.50694,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5771-71-56-143": {
+      "cx": 0.47429,
+      "cy": 0.45263,
+      "r": 0.52596,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5775-71-02-137": {
+      "cx": 0.50286,
+      "cy": 0.44912,
+      "r": 0.52538,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5921-61-31-114": {
+      "cx": 0.49714,
+      "cy": 0.51579,
+      "r": 0.43939,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5950-31-03-133": {
+      "cx": 0.48571,
+      "cy": 0.49825,
+      "r": 0.47316,
+      "fallback": false
+    },
+    "tpp|tpp-omega-5950-81-03-135": {
+      "cx": 0.48,
+      "cy": 0.49474,
+      "r": 0.47246,
+      "fallback": false
+    },
+    "tpp|tpp-omega-7802-30-32-118": {
+      "cx": 0.49714,
+      "cy": 0.79649,
+      "r": 0.26836,
+      "fallback": false
+    },
+    "tpp|tpp-omega-7802-50-31-116": {
+      "cx": 0.50286,
+      "cy": 0.16941,
+      "r": 0.2759,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-fer00001-274": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00025-aka-pam25-pam-25-271": {
+      "cx": 0.52982,
+      "cy": 0.36974,
+      "r": 0.71404,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00049-aka-pam49-pam-49-235": {
+      "cx": 0.53469,
+      "cy": 0.3652,
+      "r": 0.70052,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00050-aka-pam50-pam-50-229": {
+      "cx": 0.53043,
+      "cy": 0.35293,
+      "r": 0.69173,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00051-aka-pam51-pam-51-241": {
+      "cx": 0.51872,
+      "cy": 0.33198,
+      "r": 0.56789,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00062-aka-pam62-pam-62-262": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00086-aka-pam86-pam-86-256": {
+      "cx": 0.52988,
+      "cy": 0.36948,
+      "r": 0.70554,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00087-aka-pam87-pam-87-268": {
+      "cx": 0.52526,
+      "cy": 0.36959,
+      "r": 0.70637,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00089-aka-pam89-pam-89-230": {
+      "cx": 0.50252,
+      "cy": 0.36226,
+      "r": 0.61082,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00091-aka-pam91-pam-91-228": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00098-aka-pam98-pam-98-259": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00103-aka-pam103-pam-103-263": {
+      "cx": 0.53558,
+      "cy": 0.34018,
+      "r": 0.67329,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00113-aka-pam113-pam-113-242": {
+      "cx": 0.50686,
+      "cy": 0.37353,
+      "r": 0.69587,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00115-aka-pam115-pam-115-249": {
+      "cx": 0.46548,
+      "cy": 0.36934,
+      "r": 0.70431,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00118-aka-pam118-pam-118-251": {
+      "cx": 0.50267,
+      "cy": 0.36032,
+      "r": 0.61511,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00119-aka-pam119-pam-119-243": {
+      "cx": 0.5395,
+      "cy": 0.36103,
+      "r": 0.69941,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00123-aka-pam123-pam-123-247": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00125-aka-pam125-pam-125-240": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00126-aka-pam126-pam-126-252": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00140-aka-pam140-pam-140-253": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00141-aka-pam141-pam-141-264": {
+      "cx": 0.50298,
+      "cy": 0.38226,
+      "r": 0.51852,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00161-aka-pam161-pam-161-248": {
+      "cx": 0.52508,
+      "cy": 0.374,
+      "r": 0.71849,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00175-aka-pam175-pam-175-234": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00176-aka-pam176-pam-176-244": {
+      "cx": 0.45455,
+      "cy": 0.7317,
+      "r": 0.37119,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00177-aka-pam177-pam-177-227": {
+      "cx": 0.52991,
+      "cy": 0.36587,
+      "r": 0.71936,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00188-aka-pam188-pam-188-238": {
+      "cx": 0.53937,
+      "cy": 0.36149,
+      "r": 0.71465,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00190-aka-pam190-pam-190-261": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00196-aka-pam196-pam-196-233": {
+      "cx": 0.50267,
+      "cy": 0.74494,
+      "r": 0.38109,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00210-aka-pam210-pam-210-260": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00220-aka-pam220-pam-220-250": {
+      "cx": 0.4492,
+      "cy": 0.71734,
+      "r": 0.37335,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00221-aka-pam221-pam-221-255": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00231-aka-pam231-pam-231-265": {
+      "cx": 0.50802,
+      "cy": 0.65913,
+      "r": 0.46764,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00236-aka-pam236-pam-236-232": {
+      "cx": 0.51561,
+      "cy": 0.38351,
+      "r": 0.76059,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00238-aka-pam238-pam-238-258": {
+      "cx": 0.45989,
+      "cy": 0.73348,
+      "r": 0.42594,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00241-aka-pam241-pam-241-245": {
+      "cx": 0.44385,
+      "cy": 0.71965,
+      "r": 0.37031,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00243-aka-pam243-pam-243-267": {
+      "cx": 0.50671,
+      "cy": 0.38311,
+      "r": 0.74428,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00251-aka-pam251-pam-251-246": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "tpp|tpp-panerai-pam00355-aka-pam355-pam-355-266": {
+      "cx": 0.46078,
+      "cy": 0.36552,
+      "r": 0.71495,
+      "fallback": false
+    },
+    "tpp|tpp-panerai-pam00361-aka-pam361-pam-361-257": {
+      "cx": 0.48402,
+      "cy": 0.37038,
+      "r": 0.7276,
+      "fallback": false
+    },
+    "tpp|tpp-tag-heuer-car5a98-fc6471-278": {
+      "cx": 0.48997,
+      "cy": 0.44635,
+      "r": 0.49824,
+      "fallback": false
+    },
+    "tpp|tpp-tissot-t084-210-11-017-00-aka-t0842101101700-285": {
+      "cx": 0.5,
+      "cy": 0.50357,
+      "r": 0.32186,
+      "fallback": false
+    },
+    "tpp|tpp-tissot-t084-210-11-017-01-aka-t0842101101701-281": {
+      "cx": 0.49474,
+      "cy": 0.5,
+      "r": 0.32708,
+      "fallback": false
+    },
+    "tpp|tpp-tissot-t084-210-11-057-00-aka-t0842101105700-282": {
+      "cx": 0.50526,
+      "cy": 0.50357,
+      "r": 0.32086,
+      "fallback": false
+    },
+    "tpp|tpp-tissot-t084-210-22-117-00-aka-t0842102211700-284": {
+      "cx": 0.49474,
+      "cy": 0.5,
+      "r": 0.33156,
+      "fallback": false
+    },
+    "tpp|tpp-tissot-t66-1-528-32-aka-t66152832-280": {
+      "cx": 0.5,
+      "cy": 0.50833,
+      "r": 0.66638,
+      "fallback": false
+    },
+    "tpp|tpp-tissot-t74-3-308-71-aka-t74330871-279": {
+      "cx": 0.5,
+      "cy": 0.60278,
+      "r": 0.5316,
+      "fallback": false
+    },
+    "tpp|tpp-unimatic-u1-d-286": {
+      "cx": 0.48056,
+      "cy": 0.46944,
+      "r": 0.3217,
+      "fallback": false
+    },
+    "tpp|tpp-zeitwinkel-181-blue-289": {
+      "cx": 0.48325,
+      "cy": 0.5,
+      "r": 0.45848,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-006-b586f0c4": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-010-ea4e4fac": {
+      "cx": 0.41128,
+      "cy": 0.59225,
+      "r": 0.42942,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-018-3de7ca97": {
+      "cx": 0.525,
+      "cy": 0.43056,
+      "r": 0.40884,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-025-03d51f98": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-029-7a653fb2": {
+      "cx": 0.49722,
+      "cy": 0.42778,
+      "r": 0.28,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-032-4dc5b792": {
+      "cx": 0.47778,
+      "cy": 0.43889,
+      "r": 0.3173,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-033-2bbf711e": {
+      "cx": 0.51389,
+      "cy": 0.45,
+      "r": 0.34721,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-035-b42e7147": {
+      "cx": 0.50556,
+      "cy": 0.53611,
+      "r": 0.37917,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-037-5d56a077": {
+      "cx": 0.24318,
+      "cy": 0.67778,
+      "r": 0.31417,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-039-fad89116": {
+      "cx": 0.50833,
+      "cy": 0.44686,
+      "r": 0.44686,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-043-f3f015de": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-046-abf660c9": {
+      "cx": 0.52431,
+      "cy": 0.49444,
+      "r": 0.43365,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-048-1d911670": {
+      "cx": 0.50833,
+      "cy": 0.46111,
+      "r": 0.30641,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-054-2dd70356": {
+      "cx": 0.5,
+      "cy": 0.51111,
+      "r": 0.4415,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-058-2148520f": {
+      "cx": 0.48056,
+      "cy": 0.46111,
+      "r": 0.30948,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-061-e399144e": {
+      "cx": 0.48889,
+      "cy": 0.40278,
+      "r": 0.26847,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-063-b01c6098": {
+      "cx": 0.50278,
+      "cy": 0.49167,
+      "r": 0.36257,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-068-40318147": {
+      "cx": 0.51944,
+      "cy": 0.46111,
+      "r": 0.36667,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-075-84b91c2b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-081-6afc717d": {
+      "cx": 0.54444,
+      "cy": 0.53333,
+      "r": 0.40416,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-087-b26fe70a": {
+      "cx": 0.47222,
+      "cy": 0.48056,
+      "r": 0.46366,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-090-89f5756f": {
+      "cx": 0.48056,
+      "cy": 0.41944,
+      "r": 0.30646,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-092-e05c4b09": {
+      "cx": 0.47497,
+      "cy": 0.51111,
+      "r": 0.47497,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-098-939f2ab7": {
+      "cx": 0.50833,
+      "cy": 0.47222,
+      "r": 0.38416,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-099-c968b5d5": {
+      "cx": 0.47778,
+      "cy": 0.45556,
+      "r": 0.38315,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-100-8fa684f0": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-101-9118d7af": {
+      "cx": 0.50556,
+      "cy": 0.51111,
+      "r": 0.44511,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-109-6ad4a1f7": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-110-53acd72b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-113-f2e6182e": {
+      "cx": 0.45357,
+      "cy": 0.5445,
+      "r": 0.69241,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-114-736e7c1d": {
+      "cx": 0.50556,
+      "cy": 0.43889,
+      "r": 0.35682,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-116-bc2aba1c": {
+      "cx": 0.52222,
+      "cy": 0.46111,
+      "r": 0.34886,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-123-b6ea33e8": {
+      "cx": 0.46944,
+      "cy": 0.49444,
+      "r": 0.43521,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-124-60925465": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-126-a6935172": {
+      "cx": 0.5,
+      "cy": 0.49444,
+      "r": 0.53145,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-127-3e3659b7": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-133-4b1005ed": {
+      "cx": 0.49444,
+      "cy": 0.53056,
+      "r": 0.33667,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-134-85b0c9bc": {
+      "cx": 0.50556,
+      "cy": 0.44444,
+      "r": 0.26587,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-145-ccbfa129": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-148-3f125b9b": {
+      "cx": 0.49167,
+      "cy": 0.57778,
+      "r": 0.37352,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-152-eee8a729": {
+      "cx": 0.51667,
+      "cy": 0.44722,
+      "r": 0.26667,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-154-205cd355": {
+      "cx": 0.50278,
+      "cy": 0.83056,
+      "r": 0.20274,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-157-bd1cdd06": {
+      "cx": 0.48333,
+      "cy": 0.46118,
+      "r": 0.47105,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-169-0f1b71dd": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "colored-border"
+    },
+    "hf|hf-audemars-piguet-171-4a84d94f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-175-c44172a9": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-177-3826e7b9": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-audemars-piguet-181-46a7a2f1": {
+      "cx": 0.5,
+      "cy": 0.49167,
+      "r": 0.49964,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-182-e6c93947": {
+      "cx": 0.48333,
+      "cy": 0.43333,
+      "r": 0.26,
+      "fallback": false
+    },
+    "hf|hf-audemars-piguet-185-436ece0b": {
+      "cx": 0.4806,
+      "cy": 0.46944,
+      "r": 0.39248,
+      "fallback": false
+    },
+    "hf|hf-breguet-006-72c287b8": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-008-cef4e301": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-011-7f5ac369": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-019-6e800a62": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-breguet-023-fd84965f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-025-77a8e80c": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-027-35ce156b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-032-e4f81f9a": {
+      "cx": 0.48056,
+      "cy": 0.51944,
+      "r": 0.38187,
+      "fallback": false
+    },
+    "hf|hf-breguet-037-b67363c9": {
+      "cx": 0.47222,
+      "cy": 0.51389,
+      "r": 0.37054,
+      "fallback": false
+    },
+    "hf|hf-breguet-038-c1212db0": {
+      "cx": 0.48056,
+      "cy": 0.52222,
+      "r": 0.41876,
+      "fallback": false
+    },
+    "hf|hf-breguet-044-948c8c1a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-045-a4ab2a93": {
+      "cx": 0.48056,
+      "cy": 0.56944,
+      "r": 0.34745,
+      "fallback": false
+    },
+    "hf|hf-breguet-047-ec482a01": {
+      "cx": 0.49722,
+      "cy": 0.45833,
+      "r": 0.29161,
+      "fallback": false
+    },
+    "hf|hf-breguet-050-b47f1760": {
+      "cx": 0.48889,
+      "cy": 0.45,
+      "r": 0.36617,
+      "fallback": false
+    },
+    "hf|hf-breguet-053-16e83d94": {
+      "cx": 0.475,
+      "cy": 0.44167,
+      "r": 0.34077,
+      "fallback": false
+    },
+    "hf|hf-breguet-054-90ec47a2": {
+      "cx": 0.49444,
+      "cy": 0.46389,
+      "r": 0.353,
+      "fallback": false
+    },
+    "hf|hf-breguet-058-595a278c": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-062-383f6733": {
+      "cx": 0.47778,
+      "cy": 0.46111,
+      "r": 0.34731,
+      "fallback": false
+    },
+    "hf|hf-breguet-063-9f029eaa": {
+      "cx": 0.49167,
+      "cy": 0.49444,
+      "r": 0.47351,
+      "fallback": false
+    },
+    "hf|hf-breguet-064-8345944f": {
+      "cx": 0.50625,
+      "cy": 0.475,
+      "r": 0.37123,
+      "fallback": false
+    },
+    "hf|hf-breguet-065-129a8438": {
+      "cx": 0.4875,
+      "cy": 0.4375,
+      "r": 0.41525,
+      "fallback": false
+    },
+    "hf|hf-breguet-071-15023b36": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-075-8ea86f61": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-077-331bfa06": {
+      "cx": 0.48056,
+      "cy": 0.47222,
+      "r": 0.38162,
+      "fallback": false
+    },
+    "hf|hf-breguet-081-45f57f09": {
+      "cx": 0.49167,
+      "cy": 0.54444,
+      "r": 0.32048,
+      "fallback": false
+    },
+    "hf|hf-breguet-086-1f35df1f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-088-b8674236": {
+      "cx": 0.36667,
+      "cy": 0.36944,
+      "r": 0.29698,
+      "fallback": false
+    },
+    "hf|hf-breguet-093-8888d952": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-098-dc810e06": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-100-4aec9ac8": {
+      "cx": 0.50278,
+      "cy": 0.42778,
+      "r": 0.35297,
+      "fallback": false
+    },
+    "hf|hf-breguet-102-1d0cfc1f": {
+      "cx": 0.49167,
+      "cy": 0.49444,
+      "r": 0.39033,
+      "fallback": false
+    },
+    "hf|hf-breguet-105-956ddb34": {
+      "cx": 0.50556,
+      "cy": 0.54167,
+      "r": 0.41175,
+      "fallback": false
+    },
+    "hf|hf-breguet-108-f0495d6b": {
+      "cx": 0.4875,
+      "cy": 0.49342,
+      "r": 0.50526,
+      "fallback": false
+    },
+    "hf|hf-breguet-109-55e6a3a6": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-118-afdf64b0": {
+      "cx": 0.475,
+      "cy": 0.46389,
+      "r": 0.35648,
+      "fallback": false
+    },
+    "hf|hf-breguet-119-d37fff1e": {
+      "cx": 0.5,
+      "cy": 0.16854,
+      "r": 0.2294,
+      "fallback": false
+    },
+    "hf|hf-breguet-122-f7531333": {
+      "cx": 0.49722,
+      "cy": 0.51667,
+      "r": 0.43879,
+      "fallback": false
+    },
+    "hf|hf-breguet-127-0b0ed1e3": {
+      "cx": 0.52222,
+      "cy": 0.57222,
+      "r": 0.41281,
+      "fallback": false
+    },
+    "hf|hf-breguet-132-d3ec51f2": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-133-df426abd": {
+      "cx": 0.47222,
+      "cy": 0.49722,
+      "r": 0.44971,
+      "fallback": false
+    },
+    "hf|hf-breguet-148-bdbb9165": {
+      "cx": 0.51389,
+      "cy": 0.47222,
+      "r": 0.31157,
+      "fallback": false
+    },
+    "hf|hf-breguet-154-5b5f8b71": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-156-ed53a3a9": {
+      "cx": 0.49306,
+      "cy": 0.5,
+      "r": 0.3983,
+      "fallback": false
+    },
+    "hf|hf-breguet-157-ac90bbfa": {
+      "cx": 0.47778,
+      "cy": 0.48333,
+      "r": 0.31919,
+      "fallback": false
+    },
+    "hf|hf-breguet-158-9bad2980": {
+      "cx": 0.49653,
+      "cy": 0.49444,
+      "r": 0.40298,
+      "fallback": false
+    },
+    "hf|hf-breguet-161-68595f57": {
+      "cx": 0.50556,
+      "cy": 0.41389,
+      "r": 0.36773,
+      "fallback": false
+    },
+    "hf|hf-breguet-163-97e4d072": {
+      "cx": 0.38611,
+      "cy": 0.35278,
+      "r": 0.28425,
+      "fallback": false
+    },
+    "hf|hf-breguet-164-5132f3d0": {
+      "cx": 0.475,
+      "cy": 0.45278,
+      "r": 0.30465,
+      "fallback": false
+    },
+    "hf|hf-breguet-166-7035db72": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-169-2b7c6209": {
+      "cx": 0.49444,
+      "cy": 0.43611,
+      "r": 0.32275,
+      "fallback": false
+    },
+    "hf|hf-breguet-170-7a52ca69": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-171-a0135da2": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-173-3b4ecfdf": {
+      "cx": 0.5,
+      "cy": 0.16658,
+      "r": 0.2546,
+      "fallback": false
+    },
+    "hf|hf-breguet-175-8bf98da4": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-176-f9bec419": {
+      "cx": 0.48056,
+      "cy": 0.48056,
+      "r": 0.39834,
+      "fallback": false
+    },
+    "hf|hf-breguet-178-0edac656": {
+      "cx": 0.43056,
+      "cy": 0.50581,
+      "r": 0.3504,
+      "fallback": false
+    },
+    "hf|hf-breguet-180-6d598841": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-183-b4f1924d": {
+      "cx": 0.48889,
+      "cy": 0.46389,
+      "r": 0.36787,
+      "fallback": false
+    },
+    "hf|hf-breguet-185-6c201b82": {
+      "cx": 0.48333,
+      "cy": 0.43056,
+      "r": 0.31181,
+      "fallback": false
+    },
+    "hf|hf-breguet-186-3e505f48": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breguet-188-384a726a": {
+      "cx": 0.53584,
+      "cy": 0.15833,
+      "r": 0.17587,
+      "fallback": false
+    },
+    "hf|hf-breguet-189-2aa6d9a4": {
+      "cx": 0.50139,
+      "cy": 0.44167,
+      "r": 0.32763,
+      "fallback": false
+    },
+    "hf|hf-breitling-001-79d064d5": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-004-72809eb6": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-breitling-005-2df71921": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-006-2a903dd7": {
+      "cx": 0.41076,
+      "cy": 0.5,
+      "r": 0.47191,
+      "fallback": false
+    },
+    "hf|hf-breitling-007-8a27cd9f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-008-2b08d99d": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-010-6a96f5cf": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "colored-border"
+    },
+    "hf|hf-breitling-013-88d94628": {
+      "cx": 0.49419,
+      "cy": 0.51681,
+      "r": 0.56104,
+      "fallback": false
+    },
+    "hf|hf-breitling-019-49b976cd": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-022-1d130d8f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-023-8c4152d0": {
+      "cx": 0.46474,
+      "cy": 0.53526,
+      "r": 0.51729,
+      "fallback": false
+    },
+    "hf|hf-breitling-025-1e638791": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-027-6af3cc6a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.51333,
+      "fallback": false
+    },
+    "hf|hf-breitling-028-ccaa0bc6": {
+      "cx": 0.47727,
+      "cy": 0.48333,
+      "r": 0.57641,
+      "fallback": false
+    },
+    "hf|hf-breitling-032-57064ffc": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-037-1686a97b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-038-c5588f8b": {
+      "cx": 0.48611,
+      "cy": 0.46111,
+      "r": 0.34879,
+      "fallback": false
+    },
+    "hf|hf-breitling-042-c77a6383": {
+      "cx": 0.52222,
+      "cy": 0.57222,
+      "r": 0.44587,
+      "fallback": false
+    },
+    "hf|hf-breitling-045-5cd6fe85": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-050-e71262af": {
+      "cx": 0.48056,
+      "cy": 0.44722,
+      "r": 0.37467,
+      "fallback": false
+    },
+    "hf|hf-breitling-051-d8ed87a3": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-breitling-064-d79a0904": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-067-24c2fa73": {
+      "cx": 0.5,
+      "cy": 0.475,
+      "r": 0.3712,
+      "fallback": false
+    },
+    "hf|hf-breitling-077-df7b4b2f": {
+      "cx": 0.50556,
+      "cy": 0.47222,
+      "r": 0.3746,
+      "fallback": false
+    },
+    "hf|hf-breitling-081-57b677a5": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.56302,
+      "fallback": false
+    },
+    "hf|hf-breitling-085-5101f57f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-breitling-086-8a1d4b58": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-093-8baef883": {
+      "cx": 0.475,
+      "cy": 0.40278,
+      "r": 0.37402,
+      "fallback": false
+    },
+    "hf|hf-breitling-097-e45de133": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-098-2c989e3b": {
+      "cx": 0.47222,
+      "cy": 0.45833,
+      "r": 0.40778,
+      "fallback": false
+    },
+    "hf|hf-breitling-100-63caa98a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-101-23f409f0": {
+      "cx": 0.52275,
+      "cy": 0.60238,
+      "r": 0.57252,
+      "fallback": false
+    },
+    "hf|hf-breitling-105-fe39da0b": {
+      "cx": 0.5,
+      "cy": 0.50484,
+      "r": 0.70396,
+      "fallback": false
+    },
+    "hf|hf-breitling-108-4a362c66": {
+      "cx": 0.46667,
+      "cy": 0.43889,
+      "r": 0.45045,
+      "fallback": false
+    },
+    "hf|hf-breitling-109-9f14fe2e": {
+      "cx": 0.58611,
+      "cy": 0.35278,
+      "r": 0.33333,
+      "fallback": false
+    },
+    "hf|hf-breitling-136-857254d3": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-140-5e74e829": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-141-b50e7844": {
+      "cx": 0.50278,
+      "cy": 0.46667,
+      "r": 0.38977,
+      "fallback": false
+    },
+    "hf|hf-breitling-145-28823034": {
+      "cx": 0.48611,
+      "cy": 0.49444,
+      "r": 0.38448,
+      "fallback": false
+    },
+    "hf|hf-breitling-146-96c20c07": {
+      "cx": 0.48611,
+      "cy": 0.47222,
+      "r": 0.40056,
+      "fallback": false
+    },
+    "hf|hf-breitling-148-84977f31": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-150-da49e4b8": {
+      "cx": 0.48889,
+      "cy": 0.46389,
+      "r": 0.4359,
+      "fallback": false
+    },
+    "hf|hf-breitling-151-9042d6a8": {
+      "cx": 0.49444,
+      "cy": 0.50278,
+      "r": 0.48257,
+      "fallback": false
+    },
+    "hf|hf-breitling-167-55aacf1b": {
+      "cx": 0.46944,
+      "cy": 0.5,
+      "r": 0.45898,
+      "fallback": false
+    },
+    "hf|hf-breitling-168-447675b5": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-breitling-170-7cc8e31a": {
+      "cx": 0.48333,
+      "cy": 0.44722,
+      "r": 0.40289,
+      "fallback": false
+    },
+    "hf|hf-breitling-173-b7c27841": {
+      "cx": 0.4894,
+      "cy": 0.49735,
+      "r": 0.579,
+      "fallback": false
+    },
+    "hf|hf-breitling-182-dffbf6d4": {
+      "cx": 0.87839,
+      "cy": 0.20556,
+      "r": 0.12219,
+      "fallback": false
+    },
+    "hf|hf-breitling-183-4512a2b2": {
+      "cx": 0.48889,
+      "cy": 0.50278,
+      "r": 0.41442,
+      "fallback": false
+    },
+    "hf|hf-breitling-184-286a82a4": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-002-b2ecf6f7": {
+      "cx": 0.5,
+      "cy": 0.43889,
+      "r": 0.32333,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-007-72efa7c1": {
+      "cx": 0.46944,
+      "cy": 0.44444,
+      "r": 0.35509,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-009-31bb50c4": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-012-2c424055": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-014-4c78be67": {
+      "cx": 0.48611,
+      "cy": 0.44444,
+      "r": 0.37877,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-020-f6288eb1": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-022-d9243a87": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.3255,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-025-3afc50b5": {
+      "cx": 0.48333,
+      "cy": 0.48889,
+      "r": 0.28088,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-028-023cdd8f": {
+      "cx": 0.5,
+      "cy": 0.45556,
+      "r": 0.38421,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-029-5fe069c0": {
+      "cx": 0.475,
+      "cy": 0.44722,
+      "r": 0.34353,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-030-87e4ac24": {
+      "cx": 0.50888,
+      "cy": 0.35833,
+      "r": 0.33823,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-031-e39055b2": {
+      "cx": 0.47778,
+      "cy": 0.46111,
+      "r": 0.31331,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-032-698417d7": {
+      "cx": 0.62534,
+      "cy": 0.62288,
+      "r": 0.56487,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-038-915a370e": {
+      "cx": 0.47222,
+      "cy": 0.46111,
+      "r": 0.32469,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-055-c97713e8": {
+      "cx": 0.46944,
+      "cy": 0.45,
+      "r": 0.38598,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-060-314132eb": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-064-6dc7906a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-066-5acb933e": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-068-26b2fcd0": {
+      "cx": 0.49722,
+      "cy": 0.51389,
+      "r": 0.30847,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-070-c01c2208": {
+      "cx": 0.51667,
+      "cy": 0.49722,
+      "r": 0.24642,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-073-50b42f03": {
+      "cx": 0.48333,
+      "cy": 0.41944,
+      "r": 0.29107,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-075-b4bd7007": {
+      "cx": 0.53611,
+      "cy": 0.53611,
+      "r": 0.4241,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-082-24f7231e": {
+      "cx": 0.47222,
+      "cy": 0.43333,
+      "r": 0.25319,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-086-616a9dd3": {
+      "cx": 0.38611,
+      "cy": 0.51944,
+      "r": 0.34341,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-089-21acd1e2": {
+      "cx": 0.48056,
+      "cy": 0.43611,
+      "r": 0.32895,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-090-bdb213c7": {
+      "cx": 0.48056,
+      "cy": 0.45,
+      "r": 0.33805,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-095-20f5b07a": {
+      "cx": 0.48889,
+      "cy": 0.53056,
+      "r": 0.21507,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-096-88463a9f": {
+      "cx": 0.49722,
+      "cy": 0.45,
+      "r": 0.28039,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-105-3a54cf2e": {
+      "cx": 0.49722,
+      "cy": 0.46944,
+      "r": 0.46425,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-108-6c79a6ff": {
+      "cx": 0.8408,
+      "cy": 0.37778,
+      "r": 0.22737,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-113-737107a9": {
+      "cx": 0.50833,
+      "cy": 0.48056,
+      "r": 0.51481,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-119-56af4ab3": {
+      "cx": 0.43056,
+      "cy": 0.30833,
+      "r": 0.27586,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-127-1d1b6faf": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-129-734ae356": {
+      "cx": 0.57435,
+      "cy": 0.5,
+      "r": 0.63382,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-135-9ca4a480": {
+      "cx": 0.48056,
+      "cy": 0.47222,
+      "r": 0.28821,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-140-5608dd04": {
+      "cx": 0.49167,
+      "cy": 0.37778,
+      "r": 0.32157,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-142-d8adc438": {
+      "cx": 0.475,
+      "cy": 0.43333,
+      "r": 0.28683,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-146-63b7ef5c": {
+      "cx": 0.48056,
+      "cy": 0.38333,
+      "r": 0.31679,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-147-73702143": {
+      "cx": 0.51389,
+      "cy": 0.51111,
+      "r": 0.3837,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-151-d6f34098": {
+      "cx": 0.47296,
+      "cy": 0.47103,
+      "r": 0.53123,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-155-bdcf6dbf": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-162-e0331938": {
+      "cx": 0.47778,
+      "cy": 0.39444,
+      "r": 0.27051,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-164-59ac89f4": {
+      "cx": 0.48889,
+      "cy": 0.35556,
+      "r": 0.26653,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-165-55a0cd88": {
+      "cx": 0.41944,
+      "cy": 0.51111,
+      "r": 0.35028,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-170-03d2d8f2": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-171-a92f7c8a": {
+      "cx": 0.50278,
+      "cy": 0.44167,
+      "r": 0.37277,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-172-9e90e8b8": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-176-1af98773": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-maurice-lacroix-178-fd019781": {
+      "cx": 0.47778,
+      "cy": 0.42778,
+      "r": 0.3327,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-183-0ddfb6c2": {
+      "cx": 0.46944,
+      "cy": 0.49167,
+      "r": 0.32831,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-184-acba993a": {
+      "cx": 0.49167,
+      "cy": 0.43056,
+      "r": 0.34687,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-185-4ec83c1b": {
+      "cx": 0.57222,
+      "cy": 0.43333,
+      "r": 0.51381,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-187-7ad54e2d": {
+      "cx": 0.46944,
+      "cy": 0.45,
+      "r": 0.35578,
+      "fallback": false
+    },
+    "hf|hf-maurice-lacroix-188-11aa7ca7": {
+      "cx": 0.48611,
+      "cy": 0.43889,
+      "r": 0.34727,
+      "fallback": false
+    },
+    "hf|hf-omega-004-4e254570": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-005-25cb92f4": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-006-413ea940": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-007-a61f128f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-012-1342162b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-014-178518fe": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-016-d94fccb8": {
+      "cx": 0.44063,
+      "cy": 0.56149,
+      "r": 0.65462,
+      "fallback": false
+    },
+    "hf|hf-omega-018-fdb44e39": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-025-b724069a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-omega-030-c22d7140": {
+      "cx": 0.475,
+      "cy": 0.50556,
+      "r": 0.45412,
+      "fallback": false
+    },
+    "hf|hf-omega-032-2ee5a41e": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-034-2a4f0f7b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "colored-border"
+    },
+    "hf|hf-omega-035-b4607733": {
+      "cx": 0.46062,
+      "cy": 0.50323,
+      "r": 0.70273,
+      "fallback": false
+    },
+    "hf|hf-omega-037-81d60593": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-040-bb561e7e": {
+      "cx": 0.49167,
+      "cy": 0.47778,
+      "r": 0.45519,
+      "fallback": false
+    },
+    "hf|hf-omega-045-138ff1aa": {
+      "cx": 0.47657,
+      "cy": 0.47657,
+      "r": 0.47657,
+      "fallback": false
+    },
+    "hf|hf-omega-046-e4ffca45": {
+      "cx": 0.6,
+      "cy": 0.51111,
+      "r": 0.51502,
+      "fallback": false
+    },
+    "hf|hf-omega-047-47dc7334": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-048-aefe0d07": {
+      "cx": 0.475,
+      "cy": 0.49444,
+      "r": 0.48304,
+      "fallback": false
+    },
+    "hf|hf-omega-049-0f16e8c5": {
+      "cx": 0.49722,
+      "cy": 0.50556,
+      "r": 0.48228,
+      "fallback": false
+    },
+    "hf|hf-omega-050-00e4a4b4": {
+      "cx": 0.5,
+      "cy": 0.45278,
+      "r": 0.30081,
+      "fallback": false
+    },
+    "hf|hf-omega-053-13024c09": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-058-e39da7a4": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-059-d76149a0": {
+      "cx": 0.5,
+      "cy": 0.46111,
+      "r": 0.28889,
+      "fallback": false
+    },
+    "hf|hf-omega-060-092cacb0": {
+      "cx": 0.51111,
+      "cy": 0.53056,
+      "r": 0.4301,
+      "fallback": false
+    },
+    "hf|hf-omega-064-71ab1e0b": {
+      "cx": 0.43333,
+      "cy": 0.51376,
+      "r": 0.44136,
+      "fallback": false
+    },
+    "hf|hf-omega-067-a37c9782": {
+      "cx": 0.50833,
+      "cy": 0.45556,
+      "r": 0.3525,
+      "fallback": false
+    },
+    "hf|hf-omega-070-572a7eef": {
+      "cx": 0.48889,
+      "cy": 0.5,
+      "r": 0.43658,
+      "fallback": false
+    },
+    "hf|hf-omega-072-5ce7f7b6": {
+      "cx": 0.48611,
+      "cy": 0.48056,
+      "r": 0.40083,
+      "fallback": false
+    },
+    "hf|hf-omega-074-fb89bb30": {
+      "cx": 0.48056,
+      "cy": 0.45833,
+      "r": 0.35229,
+      "fallback": false
+    },
+    "hf|hf-omega-080-ad1fb3a2": {
+      "cx": 0.48056,
+      "cy": 0.46944,
+      "r": 0.41667,
+      "fallback": false
+    },
+    "hf|hf-omega-082-b6379376": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-085-f9e8e3c9": {
+      "cx": 0.475,
+      "cy": 0.48611,
+      "r": 0.46,
+      "fallback": false
+    },
+    "hf|hf-omega-087-9b6ee662": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.50249,
+      "fallback": false
+    },
+    "hf|hf-omega-095-0cac62d7": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-097-bb7d1a7b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-098-755aa675": {
+      "cx": 0.49157,
+      "cy": 0.47778,
+      "r": 0.39365,
+      "fallback": false
+    },
+    "hf|hf-omega-099-83335570": {
+      "cx": 0.49722,
+      "cy": 0.79683,
+      "r": 0.21549,
+      "fallback": false
+    },
+    "hf|hf-omega-100-6eb40d06": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-omega-102-ceff9249": {
+      "cx": 0.41262,
+      "cy": 0.49722,
+      "r": 0.47092,
+      "fallback": false
+    },
+    "hf|hf-omega-107-29d4d534": {
+      "cx": 0.55833,
+      "cy": 0.47207,
+      "r": 0.57172,
+      "fallback": false
+    },
+    "hf|hf-omega-114-c4d8212d": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-omega-117-51be3010": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-119-6bd71235": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-124-bf3c1317": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-126-aa6f9e24": {
+      "cx": 0.48553,
+      "cy": 0.49277,
+      "r": 0.67454,
+      "fallback": false
+    },
+    "hf|hf-omega-129-b319f3f4": {
+      "cx": 0.47222,
+      "cy": 0.54217,
+      "r": 0.59127,
+      "fallback": false
+    },
+    "hf|hf-omega-131-225a7cb2": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-139-40e4ab76": {
+      "cx": 0.46111,
+      "cy": 0.50833,
+      "r": 0.45122,
+      "fallback": false
+    },
+    "hf|hf-omega-140-ee6d8cad": {
+      "cx": 0.475,
+      "cy": 0.45556,
+      "r": 0.34575,
+      "fallback": false
+    },
+    "hf|hf-omega-141-9b46fa17": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-146-cf533ef1": {
+      "cx": 0.48889,
+      "cy": 0.48056,
+      "r": 0.45319,
+      "fallback": false
+    },
+    "hf|hf-omega-147-a2620e90": {
+      "cx": 0.49167,
+      "cy": 0.43333,
+      "r": 0.34764,
+      "fallback": false
+    },
+    "hf|hf-omega-148-8a05037a": {
+      "cx": 0.48333,
+      "cy": 0.43333,
+      "r": 0.29876,
+      "fallback": false
+    },
+    "hf|hf-omega-154-f920b90b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-155-fcadfe2e": {
+      "cx": 0.43333,
+      "cy": 0.575,
+      "r": 0.50711,
+      "fallback": false
+    },
+    "hf|hf-omega-156-d77b2098": {
+      "cx": 0.49649,
+      "cy": 0.49649,
+      "r": 0.49649,
+      "fallback": false
+    },
+    "hf|hf-omega-159-0419784d": {
+      "cx": 0.47222,
+      "cy": 0.44497,
+      "r": 0.44497,
+      "fallback": false
+    },
+    "hf|hf-omega-160-ad227bb2": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-omega-161-aa7b6899": {
+      "cx": 0.48958,
+      "cy": 0.45556,
+      "r": 0.40785,
+      "fallback": false
+    },
+    "hf|hf-omega-167-d034517e": {
+      "cx": 0.48333,
+      "cy": 0.59167,
+      "r": 0.4425,
+      "fallback": false
+    },
+    "hf|hf-omega-170-f196dd2d": {
+      "cx": 0.45988,
+      "cy": 0.46667,
+      "r": 0.40918,
+      "fallback": false
+    },
+    "hf|hf-omega-172-88e6c93c": {
+      "cx": 0.5,
+      "cy": 0.50556,
+      "r": 0.35504,
+      "fallback": false
+    },
+    "hf|hf-omega-178-0b092f73": {
+      "cx": 0.37778,
+      "cy": 0.45556,
+      "r": 0.36402,
+      "fallback": false
+    },
+    "hf|hf-omega-189-9f3d0ef1": {
+      "cx": 0.48333,
+      "cy": 0.47222,
+      "r": 0.25,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-005-1540cdda": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-006-e2b9d983": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-009-8f7e0723": {
+      "cx": 0.56323,
+      "cy": 0.60063,
+      "r": 0.6892,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-011-e3c3af31": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-015-02fa697d": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-018-b37dba13": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-021-0701def0": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-023-2715dccf": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-026-69ca9b16": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-030-acbf39be": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-033-1a25390f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-patek-philippe-034-f3dd542d": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-035-0ded763f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-037-c3e7802e": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-040-676693fc": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-043-f16d4c4d": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-057-b92e546c": {
+      "cx": 0.34444,
+      "cy": 0.43889,
+      "r": 0.44778,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-058-e5a047c8": {
+      "cx": 0.48333,
+      "cy": 0.5,
+      "r": 0.49609,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-060-afe97e8f": {
+      "cx": 0.43807,
+      "cy": 0.59444,
+      "r": 0.41045,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-062-9bfde383": {
+      "cx": 0.50278,
+      "cy": 0.46308,
+      "r": 0.46308,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-063-9288f120": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-064-4501a48d": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-069-62372bd3": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-070-887acfc1": {
+      "cx": 0.47328,
+      "cy": 0.53919,
+      "r": 0.65558,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-071-ef308b2c": {
+      "cx": 0.475,
+      "cy": 0.55,
+      "r": 0.43092,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-073-1828602e": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.51886,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-074-90649ae6": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-076-816eee10": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-077-1d463727": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-082-5181f9ec": {
+      "cx": 0.52842,
+      "cy": 0.50853,
+      "r": 0.69999,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-083-ee224658": {
+      "cx": 0.49444,
+      "cy": 0.45833,
+      "r": 0.36771,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-086-54a21cf3": {
+      "cx": 0.49722,
+      "cy": 0.46944,
+      "r": 0.37886,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-088-8f33403f": {
+      "cx": 0.33056,
+      "cy": 0.55833,
+      "r": 0.41529,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-098-9b3633d1": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-100-cc5d4473": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-101-def50d80": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-105-329785cd": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-109-90eb6bce": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-110-db3e813a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-112-a8c5b4aa": {
+      "cx": 0.5,
+      "cy": 0.44444,
+      "r": 0.35287,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-118-3bff75a7": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-119-bef66ea5": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-125-b96ed774": {
+      "cx": 0.49167,
+      "cy": 0.49722,
+      "r": 0.3964,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-127-fb3693e3": {
+      "cx": 0.46389,
+      "cy": 0.47354,
+      "r": 0.31818,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-129-c8ccc2eb": {
+      "cx": 0.48665,
+      "cy": 0.45833,
+      "r": 0.47982,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-132-89a0eacb": {
+      "cx": 0.43889,
+      "cy": 0.45556,
+      "r": 0.39138,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-135-62b9dbd5": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-141-67c22577": {
+      "cx": 0.48065,
+      "cy": 0.50833,
+      "r": 0.3377,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-148-d6dc1066": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-150-eb150f51": {
+      "cx": 0.49722,
+      "cy": 0.56619,
+      "r": 0.43381,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-151-01026d58": {
+      "cx": 0.475,
+      "cy": 0.48056,
+      "r": 0.32236,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-152-871435df": {
+      "cx": 0.48333,
+      "cy": 0.50278,
+      "r": 0.40689,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-161-f34903ba": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-164-2a11bfd4": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-patek-philippe-169-20ecf901": {
+      "cx": 0.49722,
+      "cy": 0.45,
+      "r": 0.37985,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-176-8889a9b0": {
+      "cx": 0.49722,
+      "cy": 0.37955,
+      "r": 0.38687,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-180-49168c78": {
+      "cx": 0.51875,
+      "cy": 0.48125,
+      "r": 0.3968,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-182-4706633e": {
+      "cx": 0.48333,
+      "cy": 0.43333,
+      "r": 0.40667,
+      "fallback": false
+    },
+    "hf|hf-patek-philippe-188-5873d5cb": {
+      "cx": 0.51057,
+      "cy": 0.45316,
+      "r": 0.49673,
+      "fallback": false
+    },
+    "hf|hf-rado-003-e2196ec0": {
+      "cx": 0.49444,
+      "cy": 0.46944,
+      "r": 0.45861,
+      "fallback": false
+    },
+    "hf|hf-rado-006-bcee656b": {
+      "cx": 0.46944,
+      "cy": 0.60278,
+      "r": 0.39604,
+      "fallback": false
+    },
+    "hf|hf-rado-009-8ac45060": {
+      "cx": 0.49167,
+      "cy": 0.475,
+      "r": 0.28538,
+      "fallback": false
+    },
+    "hf|hf-rado-010-6390341f": {
+      "cx": 0.43056,
+      "cy": 0.36389,
+      "r": 0.32784,
+      "fallback": false
+    },
+    "hf|hf-rado-018-4d0ff46f": {
+      "cx": 0.48889,
+      "cy": 0.45,
+      "r": 0.2528,
+      "fallback": false
+    },
+    "hf|hf-rado-019-eef8318a": {
+      "cx": 0.475,
+      "cy": 0.46111,
+      "r": 0.38244,
+      "fallback": false
+    },
+    "hf|hf-rado-021-a39a13fc": {
+      "cx": 0.48333,
+      "cy": 0.46944,
+      "r": 0.37696,
+      "fallback": false
+    },
+    "hf|hf-rado-025-e8dc5995": {
+      "cx": 0.4908,
+      "cy": 0.46667,
+      "r": 0.34176,
+      "fallback": false
+    },
+    "hf|hf-rado-027-1f2e5030": {
+      "cx": 0.49722,
+      "cy": 0.45833,
+      "r": 0.29252,
+      "fallback": false
+    },
+    "hf|hf-rado-030-68686e92": {
+      "cx": 0.53889,
+      "cy": 0.18594,
+      "r": 0.20175,
+      "fallback": false
+    },
+    "hf|hf-rado-037-df079c98": {
+      "cx": 0.5,
+      "cy": 0.44444,
+      "r": 0.36615,
+      "fallback": false
+    },
+    "hf|hf-rado-038-6a74a112": {
+      "cx": 0.48611,
+      "cy": 0.58056,
+      "r": 0.31797,
+      "fallback": false
+    },
+    "hf|hf-rado-066-77aa5c99": {
+      "cx": 0.46875,
+      "cy": 0.38847,
+      "r": 0.39837,
+      "fallback": false
+    },
+    "hf|hf-rado-068-1bc7adb6": {
+      "cx": 0.47778,
+      "cy": 0.45278,
+      "r": 0.32861,
+      "fallback": false
+    },
+    "hf|hf-rado-075-cb7f4f38": {
+      "cx": 0.49167,
+      "cy": 0.46667,
+      "r": 0.27777,
+      "fallback": false
+    },
+    "hf|hf-rado-077-636529eb": {
+      "cx": 0.54167,
+      "cy": 0.71944,
+      "r": 0.25777,
+      "fallback": false
+    },
+    "hf|hf-rado-079-03969b74": {
+      "cx": 0.48889,
+      "cy": 0.48056,
+      "r": 0.40255,
+      "fallback": false
+    },
+    "hf|hf-rado-080-afe8b951": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "colored-border"
+    },
+    "hf|hf-rado-089-3a534efa": {
+      "cx": 0.48056,
+      "cy": 0.43889,
+      "r": 0.37341,
+      "fallback": false
+    },
+    "hf|hf-rado-096-5bb70477": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rado-100-c20d04d1": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.59808,
+      "fallback": false
+    },
+    "hf|hf-rado-104-222b9533": {
+      "cx": 0.51695,
+      "cy": 0.5,
+      "r": 0.54337,
+      "fallback": false
+    },
+    "hf|hf-rado-113-1dc32d4e": {
+      "cx": 0.47778,
+      "cy": 0.46667,
+      "r": 0.40033,
+      "fallback": false
+    },
+    "hf|hf-rado-116-062f53a5": {
+      "cx": 0.53333,
+      "cy": 0.63611,
+      "r": 0.25713,
+      "fallback": false
+    },
+    "hf|hf-rado-117-fc4a69c4": {
+      "cx": 0.53889,
+      "cy": 0.64167,
+      "r": 0.25041,
+      "fallback": false
+    },
+    "hf|hf-rado-121-1f851c3c": {
+      "cx": 0.54348,
+      "cy": 0.47731,
+      "r": 0.56862,
+      "fallback": false
+    },
+    "hf|hf-rado-123-e5ea5138": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rado-124-b1d47fb0": {
+      "cx": 0.48056,
+      "cy": 0.43333,
+      "r": 0.38578,
+      "fallback": false
+    },
+    "hf|hf-rado-125-75d5aeee": {
+      "cx": 0.475,
+      "cy": 0.46389,
+      "r": 0.35206,
+      "fallback": false
+    },
+    "hf|hf-rado-126-1319c9a5": {
+      "cx": 0.51658,
+      "cy": 0.51658,
+      "r": 0.68246,
+      "fallback": false
+    },
+    "hf|hf-rado-129-8f13eb10": {
+      "cx": 0.475,
+      "cy": 0.43056,
+      "r": 0.23837,
+      "fallback": false
+    },
+    "hf|hf-rado-130-379b39bf": {
+      "cx": 0.48889,
+      "cy": 0.44722,
+      "r": 0.27974,
+      "fallback": false
+    },
+    "hf|hf-rado-132-b7b16d09": {
+      "cx": 0.5,
+      "cy": 0.575,
+      "r": 0.32876,
+      "fallback": false
+    },
+    "hf|hf-rado-134-ad169ba5": {
+      "cx": 0.47778,
+      "cy": 0.43889,
+      "r": 0.32911,
+      "fallback": false
+    },
+    "hf|hf-rado-136-3b1b1ccf": {
+      "cx": 0.47778,
+      "cy": 0.49722,
+      "r": 0.36899,
+      "fallback": false
+    },
+    "hf|hf-rado-142-7d46eb06": {
+      "cx": 0.48889,
+      "cy": 0.48056,
+      "r": 0.23257,
+      "fallback": false
+    },
+    "hf|hf-rado-144-7987321b": {
+      "cx": 0.49444,
+      "cy": 0.43611,
+      "r": 0.29058,
+      "fallback": false
+    },
+    "hf|hf-rado-148-c8f100a9": {
+      "cx": 0.48333,
+      "cy": 0.49444,
+      "r": 0.33476,
+      "fallback": false
+    },
+    "hf|hf-rado-149-7a6c9fb9": {
+      "cx": 0.50556,
+      "cy": 0.44722,
+      "r": 0.41092,
+      "fallback": false
+    },
+    "hf|hf-rado-156-7e856c69": {
+      "cx": 0.50556,
+      "cy": 0.525,
+      "r": 0.37216,
+      "fallback": false
+    },
+    "hf|hf-rado-158-c9171a53": {
+      "cx": 0.35833,
+      "cy": 0.4,
+      "r": 0.27189,
+      "fallback": false
+    },
+    "hf|hf-rado-162-3ea58f0a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rado-163-b6981e19": {
+      "cx": 0.48333,
+      "cy": 0.46667,
+      "r": 0.33443,
+      "fallback": false
+    },
+    "hf|hf-rado-170-0192951a": {
+      "cx": 0.48889,
+      "cy": 0.55833,
+      "r": 0.27318,
+      "fallback": false
+    },
+    "hf|hf-rado-172-755bb71c": {
+      "cx": 0.48889,
+      "cy": 0.475,
+      "r": 0.35582,
+      "fallback": false
+    },
+    "hf|hf-rado-174-e6834c34": {
+      "cx": 0.49444,
+      "cy": 0.48611,
+      "r": 0.46996,
+      "fallback": false
+    },
+    "hf|hf-rado-185-1fac03f6": {
+      "cx": 0.49444,
+      "cy": 0.58333,
+      "r": 0.32838,
+      "fallback": false
+    },
+    "hf|hf-rolex-004-0c1ec04e": {
+      "cx": 0.43333,
+      "cy": 0.53333,
+      "r": 0.50815,
+      "fallback": false
+    },
+    "hf|hf-rolex-006-f0992996": {
+      "cx": 0.34444,
+      "cy": 0.44444,
+      "r": 0.44769,
+      "fallback": false
+    },
+    "hf|hf-rolex-007-0c194eab": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-011-8a8b8c13": {
+      "cx": 0.49167,
+      "cy": 0.47778,
+      "r": 0.541,
+      "fallback": false
+    },
+    "hf|hf-rolex-014-370bf2a8": {
+      "cx": 0.55607,
+      "cy": 0.48398,
+      "r": 0.55782,
+      "fallback": false
+    },
+    "hf|hf-rolex-015-0ef4edcd": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-018-314ec217": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-rolex-021-a32ac3ef": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-026-3fdbbdc0": {
+      "cx": 0.49323,
+      "cy": 0.53177,
+      "r": 0.75659,
+      "fallback": false
+    },
+    "hf|hf-rolex-030-a13829fa": {
+      "cx": 0.47222,
+      "cy": 0.45,
+      "r": 0.34207,
+      "fallback": false
+    },
+    "hf|hf-rolex-031-0e09075b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-rolex-034-89c66ea8": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-rolex-035-d58071f7": {
+      "cx": 0.50278,
+      "cy": 0.46111,
+      "r": 0.23118,
+      "fallback": false
+    },
+    "hf|hf-rolex-042-3e128e3d": {
+      "cx": 0.49167,
+      "cy": 0.46667,
+      "r": 0.35673,
+      "fallback": false
+    },
+    "hf|hf-rolex-044-e6d28760": {
+      "cx": 0.4875,
+      "cy": 0.50625,
+      "r": 0.45971,
+      "fallback": false
+    },
+    "hf|hf-rolex-047-ca0b4457": {
+      "cx": 0.4875,
+      "cy": 0.51875,
+      "r": 0.24829,
+      "fallback": false
+    },
+    "hf|hf-rolex-052-774f546a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-056-e742be05": {
+      "cx": 0.62323,
+      "cy": 0.49444,
+      "r": 0.48214,
+      "fallback": false
+    },
+    "hf|hf-rolex-059-a376db16": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-rolex-062-3a9ef198": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-066-89a8660e": {
+      "cx": 0.50556,
+      "cy": 0.47885,
+      "r": 0.47885,
+      "fallback": false
+    },
+    "hf|hf-rolex-068-703a17b7": {
+      "cx": 0.48611,
+      "cy": 0.46667,
+      "r": 0.3406,
+      "fallback": false
+    },
+    "hf|hf-rolex-072-79f2fc30": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-078-c20596f4": {
+      "cx": 0.48056,
+      "cy": 0.56667,
+      "r": 0.38333,
+      "fallback": false
+    },
+    "hf|hf-rolex-082-4955be47": {
+      "cx": 0.45016,
+      "cy": 0.56389,
+      "r": 0.58152,
+      "fallback": false
+    },
+    "hf|hf-rolex-083-910dbf3b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-084-63d303b1": {
+      "cx": 0.48056,
+      "cy": 0.49444,
+      "r": 0.46934,
+      "fallback": false
+    },
+    "hf|hf-rolex-086-e36a0a93": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-091-20b9f394": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-092-8b8698b2": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-093-22549cef": {
+      "cx": 0.45278,
+      "cy": 0.46389,
+      "r": 0.40169,
+      "fallback": false
+    },
+    "hf|hf-rolex-094-f7bbf645": {
+      "cx": 0.47078,
+      "cy": 0.46667,
+      "r": 0.43542,
+      "fallback": false
+    },
+    "hf|hf-rolex-097-245197b9": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-099-ec04024c": {
+      "cx": 0.49375,
+      "cy": 0.45625,
+      "r": 0.36846,
+      "fallback": false
+    },
+    "hf|hf-rolex-100-094afd11": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-103-6dc321c8": {
+      "cx": 0.48333,
+      "cy": 0.45278,
+      "r": 0.3796,
+      "fallback": false
+    },
+    "hf|hf-rolex-111-edba30ef": {
+      "cx": 0.1591,
+      "cy": 0.33125,
+      "r": 0.1591,
+      "fallback": false
+    },
+    "hf|hf-rolex-117-7f9b85b9": {
+      "cx": 0.40438,
+      "cy": 0.51944,
+      "r": 0.40438,
+      "fallback": false
+    },
+    "hf|hf-rolex-124-8e3c405f": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-126-a84b4aba": {
+      "cx": 0.50625,
+      "cy": 0.5125,
+      "r": 0.4755,
+      "fallback": false
+    },
+    "hf|hf-rolex-128-995a97dd": {
+      "cx": 0.49722,
+      "cy": 0.1532,
+      "r": 0.15095,
+      "fallback": false
+    },
+    "hf|hf-rolex-131-02a30c9b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "colored-border"
+    },
+    "hf|hf-rolex-132-c0c46e7c": {
+      "cx": 0.5,
+      "cy": 0.47222,
+      "r": 0.32998,
+      "fallback": false
+    },
+    "hf|hf-rolex-133-e48a7ea6": {
+      "cx": 0.36389,
+      "cy": 0.53889,
+      "r": 0.47306,
+      "fallback": false
+    },
+    "hf|hf-rolex-135-82e0ee99": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-142-23bf64e7": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "colored-border"
+    },
+    "hf|hf-rolex-143-fd3ffefd": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.26373,
+      "fallback": false
+    },
+    "hf|hf-rolex-145-5760caa9": {
+      "cx": 0.47778,
+      "cy": 0.46667,
+      "r": 0.3656,
+      "fallback": false
+    },
+    "hf|hf-rolex-150-152a8bf5": {
+      "cx": 0.51389,
+      "cy": 0.475,
+      "r": 0.22482,
+      "fallback": false
+    },
+    "hf|hf-rolex-152-774d1c8e": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.28057,
+      "fallback": false
+    },
+    "hf|hf-rolex-153-494cc013": {
+      "cx": 0.49677,
+      "cy": 0.425,
+      "r": 0.38051,
+      "fallback": false
+    },
+    "hf|hf-rolex-155-51471c62": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-160-fdaf578e": {
+      "cx": 0.48056,
+      "cy": 0.48333,
+      "r": 0.39109,
+      "fallback": false
+    },
+    "hf|hf-rolex-166-b2d873cb": {
+      "cx": 0.45812,
+      "cy": 0.48056,
+      "r": 0.46907,
+      "fallback": false
+    },
+    "hf|hf-rolex-173-4c1d825f": {
+      "cx": 0.50347,
+      "cy": 0.49444,
+      "r": 0.36288,
+      "fallback": false
+    },
+    "hf|hf-rolex-175-9dc2d83d": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-rolex-178-eba22044": {
+      "cx": 0.47778,
+      "cy": 0.50278,
+      "r": 0.42017,
+      "fallback": false
+    },
+    "hf|hf-tissot-009-c04c6b85": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-tissot-010-eb22bd2f": {
+      "cx": 0.50833,
+      "cy": 0.52222,
+      "r": 0.44878,
+      "fallback": false
+    },
+    "hf|hf-tissot-012-4fadea8c": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-tissot-013-05e8d5e8": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.50548,
+      "fallback": false
+    },
+    "hf|hf-tissot-015-08ef38ce": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-tissot-016-f186c247": {
+      "cx": 0.46667,
+      "cy": 0.475,
+      "r": 0.39368,
+      "fallback": false
+    },
+    "hf|hf-tissot-022-5167fd78": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-tissot-023-faa11506": {
+      "cx": 0.53056,
+      "cy": 0.46667,
+      "r": 0.41679,
+      "fallback": false
+    },
+    "hf|hf-tissot-027-74d2001c": {
+      "cx": 0.54596,
+      "cy": 0.45205,
+      "r": 0.64034,
+      "fallback": false
+    },
+    "hf|hf-tissot-031-2925a7f1": {
+      "cx": 0.49444,
+      "cy": 0.5,
+      "r": 0.40174,
+      "fallback": false
+    },
+    "hf|hf-tissot-040-d71104cf": {
+      "cx": 0.47778,
+      "cy": 0.49167,
+      "r": 0.38102,
+      "fallback": false
+    },
+    "hf|hf-tissot-041-60ee39c4": {
+      "cx": 0.53667,
+      "cy": 0.375,
+      "r": 0.45886,
+      "fallback": false
+    },
+    "hf|hf-tissot-042-d0bf5d04": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.40502,
+      "fallback": false
+    },
+    "hf|hf-tissot-051-ff29d9fe": {
+      "cx": 0.47222,
+      "cy": 0.50556,
+      "r": 0.376,
+      "fallback": false
+    },
+    "hf|hf-tissot-058-4535ab08": {
+      "cx": 0.48333,
+      "cy": 0.525,
+      "r": 0.35241,
+      "fallback": false
+    },
+    "hf|hf-tissot-059-cb7845c0": {
+      "cx": 0.475,
+      "cy": 0.49722,
+      "r": 0.32826,
+      "fallback": false
+    },
+    "hf|hf-tissot-060-d96644c0": {
+      "cx": 0.48611,
+      "cy": 0.5,
+      "r": 0.34796,
+      "fallback": false
+    },
+    "hf|hf-tissot-064-935b4d2f": {
+      "cx": 0.50278,
+      "cy": 0.50833,
+      "r": 0.37333,
+      "fallback": false
+    },
+    "hf|hf-tissot-066-988faed9": {
+      "cx": 0.5,
+      "cy": 0.49722,
+      "r": 0.36249,
+      "fallback": false
+    },
+    "hf|hf-tissot-067-dfed99ad": {
+      "cx": 0.47778,
+      "cy": 0.45278,
+      "r": 0.36198,
+      "fallback": false
+    },
+    "hf|hf-tissot-076-21942a3d": {
+      "cx": 0.48056,
+      "cy": 0.51389,
+      "r": 0.36943,
+      "fallback": false
+    },
+    "hf|hf-tissot-085-e0d93d7f": {
+      "cx": 0.5,
+      "cy": 0.52222,
+      "r": 0.33903,
+      "fallback": false
+    },
+    "hf|hf-tissot-096-d83b5d4c": {
+      "cx": 0.48056,
+      "cy": 0.475,
+      "r": 0.40973,
+      "fallback": false
+    },
+    "hf|hf-tissot-097-ea96271b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-tissot-098-cdf2227a": {
+      "cx": 0.50126,
+      "cy": 0.51616,
+      "r": 0.73815,
+      "fallback": false
+    },
+    "hf|hf-tissot-100-0fb3bca9": {
+      "cx": 0.51111,
+      "cy": 0.37778,
+      "r": 0.40317,
+      "fallback": false
+    },
+    "hf|hf-tissot-108-7ab57edb": {
+      "cx": 0.5,
+      "cy": 0.49722,
+      "r": 0.33838,
+      "fallback": false
+    },
+    "hf|hf-tissot-109-29513b6b": {
+      "cx": 0.48333,
+      "cy": 0.48611,
+      "r": 0.35631,
+      "fallback": false
+    },
+    "hf|hf-tissot-110-70408f63": {
+      "cx": 0.50278,
+      "cy": 0.50833,
+      "r": 0.36501,
+      "fallback": false
+    },
+    "hf|hf-tissot-116-5f7e08c0": {
+      "cx": 0.46111,
+      "cy": 0.53611,
+      "r": 0.29328,
+      "fallback": false
+    },
+    "hf|hf-tissot-121-f98c9d43": {
+      "cx": 0.49722,
+      "cy": 0.50278,
+      "r": 0.38158,
+      "fallback": false
+    },
+    "hf|hf-tissot-124-b2bee7a8": {
+      "cx": 0.44444,
+      "cy": 0.43889,
+      "r": 0.42214,
+      "fallback": false
+    },
+    "hf|hf-tissot-133-3096ff30": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-tissot-138-8360570c": {
+      "cx": 0.44167,
+      "cy": 0.41944,
+      "r": 0.28921,
+      "fallback": false
+    },
+    "hf|hf-tissot-144-f54ff6e9": {
+      "cx": 0.48996,
+      "cy": 0.48594,
+      "r": 0.23587,
+      "fallback": false
+    },
+    "hf|hf-tissot-147-d00610e2": {
+      "cx": 0.46944,
+      "cy": 0.5,
+      "r": 0.37678,
+      "fallback": false
+    },
+    "hf|hf-tissot-148-23ff77aa": {
+      "cx": 0.49444,
+      "cy": 0.48333,
+      "r": 0.32564,
+      "fallback": false
+    },
+    "hf|hf-tissot-149-55d61d4b": {
+      "cx": 0.46667,
+      "cy": 0.45833,
+      "r": 0.34311,
+      "fallback": false
+    },
+    "hf|hf-tissot-153-c798dfad": {
+      "cx": 0.50278,
+      "cy": 0.49722,
+      "r": 0.35389,
+      "fallback": false
+    },
+    "hf|hf-tissot-159-19ccab03": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-tissot-161-7363c4e0": {
+      "cx": 0.47222,
+      "cy": 0.49722,
+      "r": 0.37855,
+      "fallback": false
+    },
+    "hf|hf-tissot-166-1bf355ea": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-tissot-170-ae379347": {
+      "cx": 0.49722,
+      "cy": 0.50556,
+      "r": 0.3332,
+      "fallback": false
+    },
+    "hf|hf-tissot-173-26dbced3": {
+      "cx": 0.51389,
+      "cy": 0.50556,
+      "r": 0.34197,
+      "fallback": false
+    },
+    "hf|hf-tissot-174-458ca472": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.25256,
+      "fallback": false
+    },
+    "hf|hf-tissot-177-d4308ef9": {
+      "cx": 0.51111,
+      "cy": 0.53333,
+      "r": 0.462,
+      "fallback": false
+    },
+    "hf|hf-tissot-178-a0021155": {
+      "cx": 0.47778,
+      "cy": 0.46111,
+      "r": 0.44692,
+      "fallback": false
+    },
+    "hf|hf-tissot-179-28b80c23": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.50913,
+      "fallback": false
+    },
+    "hf|hf-tissot-180-82277b68": {
+      "cx": 0.51111,
+      "cy": 0.50556,
+      "r": 0.39442,
+      "fallback": false
+    },
+    "hf|hf-tissot-182-5171d81e": {
+      "cx": 0.50556,
+      "cy": 0.45278,
+      "r": 0.35241,
+      "fallback": false
+    },
+    "hf|hf-tissot-185-3295f85f": {
+      "cx": 0.49722,
+      "cy": 0.48889,
+      "r": 0.46484,
+      "fallback": false
+    },
+    "hf|hf-tissot-189-9dfadf1e": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-003-d101d1f4": {
+      "cx": 0.42955,
+      "cy": 0.49167,
+      "r": 0.55842,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-004-685583bd": {
+      "cx": 0.5,
+      "cy": 0.50278,
+      "r": 0.47303,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-009-cb20cfdd": {
+      "cx": 0.51111,
+      "cy": 0.45556,
+      "r": 0.27588,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-017-fd43be73": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-022-da1e2382": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-023-7e83c174": {
+      "cx": 0.44167,
+      "cy": 0.48056,
+      "r": 0.41603,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-025-662400ea": {
+      "cx": 0.45833,
+      "cy": 0.47778,
+      "r": 0.32339,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-029-1afcb62e": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-037-3ac42747": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-038-7acddf5f": {
+      "cx": 0.475,
+      "cy": 0.5,
+      "r": 0.39801,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-039-c191618f": {
+      "cx": 0.45556,
+      "cy": 0.45556,
+      "r": 0.39082,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-040-c24aa3e5": {
+      "cx": 0.49167,
+      "cy": 0.48333,
+      "r": 0.29624,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-041-56a0e1ff": {
+      "cx": 0.46667,
+      "cy": 0.47222,
+      "r": 0.3005,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-044-7ae44a1c": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-vacheron-constantin-046-7c2ef3d2": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-047-4a9703da": {
+      "cx": 0.9143,
+      "cy": 0.20833,
+      "r": 0.12719,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-048-d8427f08": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-050-7065cb43": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-056-101dc509": {
+      "cx": 0.48333,
+      "cy": 0.475,
+      "r": 0.38977,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-058-6bd2fcf3": {
+      "cx": 0.46602,
+      "cy": 0.50278,
+      "r": 0.55536,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-062-46c14d49": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-068-8f82557a": {
+      "cx": 0.52222,
+      "cy": 0.53611,
+      "r": 0.39561,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-069-378a9476": {
+      "cx": 0.48333,
+      "cy": 0.46111,
+      "r": 0.27333,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-070-da51f8ce": {
+      "cx": 0.49722,
+      "cy": 0.45833,
+      "r": 0.32667,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-072-cb7dd224": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-076-b9a42f9b": {
+      "cx": 0.49722,
+      "cy": 0.75556,
+      "r": 0.17397,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-082-10459bce": {
+      "cx": 0.48611,
+      "cy": 0.50833,
+      "r": 0.4714,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-083-eed09541": {
+      "cx": 0.48056,
+      "cy": 0.46111,
+      "r": 0.3512,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-085-9e85aabb": {
+      "cx": 0.50278,
+      "cy": 0.44167,
+      "r": 0.27294,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-088-34ed487c": {
+      "cx": 0.5014,
+      "cy": 0.48611,
+      "r": 0.39973,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-091-d87da61b": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-092-11a387cd": {
+      "cx": 0.46389,
+      "cy": 0.48056,
+      "r": 0.43092,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-094-c3d44c3b": {
+      "cx": 0.475,
+      "cy": 0.50556,
+      "r": 0.37454,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-095-7e8ebed0": {
+      "cx": 0.49722,
+      "cy": 0.49722,
+      "r": 0.30832,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-096-218c888e": {
+      "cx": 0.46667,
+      "cy": 0.41389,
+      "r": 0.51061,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-101-2e3cfc83": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-102-e103f0b7": {
+      "cx": 0.50556,
+      "cy": 0.45,
+      "r": 0.45477,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-103-f8f44f93": {
+      "cx": 0.53056,
+      "cy": 0.55,
+      "r": 0.38361,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-105-11cb60ce": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-vacheron-constantin-106-9252ba7a": {
+      "cx": 0.55556,
+      "cy": 0.59205,
+      "r": 0.40795,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-109-e34af7d5": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-vacheron-constantin-112-301ec828": {
+      "cx": 0.63611,
+      "cy": 0.7741,
+      "r": 0.22816,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-115-1649c65c": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-116-2aedaa74": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "uneven-border"
+    },
+    "hf|hf-vacheron-constantin-117-fcb60834": {
+      "cx": 0.55213,
+      "cy": 0.46742,
+      "r": 0.52432,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-118-2979e697": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-121-e9a6ee0a": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-132-cef4593c": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-139-e4e03387": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-140-1f5ba4b3": {
+      "cx": 0.475,
+      "cy": 0.45556,
+      "r": 0.45283,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-141-3645d891": {
+      "cx": 0.48889,
+      "cy": 0.51944,
+      "r": 0.39051,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-142-07c0b078": {
+      "cx": 0.48333,
+      "cy": 0.43056,
+      "r": 0.3266,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-146-a603d800": {
+      "cx": 0.48056,
+      "cy": 0.43889,
+      "r": 0.3145,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-150-cdd2d893": {
+      "cx": 0.5,
+      "cy": 0.50556,
+      "r": 0.35219,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-155-c03cc32a": {
+      "cx": 0.50556,
+      "cy": 0.43056,
+      "r": 0.45513,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-156-9dd9813a": {
+      "cx": 0.49032,
+      "cy": 0.48611,
+      "r": 0.37435,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-159-ca485234": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-167-4bc4ca46": {
+      "cx": 0.5,
+      "cy": 0.425,
+      "r": 0.27294,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-175-0409f568": {
+      "cx": 0.49722,
+      "cy": 0.44722,
+      "r": 0.2908,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-179-643a2460": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-181-352bbc41": {
+      "cx": 0.5,
+      "cy": 0.5,
+      "r": 0.5,
+      "fallback": true,
+      "reason": "dark-border"
+    },
+    "hf|hf-vacheron-constantin-187-29060a71": {
+      "cx": 0.54722,
+      "cy": 0.36202,
+      "r": 0.43416,
+      "fallback": false
+    },
+    "hf|hf-vacheron-constantin-189-9521980e": {
+      "cx": 0.49722,
+      "cy": 0.71643,
+      "r": 0.28357,
+      "fallback": false
+    }
+  }
+}
