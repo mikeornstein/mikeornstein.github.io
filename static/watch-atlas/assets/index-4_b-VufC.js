@@ -1,1 +1,1 @@
-@/tmp/deploy-watch-atlas/assets/index-4_b-VufC.js
+file:///tmp/deploy-watch-atlas/assets/index-4_b-VufC.js
