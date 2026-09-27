@@ -20,17 +20,15 @@ jobs:
           OUT=static/watch-atlas/assets/index-4_b-VufC.js
           count=$(ls "$PARTS_DIR"/gz*.b64 2>/dev/null | wc -l)
           echo "Found $count gz parts"
-          expected=9
+          expected=24
           if [ "$count" -lt "$expected" ]; then
             echo "Not all parts uploaded yet; skipping"
             exit 0
           fi
-          # base64url: translate -_ back to +/ then decode; tolerate missing padding
           python3 - <<'PY'
           import base64, gzip, hashlib, pathlib
           parts_dir = pathlib.Path("static/watch-atlas/assets/.assemble")
           data = "".join(p.read_text() for p in sorted(parts_dir.glob("gz*.b64")))
-          # urlsafe_b64decode handles -_ and padding
           raw = base64.urlsafe_b64decode(data + "===")
           out = gzip.decompress(raw)
           path = pathlib.Path("static/watch-atlas/assets/index-4_b-VufC.js")
