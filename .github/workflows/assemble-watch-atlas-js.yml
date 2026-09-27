@@ -22,7 +22,19 @@ jobs:
             echo "No parts directory; nothing to do"
             exit 0
           fi
-          cat "$PARTS_DIR"/part*.bin > "$OUT"
+          # Wait until all 18 parts are present (avoid racing partial pushes)
+          count=$(ls "$PARTS_DIR"/part*.txt 2>/dev/null | wc -l)
+          echo "Found $count parts"
+          if [ "$count" -lt 18 ]; then
+            echo "Not all parts uploaded yet; skipping assemble"
+            exit 0
+          fi
+          cat "$PARTS_DIR"/part00.txt "$PARTS_DIR"/part01.txt "$PARTS_DIR"/part02.txt \
+              "$PARTS_DIR"/part03.txt "$PARTS_DIR"/part04.txt "$PARTS_DIR"/part05.txt \
+              "$PARTS_DIR"/part06.txt "$PARTS_DIR"/part07.txt "$PARTS_DIR"/part08.txt \
+              "$PARTS_DIR"/part09.txt "$PARTS_DIR"/part10.txt "$PARTS_DIR"/part11.txt \
+              "$PARTS_DIR"/part12.txt "$PARTS_DIR"/part13.txt "$PARTS_DIR"/part14.txt \
+              "$PARTS_DIR"/part15.txt "$PARTS_DIR"/part16.txt "$PARTS_DIR"/part17.txt > "$OUT"
           rm -rf "$PARTS_DIR"
           git config user.name "mikeornstein"
           git config user.email "10444033+mikeornstein@users.noreply.github.com"
