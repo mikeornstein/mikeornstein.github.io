@@ -13,24 +13,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Assemble JS from gzip+base64 parts
+      - name: Assemble JS from gzip+base64url parts
         run: |
           set -euo pipefail
           PARTS_DIR=static/watch-atlas/assets/.assemble
           OUT=static/watch-atlas/assets/index-4_b-VufC.js
           count=$(ls "$PARTS_DIR"/gz*.b64 2>/dev/null | wc -l)
           echo "Found $count gz parts"
-          expected=6
+          expected=9
           if [ "$count" -lt "$expected" ]; then
             echo "Not all parts uploaded yet; skipping"
             exit 0
           fi
-          cat "$PARTS_DIR"/gz*.b64 | base64 -d | gzip -d > "$OUT"
+          # base64url: translate -_ back to +/ then decode; tolerate missing padding
           python3 - <<'PY'
-          import hashlib, pathlib
-          data = pathlib.Path("static/watch-atlas/assets/index-4_b-VufC.js").read_bytes()
-          print("assembled", len(data), hashlib.md5(data).hexdigest())
-          assert hashlib.md5(data).hexdigest() == "0d206624af4a51345ae0a0e0694f9502"
+          import base64, gzip, hashlib, pathlib
+          parts_dir = pathlib.Path("static/watch-atlas/assets/.assemble")
+          data = "".join(p.read_text() for p in sorted(parts_dir.glob("gz*.b64")))
+          # urlsafe_b64decode handles -_ and padding
+          raw = base64.urlsafe_b64decode(data + "===")
+          out = gzip.decompress(raw)
+          path = pathlib.Path("static/watch-atlas/assets/index-4_b-VufC.js")
+          path.write_bytes(out)
+          print("assembled", len(out), hashlib.md5(out).hexdigest())
+          assert hashlib.md5(out).hexdigest() == "0d206624af4a51345ae0a0e0694f9502"
           PY
           rm -rf "$PARTS_DIR"
           git config user.name "mikeornstein"
