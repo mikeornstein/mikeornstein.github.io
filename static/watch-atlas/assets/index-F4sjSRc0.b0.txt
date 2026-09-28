@@ -1,1 +1,1 @@
-FILE_BYTES_FROM_/tmp/js-b64/b0.txt
+FILE_FROM_DISK:/tmp/js-b64/b0.txt
