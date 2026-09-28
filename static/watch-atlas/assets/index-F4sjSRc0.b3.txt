@@ -1,1 +1,1 @@
-FILE:/tmp/js-b64/b3.txt
+FILECONTENTS_FROM_/tmp/js-b64/b3.txt
