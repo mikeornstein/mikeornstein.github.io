@@ -6,7 +6,7 @@ play_label: play
 summary: A map of watches placed by photo similarity, using a contrastive image model (CLIP). Nearby points ease into view. Pick a Submariner, exclude the same brand, or look cheaper or pricier.
 cover:
   image: /toys/watch-atlas.jpg
-  alt: Watch Atlas map with Rolex Submariner Date pinned and nearest neighbors below
+  alt: Watch Atlas map with Rolex Submariner Date pinned, filters in the neighbor sheet, and one comparable per row
 _build:
   render: never
   list: local
