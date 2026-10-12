@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tartan</title>
+  <meta name="description" content="Design a tartan in the Scottish Register of Tartans text formats and see it as woven cloth.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%238e3b32'/%3E%3Cpath d='M0 0h8v8H0zm8 8h8v8H8z' fill='%231d1a17'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      var theme = localStorage.getItem("tartan-theme");
+      if (theme !== "light" && theme !== "dark") {
+        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="stage">
+    <canvas id="cloth" aria-label="Woven tartan"></canvas>
+    <header class="top">
+      <div>
+        <p class="mark">Tartan</p>
+        <h1 id="title">Tartan</h1>
+      </div>
+      <div class="top-actions">
+        <button id="share" type="button">Share</button>
+        <button id="theme" type="button" aria-pressed="false">Dark</button>
+      </div>
+    </header>
+  </div>
+
+  <section class="sheet" id="sheet" aria-label="Design">
+    <button class="handle" id="handle" type="button" aria-expanded="false" aria-controls="sheet-body">
+      <span class="handle-bar" aria-hidden="true"></span>
+      Design
+    </button>
+    <div class="sheet-body" id="sheet-body">
+      <h2>Presets</h2>
+      <div class="presets" id="presets"></div>
+      <h2>Not available</h2>
+      <ul class="missing" id="missing"></ul>
+
+      <div id="story" class="story"></div>
+
+      <h2>Palette</h2>
+      <label class="field-label" for="palette">Register palette</label>
+      <textarea id="palette" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+      <ul class="swatches" id="swatches"></ul>
+
+      <h2>Threadcount</h2>
+      <label class="field-label" for="threadcount">Register threadcount</label>
+      <textarea id="threadcount" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+      <p id="totals" class="totals"></p>
+      <ul id="hints" class="hints" aria-live="polite"></ul>
+      <ul class="stripes" id="stripes"></ul>
+
+      <h2>Cloth</h2>
+      <div class="zoom-row">
+        <label for="zoom">Thread size <span id="zoom-val">2</span></label>
+      </div>
+      <input id="zoom" type="range" min="1" max="8" value="2" aria-valuemin="1" aria-valuemax="8">
+      <div class="check-row">
+        <button id="texture" type="button" aria-pressed="true">Thread texture</button>
+      </div>
+
+      <h2>Export</h2>
+      <div class="pair">
+        <label>Repeat size
+          <input id="png-scale" type="number" min="1" max="8" value="2" inputmode="numeric">
+          <span class="field-range">1–8</span>
+          <span class="field-note" id="png-scale-note"></span>
+        </label>
+        <label>Tile width
+          <input id="tile-w" type="number" min="16" max="4096" value="800" inputmode="numeric">
+          <span class="field-range">16–4096</span>
+          <span class="field-note" id="tile-w-note"></span>
+        </label>
+      </div>
+      <label>Tile height
+        <input id="tile-h" type="number" min="16" max="4096" value="800" inputmode="numeric">
+        <span class="field-range">16–4096</span>
+        <span class="field-note" id="tile-h-note"></span>
+      </label>
+      <div class="actions">
+        <button id="png-repeat" class="primary" type="button">PNG, one repeat</button>
+        <button id="png-tile" type="button">PNG tile</button>
+        <button id="svg" type="button">SVG, one repeat</button>
+        <button id="copy-palette" type="button">Copy palette</button>
+        <button id="copy-count" type="button">Copy threadcount</button>
+        <a id="compare" class="compare" href="https://www.tartanregister.gov.uk/searchDesigns/exportable" target="_blank" rel="noopener noreferrer">Compare Designs</a>
+      </div>
+
+      <details class="about">
+        <summary>About</summary>
+        <p>A symmetric sett mirrors between two pivots. The slash sits between the colour and the count, and that number is the full width of the pivot, woven once. The stripes between the pivots are then repeated in reverse. <code>DR/8 G64 K44 G/64</code> weaves as <code>DR8 G64 K44 G64 K44 G64</code>, 288 threads, and that block repeats.</p>
+        <p>An asymmetric sett is wrapped in three dots and does not mirror. <code>...DR8 G64 K44 G64...</code> repeats in that order.</p>
+        <p>Warp and weft follow the same sequence. In 2/2 twill the warp lies on top where (x + y) mod 4 is 0 or 1. Otherwise the weft shows.</p>
+        <p>A name with no hex uses one shade picked from the Register’s colour sheet. The Register may draw a different shade for that same name. Put a hex in the palette to lock it. Counts are usually even, and a sett under 100 threads usually reads as a check.</p>
+      </details>
+    </div>
+  </section>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
